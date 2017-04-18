@@ -1,0 +1,305 @@
+<thread>
+<Name> FDSC cluster appears to be hanging for all requests and unable to launch online </Name>
+<listno>5687339</listno>
+         <DOC>
+             <Received>06-Feb-12 02:34:10</Received>
+             <From>Michael Cheng</From>
+             <To>Michael Cheng,Kyong Kim,Mark Thomford,FuTing Chan,John Millar,Ed Macalinao,Tristan Pratt,Pavel Buick,Aziz Hilali,Alex McNulty,Edwin Cheung,Prasanna Venkatesh,Ken Suenaga,Aaron Tubbs,Alan Damon,Sean Battis,Demetry Zilberg,Jerry Uanino,Greg Jordan,Mark Guzman</To>
+             <Subject> FDSC cluster appears to be hanging for all requests and unable to launch online </Subject>
+             <Text> 
+                          <Sent id="1.1"> ORCA_CRITICAL_X is failing on FDSC only where it appears downloading requests, launching online sessions, etc. </Sent>
+                          <Sent id="1.2"> are all hanging since about 10-15 minutes ago. </Sent>
+                          <Sent id="1.3"> I'm not able to launch online after logging into FDSC05 and unable to run fqlc/usc command line requests on FDSC01 as well. </Sent>
+                          <Sent id="1.4"> I can log into the nodes but that's about it. </Sent>
+             </Text>
+             </DOC>
+         <DOC>
+             <Received>06-Feb-12 02:38:00</Received>
+             <From>Pavel Buick</From>
+             <To>Michael Cheng,Kyong Kim,Mark Thomford,FuTing Chan,John Millar,Ed Macalinao,Tristan Pratt,Pavel Buick,Aziz Hilali,Alex McNulty,Edwin Cheung,Prasanna Venkatesh,Ken Suenaga,Aaron Tubbs,Alan Damon,Sean Battis,Demetry Zilberg,Jerry Uanino,Greg Jordan,Mark Guzman</To>
+             <Subject> FDSC cluster appears to be hanging for all requests and unable to launch online </Subject>
+             <Text> 
+                          <Sent id="2.1"> FDSA/B seems to be fine. </Sent>
+                          <Sent id="2.2"> But all nodes that I have tried on FDSC (C01-C05) have the same problem. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Feb-12 02:40:38</Received>
+             <From>Pavel Buick</From>
+             <To>Michael Cheng,Kyong Kim,Mark Thomford,FuTing Chan,John Millar,Ed Macalinao,Tristan Pratt,Pavel Buick,Aziz Hilali,Alex McNulty,Edwin Cheung,Prasanna Venkatesh,Ken Suenaga,Aaron Tubbs,Alan Damon,Sean Battis,Demetry Zilberg,Jerry Uanino,Greg Jordan,Mark Guzman</To>
+             <Subject> FDSC cluster appears to be hanging for all requests and unable to launch online </Subject>
+             <Text> 
+                          <Sent id="3.1"> The issue seems to be with fqlc. </Sent>
+                          <Sent id="3.2"> I have tried a few different formulas and they all hang after returning the result: fqlc ibm "price()" fqlc 7535 "teca_dps_act(0)" fqlc 635688 "TECI_SALES_FY1R()" fqlf works fine. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Feb-12 02:42:21</Received>
+             <From>Michael Cheng</From>
+             <To>Michael Cheng,Kyong Kim,Mark Thomford,FuTing Chan,John Millar,Ed Macalinao,Tristan Pratt,Pavel Buick,Aziz Hilali,Alex McNulty,Edwin Cheung,Prasanna Venkatesh,Ken Suenaga,Aaron Tubbs,Alan Damon,Sean Battis,Demetry Zilberg,Jerry Uanino,Greg Jordan,Mark Guzman</To>
+             <Subject> FDSC cluster appears to be hanging for all requests and unable to launch online </Subject>
+             <Text> 
+                          <Sent id="4.1"> USC hangs as well. </Sent>
+                          <Sent id="4.2"> Also unable to launch a gui online session. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Feb-12 02:50:23</Received>
+             <From>Aziz Hilali</From>
+             <To>Michael Cheng,Kyong Kim,Mark Thomford,FuTing Chan,John Millar,Ed Macalinao,Tristan Pratt,Pavel Buick,Aziz Hilali,Alex McNulty,Edwin Cheung,Prasanna Venkatesh,Ken Suenaga,Aaron Tubbs,Alan Damon,Sean Battis,Demetry Zilberg,Jerry Uanino,Greg Jordan,Mark Guzman</To>
+             <Subject> FDSC cluster appears to be hanging for all requests and unable to launch online </Subject>
+             <Text> 
+                          <Sent id="5.1"> Paged VMS team. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Feb-12 03:07:02</Received>
+             <From>Bob McDougall</From>
+             <To>Michael Cheng,Kyong Kim,Mark Thomford,FuTing Chan,John Millar,Ed Macalinao,Tristan Pratt,Pavel Buick,Aziz Hilali,Alex McNulty,Edwin Cheung,Prasanna Venkatesh,Ken Suenaga,Aaron Tubbs,Alan Damon,Sean Battis,Demetry Zilberg,Jerry Uanino,Greg Jordan,Mark Guzman</To>
+             <Subject> FDSC cluster appears to be hanging for all requests and unable to launch online </Subject>
+             <Text> 
+                          <Sent id="6.1"> I'm able to login to fdsc as well, but fdsw does not start... </Sent>
+                          <Sent id="6.2"> still looking... </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Feb-12 03:17:08</Received>
+             <From>Pavel Buick</From>
+             <To>Michael Cheng,Kyong Kim,Mark Thomford,FuTing Chan,John Millar,Ed Macalinao,Tristan Pratt,Pavel Buick,Aziz Hilali,Alex McNulty,Edwin Cheung,Prasanna Venkatesh,Ken Suenaga,Aaron Tubbs,Alan Damon,Sean Battis,Demetry Zilberg,Jerry Uanino,Greg Jordan,Mark Guzman</To>
+             <Subject> FDSC cluster appears to be hanging for all requests and unable to launch online </Subject>
+             <Text> 
+                          <Sent id="7.1"> I have just started to get the same problem on fdsa07! </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Feb-12 03:23:42</Received>
+             <From>FuTing Chan</From>
+             <To>Michael Cheng,Kyong Kim,Mark Thomford,FuTing Chan,John Millar,Ed Macalinao,Tristan Pratt,Pavel Buick,Aziz Hilali,Alex McNulty,Edwin Cheung,Prasanna Venkatesh,Ken Suenaga,Aaron Tubbs,Alan Damon,Sean Battis,Demetry Zilberg,Jerry Uanino,Greg Jordan,Mark Guzman</To>
+             <Subject> FDSC cluster appears to be hanging for all requests and unable to launch online </Subject>
+             <Text> 
+                          <Sent id="8.1"> Looking into this with Ed and Pavel. </Sent>
+                          <Sent id="8.2"> The problem seems to be spreading to around fdsa. </Sent>
+                          <Sent id="8.3"> fdsa7, fdsa8 is having the same hanging issue, but other nodes seems fine. </Sent>
+                          <Sent id="8.4"> Checking pricing update scheule, and installed image versions to see if there is any dicrepencies here. </Sent>
+                          <Sent id="8.5"> In cases that hangs, I'm getting a result back, before the image hangs. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Feb-12 03:25:25</Received>
+             <From>Greg Jordan</From>
+             <To>Michael Cheng,Kyong Kim,Mark Thomford,FuTing Chan,John Millar,Ed Macalinao,Tristan Pratt,Pavel Buick,Aziz Hilali,Alex McNulty,Edwin Cheung,Prasanna Venkatesh,Ken Suenaga,Aaron Tubbs,Alan Damon,Sean Battis,Demetry Zilberg,Jerry Uanino,Greg Jordan,Mark Guzman</To>
+             <Subject> FDSC cluster appears to be hanging for all requests and unable to launch online </Subject>
+             <Text> 
+                          <Sent id="9.1"> The problem may be AUDs. </Sent>
+                          <Sent id="9.2"> I've disabled the auds shadow mode on all FDSC nodes and FDSA07 and FDSA08. </Sent>
+                          <Sent id="9.3"> Online started on FDSC08 after I disabled auds. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Feb-12 03:28:47</Received>
+             <From>Pavel Buick</From>
+             <To>Michael Cheng,Kyong Kim,Mark Thomford,FuTing Chan,John Millar,Ed Macalinao,Tristan Pratt,Pavel Buick,Aziz Hilali,Alex McNulty,Edwin Cheung,Prasanna Venkatesh,Ken Suenaga,Aaron Tubbs,Alan Damon,Sean Battis,Demetry Zilberg,Jerry Uanino,Greg Jordan,Mark Guzman</To>
+             <Subject> FDSC cluster appears to be hanging for all requests and unable to launch online </Subject>
+             <Text> 
+                          <Sent id="10.1"> That seems to have fixed the issue on fdsc05. </Sent>
+                          <Sent id="10.2"> But still hanging on fdsa07 </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Feb-12 03:30:19</Received>
+             <From>FuTing Chan</From>
+             <To>Michael Cheng,Kyong Kim,Mark Thomford,FuTing Chan,John Millar,Ed Macalinao,Tristan Pratt,Pavel Buick,Aziz Hilali,Alex McNulty,Edwin Cheung,Prasanna Venkatesh,Ken Suenaga,Aaron Tubbs,Alan Damon,Sean Battis,Demetry Zilberg,Jerry Uanino,Greg Jordan,Mark Guzman</To>
+             <Subject> FDSC cluster appears to be hanging for all requests and unable to launch online </Subject>
+             <Text> 
+                          <Sent id="11.1"> Bumping this up to Critical as this is affecting Online on at least FDSA07. </Sent>
+                          <Sent id="11.2"> Run gui_online hangs there. </Sent>
+                          <Sent id="11.3"> Although not an interactive node, there's production batch queues that this might affect. </Sent>
+                          <Sent id="11.4"> Escalating. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Feb-12 03:31:53</Received>
+             <From>Greg Jordan</From>
+             <To>Michael Cheng,Kyong Kim,Mark Thomford,FuTing Chan,John Millar,Ed Macalinao,Tristan Pratt,Pavel Buick,Aziz Hilali,Alex McNulty,Edwin Cheung,Prasanna Venkatesh,Ken Suenaga,Aaron Tubbs,Alan Damon,Sean Battis,Demetry Zilberg,Jerry Uanino,Greg Jordan,Mark Guzman</To>
+             <Subject> FDSC cluster appears to be hanging for all requests and unable to launch online </Subject>
+             <Text> 
+                          <Sent id="12.1"> Try FDSA07/FDSA08 now. </Sent>
+                          <Sent id="12.2"> My prior attetmpt failed to turn off auds shadow mode - it should be off now. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Feb-12 03:32:40</Received>
+             <From>Ed Macalinao</From>
+             <To>Michael Cheng,Kyong Kim,Mark Thomford,FuTing Chan,John Millar,Ed Macalinao,Tristan Pratt,Pavel Buick,Aziz Hilali,Alex McNulty,Edwin Cheung,Prasanna Venkatesh,Ken Suenaga,Aaron Tubbs,Alan Damon,Sean Battis,Demetry Zilberg,Jerry Uanino,Greg Jordan,Mark Guzman</To>
+             <Subject> FDSC cluster appears to be hanging for all requests and unable to launch online </Subject>
+             <Text> 
+                          <Sent id="13.1"> FDSA07 just started working. </Sent>
+                          <Sent id="13.2"> fqlc IBM price returns correctly, and I'm able to run online. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Feb-12 03:39:49</Received>
+             <From>FuTing Chan</From>
+             <To>Michael Cheng,Kyong Kim,Mark Thomford,FuTing Chan,John Millar,Ed Macalinao,Tristan Pratt,Pavel Buick,Aziz Hilali,Alex McNulty,Edwin Cheung,Prasanna Venkatesh,Ken Suenaga,Aaron Tubbs,Alan Damon,Sean Battis,Demetry Zilberg,Jerry Uanino,Greg Jordan,Mark Guzman</To>
+             <Subject> FDSC cluster appears to be hanging for all requests and unable to launch online </Subject>
+             <Text> 
+                          <Sent id="14.1"> AUDS lead makes sense with it affecting FDSC, FDSD and FDSA07/08. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Feb-12 03:41:39</Received>
+             <From>FuTing Chan</From>
+             <To>Michael Cheng,Kyong Kim,Mark Thomford,FuTing Chan,John Millar,Ed Macalinao,Tristan Pratt,Pavel Buick,Aziz Hilali,Alex McNulty,Edwin Cheung,Prasanna Venkatesh,Ken Suenaga,Aaron Tubbs,Alan Damon,Sean Battis,Demetry Zilberg,Jerry Uanino,Greg Jordan,Mark Guzman</To>
+             <Subject> FDSC cluster appears to be hanging for all requests and unable to launch online </Subject>
+             <Text> 
+                          <Sent id="15.1"> From prior connection to FDSA07, i'm getting in usage log: TEXT:AUDS:Session:Transport Exception: ECONNRESET The connection is timeing out at it goes offbox to Fonix? </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Feb-12 03:45:38</Received>
+             <From>Michael Cheng</From>
+             <To>Michael Cheng,Kyong Kim,Mark Thomford,FuTing Chan,John Millar,Ed Macalinao,Tristan Pratt,Pavel Buick,Aziz Hilali,Alex McNulty,Edwin Cheung,Prasanna Venkatesh,Ken Suenaga,Aaron Tubbs,Alan Damon,Sean Battis,Demetry Zilberg,Jerry Uanino,Greg Jordan,Mark Guzman</To>
+             <Subject> FDSC cluster appears to be hanging for all requests and unable to launch online </Subject>
+             <Text> 
+                          <Sent id="16.1"> Confirmed all the ORCA Critical jobs are now looking good. </Sent>
+                          <Sent id="16.2"> I aborted the hung jobs. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Feb-12 03:52:59</Received>
+             <From>Demetry Zilberg</From>
+             <To>Michael Cheng,Kyong Kim,Mark Thomford,FuTing Chan,John Millar,Ed Macalinao,Tristan Pratt,Pavel Buick,Aziz Hilali,Alex McNulty,Edwin Cheung,Prasanna Venkatesh,Ken Suenaga,Aaron Tubbs,Alan Damon,Sean Battis,Demetry Zilberg,Jerry Uanino,Greg Jordan,Mark Guzman</To>
+             <Subject> FDSC cluster appears to be hanging for all requests and unable to launch online </Subject>
+             <Text> 
+                          <Sent id="17.1"> Downgrading from Critical. </Sent>
+                          <Sent id="17.2"> Adding M Guzman. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Feb-12 04:03:22</Received>
+             <From>FuTing Chan</From>
+             <To>Michael Cheng,Kyong Kim,Mark Thomford,FuTing Chan,John Millar,Ed Macalinao,Tristan Pratt,Pavel Buick,Aziz Hilali,Alex McNulty,Edwin Cheung,Prasanna Venkatesh,Ken Suenaga,Aaron Tubbs,Alan Damon,Sean Battis,Demetry Zilberg,Jerry Uanino,Greg Jordan,Mark Guzman</To>
+             <Subject> FDSC cluster appears to be hanging for all requests and unable to launch online </Subject>
+             <Text> 
+                          <Sent id="18.1"> Trying to assess the impact of this to productions/clients, as I'm not too familiar with AUDS and it's interactions with batch queues in FDSA07 and FDSA08 A things questions I have in my mind: 1 - I can understand why this affected online (from reading TLB files offbox). </Sent>
+                          <Sent id="18.2"> But this also hanged ORCA and basic FQLF, Would this affect client Cornerstone jobs that run on these nodes? </Sent>
+                          <Sent id="18.3"> 2 - Would this impact production jobs that tries to evaluate an FQL code (eg Price or Symbology codes)? </Sent>
+                          <Sent id="18.4"> Or write to data in FDB? </Sent>
+                          <Sent id="18.5"> or Jobs trying to read through FFS? </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Feb-12 04:10:44</Received>
+             <From>Prasanna Venkatesh</From>
+             <To>Michael Cheng,Kyong Kim,Mark Thomford,FuTing Chan,John Millar,Ed Macalinao,Tristan Pratt,Pavel Buick,Aziz Hilali,Alex McNulty,Edwin Cheung,Prasanna Venkatesh,Ken Suenaga,Aaron Tubbs,Alan Damon,Sean Battis,Demetry Zilberg,Jerry Uanino,Greg Jordan,Mark Guzman</To>
+             <Subject> FDSC cluster appears to be hanging for all requests and unable to launch online </Subject>
+             <Text> 
+                          <Sent id="19.1"> no client batch jobs run on either fdsa07/8. </Sent>
+                          <Sent id="19.2"> unless the production job is specifically submitted to run on fdsa07/8 (except express - and I'm having a discussion with vms team about that), it will not land on these nodes. </Sent>
+                          <Sent id="19.3"> Jobs submitted to sys$batch (which is the default batch queue) will not execute on fdsa07/8. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Feb-12 04:17:15</Received>
+             <From>Mark Guzman</From>
+             <To>Michael Cheng,Kyong Kim,Mark Thomford,FuTing Chan,John Millar,Ed Macalinao,Tristan Pratt,Pavel Buick,Aziz Hilali,Alex McNulty,Edwin Cheung,Prasanna Venkatesh,Ken Suenaga,Aaron Tubbs,Alan Damon,Sean Battis,Demetry Zilberg,Jerry Uanino,Greg Jordan,Mark Guzman</To>
+             <Subject> FDSC cluster appears to be hanging for all requests and unable to launch online </Subject>
+             <Text> 
+                          <Sent id="20.1"> This stemmed a disk issue on the audsdev nodes causing our logging process to be killed, this increased the memory footprint of our processes and cause them to start failing over time. </Sent>
+                          <Sent id="20.2"> I was paged about the issue once it became critical on the auds side. </Sent>
+                          <Sent id="20.3"> I'm currently cleaning up the mess. </Sent>
+                          <Sent id="20.4"> Based on the logs it looks like requests went through their failure limits for the local site and then jumped to the B site. </Sent>
+                          <Sent id="20.5"> There is a long initial session establishment timeout that can cause a process to block while processing the event in the shadow queue, even if the process is exiting. </Sent>
+                          <Sent id="20.6"> Just to clarify this is auds shadow mode testing which involves mirroring requests to auds, the auds data is not used and the processing is done in a background thread. </Sent>
+                          <Sent id="20.7"> The auds servers themselves don't really need much disk space except to temporarily store log data in flume, the server with the issue is doing double duty as our management (puppet, graphite, dashboard, builds) server. </Sent>
+                          <Sent id="20.8"> FuTing, every process reads from resources.tlb at startup due to library relationships and global variables. </Sent>
+                          <Sent id="20.9"> To my knowledge no production jobs run on those nodes. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Feb-12 04:20:02</Received>
+             <From>Ken Suenaga</From>
+             <To>Michael Cheng,Kyong Kim,Mark Thomford,FuTing Chan,John Millar,Ed Macalinao,Tristan Pratt,Pavel Buick,Aziz Hilali,Alex McNulty,Edwin Cheung,Prasanna Venkatesh,Ken Suenaga,Aaron Tubbs,Alan Damon,Sean Battis,Demetry Zilberg,Jerry Uanino,Greg Jordan,Mark Guzman</To>
+             <Subject> FDSC cluster appears to be hanging for all requests and unable to launch online </Subject>
+             <Text> 
+                          <Sent id="21.1"> Just noting here that no Cornerstone jobs have run on fdsa07/08. </Sent>
+                          <Sent id="21.2"> (Last runs were on dec 17th on these nodes) </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Feb-12 04:45:18</Received>
+             <From>Mark Guzman</From>
+             <To>Michael Cheng,Kyong Kim,Mark Thomford,FuTing Chan,John Millar,Ed Macalinao,Tristan Pratt,Pavel Buick,Aziz Hilali,Alex McNulty,Edwin Cheung,Prasanna Venkatesh,Ken Suenaga,Aaron Tubbs,Alan Damon,Sean Battis,Demetry Zilberg,Jerry Uanino,Greg Jordan,Mark Guzman</To>
+             <Subject> FDSC cluster appears to be hanging for all requests and unable to launch online </Subject>
+             <Text> 
+                          <Sent id="22.1"> audsdeva01 is functional again. </Sent>
+                          <Sent id="22.2"> I've deployed the auds server processes to a cassandra node which is a physical box with much more memory and disk space than the audsdev VM. </Sent>
+                          <Sent id="22.3"> I'll continue doing this going forward until we have production hardware. </Sent>
+                          <Sent id="22.4"> Tomorrow I'll recreate the client-side issue and look at failing faster in shadow mode. </Sent>
+                          <Sent id="22.5"> @GregJordan please re-enable auds shadow mode on the test nodes. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Feb-12 05:12:56</Received>
+             <From>Greg Jordan</From>
+             <To>Michael Cheng,Kyong Kim,Mark Thomford,FuTing Chan,John Millar,Ed Macalinao,Tristan Pratt,Pavel Buick,Aziz Hilali,Alex McNulty,Edwin Cheung,Prasanna Venkatesh,Ken Suenaga,Aaron Tubbs,Alan Damon,Sean Battis,Demetry Zilberg,Jerry Uanino,Greg Jordan,Mark Guzman</To>
+             <Subject> FDSC cluster appears to be hanging for all requests and unable to launch online </Subject>
+             <Text> 
+                          <Sent id="23.1"> @MarkGuzman shadow mode is still enabled on the FDSD nodes. </Sent>
+                          <Sent id="23.2"> Before re-enableing elsewhere, I would like to better understand the failure scenarios and the A to B site failover. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Feb-12 05:43:24</Received>
+             <From>Mark Guzman</From>
+             <To>Michael Cheng,Kyong Kim,Mark Thomford,FuTing Chan,John Millar,Ed Macalinao,Tristan Pratt,Pavel Buick,Aziz Hilali,Alex McNulty,Edwin Cheung,Prasanna Venkatesh,Ken Suenaga,Aaron Tubbs,Alan Damon,Sean Battis,Demetry Zilberg,Jerry Uanino,Greg Jordan,Mark Guzman</To>
+             <Subject> FDSC cluster appears to be hanging for all requests and unable to launch online </Subject>
+             <Text> 
+                          <Sent id="24.1"> Sure, in this case the client will try to connect to a box 3 times before failing the request. </Sent>
+                          <Sent id="24.2"> It will prefer the same site as the client but will fail to other available servers if there are no "local" servers available. </Sent>
+                          <Sent id="24.3"> Currently we don't remove the failing server from the pool, so subsequent requests will go through the same process if we are in a "zombie" state on the server-side. </Sent>
+                          <Sent id="24.4"> We expect that a failing server will either die or be killed by monit (due to memory use or cpu use). </Sent>
+                          <Sent id="24.5"> A dead server is automatically removed from the client's list of servers via zookeeper callback. </Sent>
+                          <Sent id="24.6"> Session establishment is a special case and tries a bit harder to succeed, as all requests to private/secured content will fail without valid session credentials. </Sent>
+                          <Sent id="24.7"> All of these requests get put into the shadow queue to be processes by the shadow thread. </Sent>
+                          <Sent id="24.8"> The shadow thread will not attempt to process all requests in it's cue at shutdown, this is done to prevent it from delaying existing jobs. </Sent>
+                          <Sent id="24.9"> The only way it can cause a delay is if it is actively processing a queue entry at the time of shutdown. </Sent>
+                          <Sent id="24.10"> The shutdown code will block waiting for the shadow thread to complete it's current task. </Sent>
+                          <Sent id="24.11"> A task which can be waiting for retries to occur. </Sent>
+                          <Sent id="24.12"> ï»¿It's worth noting that if there are no servers available in the client's pool and zookeeper support is enabled then it will attempt to fetch servers from zookeeper 10 times if it needs to fulfil a request. </Sent>
+                          <Sent id="24.13"> I'll follow up with you tomorrow. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Feb-12 20:52:03</Received>
+             <From>Mark Guzman</From>
+             <To>Michael Cheng,Kyong Kim,Mark Thomford,FuTing Chan,John Millar,Ed Macalinao,Tristan Pratt,Pavel Buick,Aziz Hilali,Alex McNulty,Edwin Cheung,Prasanna Venkatesh,Ken Suenaga,Aaron Tubbs,Alan Damon,Sean Battis,Demetry Zilberg,Jerry Uanino,Greg Jordan,Mark Guzman</To>
+             <Subject> FDSC cluster appears to be hanging for all requests and unable to launch online </Subject>
+             <Text> 
+                          <Sent id="25.1"> @DemetryZilberg , @GregJordan , @SeanBattis and I just met regarding our failure scenarios and site failover. </Sent>
+                          <Sent id="25.2"> The primary concern is that shadow mode can cause a long delay if there is a failure on the server side. </Sent>
+                          <Sent id="25.3"> The client itself has retries, redundancy and failover but those actually help to cause this problem. </Sent>
+                          <Sent id="25.4"> We want shadow mode to have no impact to the end user even if it is facing a major failure. </Sent>
+                          <Sent id="25.5"> Toward this end I'll be doing the following: Lower the Session retry timeout when shadow mode is enabled. </Sent>
+                          <Sent id="25.6"> Remove pool members that have reported errors from a client's connection pool for some period of time. </Sent>
+                          <Sent id="25.7"> Test a few failure modes from the client side: Auds server hanging when a tcp/ip connection is established. </Sent>
+                          <Sent id="25.8"> No auds servers available. </Sent>
+                          <Sent id="25.9"> Auds servers advertised but non-responsive. </Sent>
+                          <Sent id="25.10"> Migrate our monitoring/dashboard to audsadma01 when it's been rebuilt by unix team. </Sent>
+                          <Sent id="25.11"> Demetry will be working with @JerryUanino to get us a physical audsdev box. </Sent>
+                          <Sent id="25.12"> This is expected to take a couple of weeks and is seen as a prerequisite for client shadow mode testing. </Sent>
+                          <Sent id="25.13"> Greg will re-enable shadow mode on fdsc. </Sent>
+                          <Sent id="25.14"> Once the failure mode testing is complete we will be resuming fdsa devel/inhouse testing. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Feb-12 22:19:51</Received>
+             <From>Greg Jordan</From>
+             <To>Michael Cheng,Kyong Kim,Mark Thomford,FuTing Chan,John Millar,Ed Macalinao,Tristan Pratt,Pavel Buick,Aziz Hilali,Alex McNulty,Edwin Cheung,Prasanna Venkatesh,Ken Suenaga,Aaron Tubbs,Alan Damon,Sean Battis,Demetry Zilberg,Jerry Uanino,Greg Jordan,Mark Guzman</To>
+             <Subject> FDSC cluster appears to be hanging for all requests and unable to launch online </Subject>
+             <Text> 
+                          <Sent id="26.1"> I'm resolving this RPD and have asked @MarkGuzman to open a new RPD to track the work he has outlined. </Sent>
+                          <Sent id="26.2"> AUDs shadow mode has been re-enabled on FDSC nodes (define/sys use_auds_shadow_impl 1). </Sent>
+             </Text>
+         </DOC>
+</thread>

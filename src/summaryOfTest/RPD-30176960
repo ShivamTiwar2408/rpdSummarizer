@@ -1,0 +1,25 @@
+(1.1) :  Hi @LilunCao A few test cases are failing as the resolution of the Selenium grid nodes is less. 
+(1.2) :  So far Focal Point VM's resolution is working fine for all the applications I've automated. 
+(1.4) :  Please increase the resolution of the selenium grid machines and let me know if you need any other information. 
+(2.1) :  Hi @ShivaKumariMandala I did some testing and found that if the script was running against the node on Windows Server 2008 for dev, the max resolution that could be reached there was 1928x1088 by default in case the following statement was used in the script: wd.driver.manage.window.maximize But if the script was running against the node on Windows Server 2012 for dev, the max resolution that could be reached was 1040x784 by default. 
+(2.4) :  So I am going to do some research to see whether we can improve the browser resolution for the nodes on Windows Server 2012. 
+(2.5) :  Right now we have two node machines for dev and prod respectively: one node machine on Windows Server 2008 and another one on Windows Server 2012. 
+(2.6) :  The hub uses some algorithms to redirect the requests to the nodes on 2008 and 2012, so the scripts may be running with different browser resolutions each time. 
+(3.1) :  Hi @ShivaKumariMandala If we ran the node on the command line on tellusgridb05 (Windows Server 2012) instead of a windows service, then the larger browser resolution 1936x1176 for chrome could be reached. 
+(3.2) :  Seems running the nodes as windows services causes some limitation to the browsers on Windows Server 2012. 
+(3.3) :  Hopefully we can find a way to reach the wanted browser resolution by launching the nodes as windows services (browsers run in the background); Otherwise we have to run the nodes on the command line, but this will cause the browsers to run in the foreground. 
+(3.4) :  It may not be a good solution. 
+(4.1) :  Hi @RajulShrivastava @KenMorris I haven't found any option in node configuration to set the default browser resolution. 
+(4.3) :  Many people have faced the resolution issue and posted those questions, but they never got any working solutions. 
+(4.5) :  Seems we can reach higher resolution on Windows Server 2008 when the nodes are launched as windows services, but we can not reach higher resolution on Windows Server 2012 when the nodes are launched as windows services. 
+(4.6) :  The only working way I found on Windows Server 2012 is to launch the nodes like any desktop apps (on the command line). 
+(4.7) :  The problem with this is if the account used to start the nodes is logged out, then all the nodes would be stopped. 
+(6.1) :  Hi @RajulShrivastava We have been using the browser maximize logic in the script which maximizes the browser to the maximum available resolution of the machine. 
+(6.2) :  As the node machine resolution is lesser than the expected, the browser also being maximized to the same resolution hence the test cases are failing. 
+(7.2) :  Seems the configuration for selenium node does not have any option to set the default resolution of the browser. 
+(7.3) :  https://github.com/SeleniumHQ/selenium/wiki/DesiredCapabilities Selenium is not capable of modifying the desktop resolution. 
+(7.4) :  The browser size in Selenium can be modified to match a specific resolution wanted: wd.driver.manage.window.move_to(0, 0) wd.driver.manage.window.resize_to(1280, 1024) Also the available resolution for the node running as a windows service may be lower and different from that for the node running as a desktop app on the command line on the same machine. 
+(9.1) :  Thanks a lot @EymeAnnMathew ! 
+(9.2) :  @ShivaKumarMacharla On the grid node, the maximum resolution that can be reached is 1920x1200. 
+(9.3) :  But the default resolution used may be lower. 
+(11.1) :  @VasuNakka @AvanthiRentala @KrishnatejaSurapaneni @BhupenderAgarwal Anybody know what resolution we are using in Focal Point VM? 

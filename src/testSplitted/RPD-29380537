@@ -1,0 +1,135 @@
+<thread>
+<Name> MFA - Portmas - Detail Tab/IDs Tab - Date Range Issue </Name>
+<listno>29380537</listno>
+         <DOC>
+             <Received>20-Feb-17 05:21:11</Received>
+             <From>Nagaraju Bodanapu</From>
+             <To>Sarah Bailly,Ursula Dvorak,Lakshman Rao,Ramesh Pujari,Nagaraju Bodanapu,Karan Dutta,Naga Sharada Saraswatula,Funds PS Methodology,Uchit Madhok,Yoon-Jeong Rozain,Ravinder Aleti,Pooja Sreekanth Karadgi,Mary Frances de Bellescize,Agnes Precetti</To>
+             <Subject> MFA - Portmas - Detail Tab/IDs Tab - Date Range Issue </Subject>
+             <Text> 
+                          <Sent id="1.1"> Hello Team, In Production Portmas application, The Name Change Date &amp; Termination Date are acceptiong before the Launch Date of the Fund. </Sent>
+                          <Sent id="1.2"> Expected Behaviour: The fund should not allow to terminate, If the Fund Termination date chosen as before the Launch Date. </Sent>
+                          <Sent id="1.3"> The fund should not allow to the Fund Name Change, if Fund Name change Date chosen as before the launch Date. </Sent>
+                          <Sent id="1.4"> Explanation with Examples: 1) Name Change Date is older than launch date: 2) Termination Date Older than Launch Date: Thanks! </Sent>
+                          <Sent id="1.5"> Nagaraju </Sent>
+             </Text>
+             </DOC>
+         <DOC>
+             <Received>01-Mar-17 09:22:28</Received>
+             <From>Nagaraju Bodanapu</From>
+             <To>Sarah Bailly,Ursula Dvorak,Lakshman Rao,Ramesh Pujari,Nagaraju Bodanapu,Karan Dutta,Naga Sharada Saraswatula,Funds PS Methodology,Uchit Madhok,Yoon-Jeong Rozain,Ravinder Aleti,Pooja Sreekanth Karadgi,Mary Frances de Bellescize,Agnes Precetti</To>
+             <Subject> MFA - Portmas - Detail Tab/IDs Tab - Date Range Issue </Subject>
+             <Text> 
+                          <Sent id="2.1"> Hello Pooja, Tested both features. </Sent>
+                          <Sent id="2.2"> Working fine. </Sent>
+                          <Sent id="2.3"> Thanks a lot for your help. </Sent>
+                          <Sent id="2.4"> Regards! </Sent>
+                          <Sent id="2.5"> Nagaraju </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>01-Mar-17 08:52:58</Received>
+             <From>Pooja Sreekanth Karadgi</From>
+             <To>Sarah Bailly,Ursula Dvorak,Lakshman Rao,Ramesh Pujari,Nagaraju Bodanapu,Karan Dutta,Naga Sharada Saraswatula,Funds PS Methodology,Uchit Madhok,Yoon-Jeong Rozain,Ravinder Aleti,Pooja Sreekanth Karadgi,Mary Frances de Bellescize,Agnes Precetti</To>
+             <Subject> MFA - Portmas - Detail Tab/IDs Tab - Date Range Issue </Subject>
+             <Text> 
+                          <Sent id="3.1"> Hi, Added the rest of the validations in staging. </Sent>
+                          <Sent id="3.2"> Please verify. </Sent>
+                          <Sent id="3.3"> Thank you, Pooja </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>01-Mar-17 06:41:17</Received>
+             <From>Nagaraju Bodanapu</From>
+             <To>Sarah Bailly,Ursula Dvorak,Lakshman Rao,Ramesh Pujari,Nagaraju Bodanapu,Karan Dutta,Naga Sharada Saraswatula,Funds PS Methodology,Uchit Madhok,Yoon-Jeong Rozain,Ravinder Aleti,Pooja Sreekanth Karadgi,Mary Frances de Bellescize,Agnes Precetti</To>
+             <Subject> MFA - Portmas - Detail Tab/IDs Tab - Date Range Issue </Subject>
+             <Text> 
+                          <Sent id="4.1"> Hello Pooja, Thanks for fixing the requested Scenarios. </Sent>
+                          <Sent id="4.2"> As per my testing, Identified couple of unexpected behaviours. </Sent>
+                          <Sent id="4.3"> Below are the details. </Sent>
+                          <Sent id="4.4"> 1) Name Change Date(Old Filed) is accepting Future Name Change Date. </Sent>
+                          <Sent id="4.5"> Expected Behaviour: It should allow only today and Older dates(Note: not older than Launch Date) but not the Future date as Already separate Button added to portmas as part Enhancement. </Sent>
+                          <Sent id="4.6"> Please find the below screeshot for better understanding. </Sent>
+                          <Sent id="4.7"> 2) Future Termination Date: Expected Behaviour: It should not allow for Termination for future date if the Researcher choosen Liquidation option as Permanent or Temporary as already we have separate option for future Termination "Future". </Sent>
+                          <Sent id="4.8"> Below screenshots for better understand. </Sent>
+                          <Sent id="4.9"> Current behaviour: Able to terminate the fund for Future date by choosing Liquidation as Permanant &amp; Temporary. </Sent>
+                          <Sent id="4.10"> Temporary Termination - Future Date Permanent Termination - Future Date Note: If the Researcher by mistake chosen permanent with Future Date, Its terminating immedately instaed of Future Date. </Sent>
+                          <Sent id="4.11"> Because of this It won't reflect in product from the date of termination action done instead of Future date. </Sent>
+                          <Sent id="4.12"> Requesting to fix those two unexpected behaviours too! </Sent>
+                          <Sent id="4.13"> Thanks in advance for your help. </Sent>
+                          <Sent id="4.14"> Thank You!! </Sent>
+                          <Sent id="4.15"> Nagaraju </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>27-Feb-17 12:03:06</Received>
+             <From>Ramesh Pujari</From>
+             <To>Sarah Bailly,Ursula Dvorak,Lakshman Rao,Ramesh Pujari,Nagaraju Bodanapu,Karan Dutta,Naga Sharada Saraswatula,Funds PS Methodology,Uchit Madhok,Yoon-Jeong Rozain,Ravinder Aleti,Pooja Sreekanth Karadgi,Mary Frances de Bellescize,Agnes Precetti</To>
+             <Subject> MFA - Portmas - Detail Tab/IDs Tab - Date Range Issue </Subject>
+             <Text> 
+                          <Sent id="5.1"> Hello @PoojaSreekanthKaradgi , I have tested in FDS App V2 - Staging for the Name change date and Termination dates issue. </Sent>
+                          <Sent id="5.2"> I have tested the below scenarios and all are working as expected. </Sent>
+                          <Sent id="5.3"> Name Change Dates: 1) For Name changes it is not accepting the dates older than Launch date and giving an error message - Fixed 2) For funds without Launch date it is taking 01/01/1960 as default and it is accepting name change dates from 01/01/1960 - Fixed 3) For Future Name changes it is not accepting the dates older than today's date - Fixed Termination Dates: For Termination dates portmas is considering Launch date and DLR as criteria. </Sent>
+                          <Sent id="5.4"> 1) Portmas is not allowing us to terminate the fund with date before launch date - Fixed 2) If the Fund is having DLR the tool will accept termination date after the DLR date - Fixed 3) For future terminations the tool is not accepting report date older than today's date. </Sent>
+                          <Sent id="5.5"> - Fixed Please find the attached testing document for your reference. </Sent>
+                          <Sent id="5.6"> Can we please deploy the changes into production. </Sent>
+                          <Sent id="5.7"> Thanks, Ramesh. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>23-Feb-17 11:02:02</Received>
+             <From>Yoon-Jeong Rozain</From>
+             <To>Sarah Bailly,Ursula Dvorak,Lakshman Rao,Ramesh Pujari,Nagaraju Bodanapu,Karan Dutta,Naga Sharada Saraswatula,Funds PS Methodology,Uchit Madhok,Yoon-Jeong Rozain,Ravinder Aleti,Pooja Sreekanth Karadgi,Mary Frances de Bellescize,Agnes Precetti</To>
+             <Subject> MFA - Portmas - Detail Tab/IDs Tab - Date Range Issue </Subject>
+             <Text> 
+                          <Sent id="6.1"> Thank you very much @PoojaSreekanthKaradgi for the quick help! </Sent>
+                          <Sent id="6.2"> we appreciate. </Sent>
+                          <Sent id="6.3"> @RameshPujari Please go through testing and provide detailed feedback result in RPD. </Sent>
+                          <Sent id="6.4"> Thank you in advance. </Sent>
+                          <Sent id="6.5"> April </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>23-Feb-17 10:56:17</Received>
+             <From>Pooja Sreekanth Karadgi</From>
+             <To>Sarah Bailly,Ursula Dvorak,Lakshman Rao,Ramesh Pujari,Nagaraju Bodanapu,Karan Dutta,Naga Sharada Saraswatula,Funds PS Methodology,Uchit Madhok,Yoon-Jeong Rozain,Ravinder Aleti,Pooja Sreekanth Karadgi,Mary Frances de Bellescize,Agnes Precetti</To>
+             <Subject> MFA - Portmas - Detail Tab/IDs Tab - Date Range Issue </Subject>
+             <Text> 
+                          <Sent id="7.1"> Hi @YoonJeongRozain , Portmas is deployed only in FDS App V2. </Sent>
+                          <Sent id="7.2"> Thanks, Pooja </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>23-Feb-17 10:53:04</Received>
+             <From>Yoon-Jeong Rozain</From>
+             <To>Sarah Bailly,Ursula Dvorak,Lakshman Rao,Ramesh Pujari,Nagaraju Bodanapu,Karan Dutta,Naga Sharada Saraswatula,Funds PS Methodology,Uchit Madhok,Yoon-Jeong Rozain,Ravinder Aleti,Pooja Sreekanth Karadgi,Mary Frances de Bellescize,Agnes Precetti</To>
+             <Subject> MFA - Portmas - Detail Tab/IDs Tab - Date Range Issue </Subject>
+             <Text> 
+                          <Sent id="8.1"> @PoojaSreekanthKaradgi Before start testing, just to make sure, could you please confirm in which enviroment we can go for testting? </Sent>
+                          <Sent id="8.2"> (in FDS App V2 - Staging or CCT - Staging?) thanks in advance, Regards, April </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>23-Feb-17 10:50:05</Received>
+             <From>Pooja Sreekanth Karadgi</From>
+             <To>Sarah Bailly,Ursula Dvorak,Lakshman Rao,Ramesh Pujari,Nagaraju Bodanapu,Karan Dutta,Naga Sharada Saraswatula,Funds PS Methodology,Uchit Madhok,Yoon-Jeong Rozain,Ravinder Aleti,Pooja Sreekanth Karadgi,Mary Frances de Bellescize,Agnes Precetti</To>
+             <Subject> MFA - Portmas - Detail Tab/IDs Tab - Date Range Issue </Subject>
+             <Text> 
+                          <Sent id="9.1"> Hello April &amp; @NagarajuBodanapu , Fixed this in Staging. </Sent>
+                          <Sent id="9.2"> Please verify and let me know your feedback. </Sent>
+                          <Sent id="9.3"> Thank you, Pooja </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>23-Feb-17 09:03:19</Received>
+             <From>Yoon-Jeong Rozain</From>
+             <To>Sarah Bailly,Ursula Dvorak,Lakshman Rao,Ramesh Pujari,Nagaraju Bodanapu,Karan Dutta,Naga Sharada Saraswatula,Funds PS Methodology,Uchit Madhok,Yoon-Jeong Rozain,Ravinder Aleti,Pooja Sreekanth Karadgi,Mary Frances de Bellescize,Agnes Precetti</To>
+             <Subject> MFA - Portmas - Detail Tab/IDs Tab - Date Range Issue </Subject>
+             <Text> 
+                          <Sent id="10.1"> @RavinderAleti , As discussed, could you please help to look into this problem in Portmas? </Sent>
+                          <Sent id="10.2"> We're currently going through various testing processes related with Portmas, so we'd be thankful if the issue could be fixed as soon as possible, in order to make some further testing process (It is Medium but High priority for us). </Sent>
+                          <Sent id="10.3"> Thank you in advance for the help on this. </Sent>
+                          <Sent id="10.4"> Best regards, April </Sent>
+             </Text>
+         </DOC>
+</thread>

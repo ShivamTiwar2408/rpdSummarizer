@@ -1,0 +1,12 @@
+python summarize.py /home/ambarish/Desktop/summarizer/Summarizing-online-conversations-master/src/testSplitted/RPD-3825447
+python summarize.py /home/ambarish/Desktop/summarizer/Summarizing-online-conversations-master/src/testSplitted/RPD-5687339
+python summarize.py /home/ambarish/Desktop/summarizer/Summarizing-online-conversations-master/src/testSplitted/RPD-5938468
+python summarize.py /home/ambarish/Desktop/summarizer/Summarizing-online-conversations-master/src/testSplitted/RPD-6131767
+python summarize.py /home/ambarish/Desktop/summarizer/Summarizing-online-conversations-master/src/testSplitted/RPD-6628385
+python summarize.py /home/ambarish/Desktop/summarizer/Summarizing-online-conversations-master/src/testSplitted/RPD-20164198
+python summarize.py /home/ambarish/Desktop/summarizer/Summarizing-online-conversations-master/src/testSplitted/RPD-26843105
+python summarize.py /home/ambarish/Desktop/summarizer/Summarizing-online-conversations-master/src/testSplitted/RPD-27683076
+python summarize.py /home/ambarish/Desktop/summarizer/Summarizing-online-conversations-master/src/testSplitted/RPD-29380537
+python summarize.py /home/ambarish/Desktop/summarizer/Summarizing-online-conversations-master/src/testSplitted/RPD-30051965
+python summarize.py /home/ambarish/Desktop/summarizer/Summarizing-online-conversations-master/src/testSplitted/RPD-30176960
+python summarize.py /home/ambarish/Desktop/summarizer/Summarizing-online-conversations-master/src/testSplitted/RPD-30430786

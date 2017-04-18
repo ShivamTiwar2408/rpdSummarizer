@@ -1,0 +1,101 @@
+(1.1) :  In addition to the recent Morph grant_access integration changes, it would be useful if super client access could be granted at the same time. 
+(1.2) :  Although it is possible to link super client access to be granted automatically, I think it might be better to prompt the user. 
+(1.3) :  We can set "yes" as the default response so that you just have to hit enter, but this way inhouse users are aware/mindful of their additional secure access request. 
+(1.4) :  @PrasannaVenkatesh -- will this work nicely with the current secure user log infrastructure on your end? 
+(2.1) :  I like the idea of prompting explicitly for superclient access vs granting it to them by default, in a majority of the cases from the secure client logs, people do not request access to superclient when requesting access to a specific client simply because that client happens to be a member of a superclient. 
+(2.2) :  If the user chooses to get access to superclient directory as well, how do you plan to do that? 
+(2.3) :  Getuserinfo() should get you the superclient associated with the client username (if one is present) Once you have the superclient username, you could do the following. 
+(2.5) :  Call GRANT_ACCESS() specifying the client username, serial #, contact name, duration and reason. 
+(2.7) :  Call GRANT_ACCESS() again specifying the superclient name, 999999 as the serial #, the same contact name, duration and reason as above. 
+(2.8) :  Was this what you had in mind or something else? 
+(3.1) :  I am going to propose the opposite point. 
+(3.2) :  If a client has a secure super_client it should automatically get access permission. 
+(3.3) :  Between portfolios, IRNs, models, formulas, screens and MSLs - one shouldn't need to know whether to request access to _SC - it is as much part of the client environment as CLIENT: Also - it is one less step in the already clutered process for the helpdesk to offer assistance to our clients in Environments. 
+(4.1) :  Hi Prasanna, I second Jason's comments with respect to SUPER_CLIENT. 
+(4.2) :  I can't tell you the number of RPDs and frantic IMs I get from sales/support teams who are afraid their clients have lost IRN access because they're not familiar with secure SUPER_CLIENT directories and don't know to request access. 
+(4.3) :  It's definitely a major point of confusion at the moment. 
+(5.1) :  I've solicited feedback from others as well and it's split fairly evenly with a lot of strong points on both ends. 
+(5.2) :  I think that given that S&C/helpdesk users will be morphing more often, it probably is best to automatically execute the grant_access for the super client account. 
+(5.3) :  @PrasannaVenkatesh -- that's pretty much what I had in mind, though I wasn't sure what to use as the serial for the super_client request. 
+(6.1) :  Hi Dan Via the Client Support Portal, the serial number used is SUPERCLIEN (no T on the end necessary). 
+(6.2) :  Not sure if that will apply for your change as well, but thought I'd throw it out there. 
+(7.1) :  Thanks for the feedback. 
+(7.2) :  My comments were made based on the usage of secure client access and I was suggesting one additional question about superclient rather than blindly giving it to them. 
+(7.3) :  If someone does not know what superclient is, they should probably not be accessing it. 
+(7.4) :  In NJ, for the last 3 years, there were 109,625 access requests out of which 1327 were for super clients (about 1%) In VA, for the last 3 years, there were 94980 access requests out of which 2570 were for super clients (about 3%) Also, I'm all for reducing clutter, so, if there are more suggestions about the alleged cluttered process especially as it pertains to requesting secure client access, I'm all ears. 
+(8.1) :  Thanks PV for the due diligence and the stats. 
+(8.2) :  Basically, we should not expect a consultant to know (or care) whether they need _SC or not. 
+(8.3) :  When they morph in, they need to be in the same environment a client is - with the same permissions, access, entitlements, sources, portfolios, news, brokers, etc. 
+(8.4) :  Not giving Superclient access by default is arbitrary and will continue to cause all sorts of confusion. 
+(8.5) :  There is no scenario that I am aware of that a Consultant would NOT need superclient access. 
+(9.2) :  So I believe that I can differentiate between an engineer's account vs S&C. 
+(9.3) :  Would it make sense to have S&C auto request SC access while engineers get the prompt? 
+(10.1) :  Since this hasn't been touched in a few days - I'd like to suggest that all employees (sales, consulting, engineering, PD, etc) when they morph get CLIENT and SUPERCLIENT Secure access, if required, by default. 
+(10.2) :  If there are objections, let's get into a room and discuss soon. 
+(11.1) :  I forgot to verify that super_client/super_client_root logicals *are* properly being set [automatically] through the Morph command-line script. 
+(11.2) :  SUP however will require changes. 
+(11.3) :  I'll go ahead and mirror the functionality with the client support portal. 
+(11.4) :  Both locations will require automatic secure access requesting. 
+(11.5) :  More to come. 
+(11.6) :  Super_client test VA B27 S7:[DTRAN]$ morph ssg_advisors 337379 "Testing morph super_client changes" "SUPER_CLIENT" = "SUPER_CLIENT_ROOT:[000000]" (LNM$JOB_98723CC0) "SUPER_CLIENT_ROOT" = "DISK$CLIENTBD:[FDS0.SSG_SC.]" (LNM$JOB_98723CC0) This procedure will execute the special commands that would be seen by a client process Serial Number Executing commands for SSG_ADVISORS serial number: 337379 * $ @BETA_EXE:LOGICAL_OVERRIDE.COM "PA_UNIVERSE_IMPL" "BETA_EXE:PA_UNIVERSE_IMPL_03062012.EXE" !I:5896597 Finished validation for serial number: 337379 
+(12.1) :  @DanTran what's the ETA for the new functionality ? 
+(13.1) :  My team's currently backlogged as we are transitioning the AUDS-related projects to our group. 
+(15.1) :  Hey Mike -- I've cleared my queue so I should be able to get to this by the end of the week. 
+(15.2) :  I'll post back with more info in the near future. 
+(16.1) :  This might take a bit longer than expected. 
+(16.2) :  I assumed that we had an existing inhouse test account that's both secure and has a super client dir. 
+(16.3) :  After scanning most of our inhouse accounts, I can't find any that have both, so I filed an RPD to either be linked to one or to have one created. 
+(16.4) :  I'll see how far I can get without an account. 
+(17.1) :  Dan Tran has submitted a code change (Change:1588607) which references this RPD. 
+(17.2) :  Description: All secure client requests using the Secure Client Access Dialog (you might remember me, er, it from such apps like "The Secure Client Portal" and "File Manager") now automatically detects if a super client account exists and if so it will automatically request access to that at the same time. 
+(17.3) :  This will happen with initial secure access requests, as well as 1-hour and 2-hour extensions. 
+(17.5) :  Coming soon to a terminal near you: similar functionality will be added to the commandline version of morph in the near future. 
+(18.1) :  If all goes well this should be installed on 5/3. 
+(18.2) :  Modifications to the commandline version to follow. 
+(18.3) :  Thanks all. 
+(19.1) :  Change:1588607 has been promoted from build to devel . 
+(21.1) :  Change:1588607 has been promoted from devel to qa . 
+(23.1) :  Change:1588607 has been installed due to an emergency . 
+(25.1) :  Hey -- I was out of the country. 
+(25.2) :  I just verified that the changes are in LIVE. 
+(25.3) :  The commandline version is still being modified and I'll post back once that's done. 
+(25.4) :  More to come. 
+(26.1) :  Dan Tran has submitted a code change (Change:1624933) which references this RPD. 
+(26.2) :  Description: This change is BFFs with Change:1588607. 
+(26.3) :  Modifying the commandline version of morph to be aware of secure super_client accounts and automatically request secure access for them as appropriate. 
+(27.1) :  The commandline morph script has been updated and is now live across all clusters: prog_distribute output NJ C08 S4:[DTRAN.CHAMELEON.STING]$ prog_distribute morph.com Copy to FACTSET_ROOT:[FACTSET]MORPH.COM? 
+(27.2) :  [Y/N] : Y Copying to FACTSET_ROOT:[FACTSET] on local and remote nodes... 
+(27.3) :  %COPY-S-COPIED, S4:[DTRAN.CHAMELEON.STING]MORPH.COM;54 copied to FACTSET_ROOT:[FACTSET]MORPH.COM;74 (57 blocks) %COPY-S-COPIED, S4:[DTRAN.CHAMELEON.STING]MORPH.COM;54 copied to ITB01"DTRAN"::FACTSET_ROOT:[FACTSET]MORPH.COM;74 (57 blocks) %COPY-S-COPIED, S4:[DTRAN.CHAMELEON.STING]MORPH.COM;54 copied to FDSA::FACTSET_ROOT:[FACTSET]MORPH.COM;73 (57 blocks) %COPY-S-COPIED, S4:[DTRAN.CHAMELEON.STING]MORPH.COM;54 copied to FDSB::FACTSET_ROOT:[FACTSET]MORPH.COM;74 (57 blocks) Operation completed. 
+(27.4) :  Here's an example of the script in action: Integrated super_client secure access requesting NJ C08 S4:[DTRAN]$ morph fdsqar_c 341933 "Testing morph super_client changes" You do not currently have access to this secure client. 
+(27.5) :  Morphing as a client without access will cause severe problems, including possible loss of client data. 
+(27.6) :  Would you like to request access at this time? 
+(27.7) :  [Y]/N: Secure access to FDSQAR_C has been granted. 
+(27.9) :  This procedure will execute the special commands that would be seen by a client process Serial Number Executing commands for FDSQAR_C serial number: 341933 * $ DEFINE/JOB/NOLOG "PA_RT_USE_STATIC_XRATES" "1" !I:5907125 * $ DEFINE/JOB/NOLOG "BC_TEST_ROOT" "DISK$PRD_FORM_0:[FDS0.SCR.]" !I:4418607 * $ DEFINE/JOB/NOLOG "PA_ENABLE_LOSS_RETURNS" "1" !I:6224619 Finished validation for serial number: 341933 
+(28.2) :  Automatically granting secure super_client: access when command-line morphing will bring a major amount of goodness to the Consulting morph workflow - @ConsultingManagers - especially as we focus on the use of Environments. 
+(29.1) :  Hi Everyone, Not sure if this was the intended result, but now whenever I morph in as a client, I'm unable to access the files in their Super Client directory. 
+(29.2) :  What shows up instead are all of the files in the Super Client directory on our side. 
+(29.3) :  The only way I've found to get around this is to morph in from the VMS command prompt. 
+(29.4) :  Please let me know if I'm missing anything or if there is additional step that is now needed. 
+(30.1) :  Multiple inhouse users are reporting issues with the commandline morph change ( http://is.factset.com/rpd/summary.aspx?messageid=6404109 ) reverting... 
+(31.1) :  Mark Seager has submitted a code change (Change:1625434) which references this RPD. 
+(31.2) :  Description: Reverting Change:1624933, as multiple inhouse users are encountering issues. 
+(32.1) :  Change:1624933 and Change:1625434 have been promoted from build to devel . 
+(33.1) :  Dan Tran has submitted a code change (Change:1634258) which references this RPD. 
+(33.2) :  Description: Fixing an issue in the morph script that didn't properly define the super_client logicals. 
+(33.3) :  This will allow us to re-deploy the automatic secure client super_client requesting. 
+(34.1) :  Fixed the super_client issues and pushed out the changes again. 
+(34.2) :  Please file new RPDs for any issues or enhancement requests with the script. 
+(34.4) :  NJ C09 S4:[DTRAN.CHAMELEON.STING]$ prog_distribute morph.com Copy to FACTSET_ROOT:[FACTSET]MORPH.COM? 
+(34.5) :  [Y/N] : y Copying to FACTSET_ROOT:[FACTSET] on local and remote nodes... 
+(34.6) :  %COPY-S-COPIED, S4:[DTRAN.CHAMELEON.STING]MORPH.COM;8 copied to FACTSET_ROOT:[FACTSET]MORPH.COM;76 (58 blocks) %COPY-S-COPIED, S4:[DTRAN.CHAMELEON.STING]MORPH.COM;8 copied to FDSD08"DTRAN"::FACTSET_ROOT:[FACTSET]MORPH.COM;76 (58 blocks) %COPY-S-COPIED, S4:[DTRAN.CHAMELEON.STING]MORPH.COM;8 copied to FDSA::FACTSET_ROOT:[FACTSET]MORPH.COM;75 (58 blocks) %COPY-S-COPIED, S4:[DTRAN.CHAMELEON.STING]MORPH.COM;8 copied to FDSB::FACTSET_ROOT:[FACTSET]MORPH.COM;76 (58 blocks) Operation completed. 
+(35.1) :  Change:1624933 and Change:1625434 have been promoted from devel to qa . 
+(36.1) :  Change:1634258 has been promoted from build to devel . 
+(37.1) :  Change:1634258 has been promoted from devel to qa . 
+(38.1) :  Change:1624933, Change:1625434 and Change:1634258 have been installed live . 
+(39.1) :  It appears this has been in place in production for a week without issue. 
+(39.2) :  @DanTran / @PrasannaVenkatesh are there any logs somewhere that we can verify the perceived goodness? 
+(39.3) :  Can others on the CC comment on the morph experience since the code changes were put in place? 
+(39.4) :  Are SC morphs working properly? 
+(40.1) :  Hey @MichaelWoods -- there aren't any logs kept on my end at the app level, but all of the requests should be seen by the grant access tool, so @PrasannaVenkatesh might be able to shed some light there. 
+(40.2) :  No issues have been reported so that's a good sign. 
+(41.1) :  This RPD was marked as read - only because there has been no activity since FY13 

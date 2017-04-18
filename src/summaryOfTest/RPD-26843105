@@ -1,0 +1,92 @@
+(1.1) :  The current upper bound on RPD comment size is 5mb, which is way too large. 
+(1.2) :  RPDs with this amount of content can barely be loaded (this is an example http://is.factset.com/rpd/summary.aspx?messageId=26560032 ). 
+(1.3) :  I'm recommending changing this limit to 500k bytes. 
+(1.4) :  This accounts for 99.99% of RPDs filed in the last month. 
+(1.5) :  Out of the 23 RPDs that would have failed to post, 40% of them are posted by a single service account, using RPDs to post log results as text (one example is the RPD I posted above). 
+(1.6) :  @RobertGroce @ChrisWerner please approve/discuss. 
+(1.7) :  If anything I think we should discuss being more aggressive, 50k for example accounts for 99.85% of RPDs. 
+(2.1) :  I think we should make the size as restrictive as we can. 
+(2.2) :  We should optimize based on human interactions, not potential dumps of logs. 
+(2.3) :  I would like to change those workflows to incorporate links to the documents rather than a copy of their content. 
+(3.1) :  I agree with what Rob said. 
+(3.2) :  What are some of the use cases that are using between 50-100k and 100-500k? 
+(3.3) :  I'm just wondering what we lose by not support these. 
+(3.4) :  If these ALL see like logs/service posts then we can just limit to 50k and be done. 
+(3.5) :  We should make all APIs return 400s and fail the request when this happens. 
+(3.6) :  We can update docs to reflect that they should provide a URL/link to their document if they need more room. 
+(4.1) :  as of now the MAX_CONTENT_LENGTH is set to 5000000 i.e the maximum allowable length of the message string, which is roughly 10mb. 
+(4.2) :  should we reduce it to 50000 ? 
+(5.1) :  @ShivamTiwari can you get some examples of message bodies between 50-100k and 100k-500k filed by humans . 
+(5.2) :  We're looking for some valid usecases for making comments > 50000. 
+(5.3) :  But yes, whatever limit we decide would be a change to MAX_CONTENT_LENGTH in both v1 and v2. 
+(7.1) :  I looked through the samples and these all appear to be log dumps, or some kind of computer generated output. 
+(7.2) :  These should just be attachments. 
+(7.3) :  @ChrisWerner @RobertGroce it sounds like we're saying 50k. 
+(7.4) :  Can you sign off on that number given the info above? 
+(7.5) :  This will need to be communicated to API consumers. 
+(7.6) :  @ShivamTiwari can you get a list of service accounts (sorted by frequency) that would be affected by this change? 
+(7.7) :  We'll also need to come up with some way of communicating this in the RTE. 
+(8.1) :  @BryanEhrlich Unrelated, love the CCList search box change. 
+(8.2) :  As for this, I totally approve of 50k limit, it sounds like that covers the vast majority of actual human users. 
+(8.3) :  As for API users what options do we have for slow roll out? 
+(8.5) :  do something like the 300 where we accept 'for now' but indicate we won't in the future? 
+(8.6) :  Or is it 'ok' to just start 400ing and how do we get that approval? 
+(8.7) :  I feel this ties a bit to the lack of a File API, we're stating we won't attach or create files for you but you shouldn't dump logs in our system. 
+(8.9) :  As for human users, it's pretty easy to detect when the limit is hit, QAI does this and limits comments to 4000 chars. 
+(8.10) :  In QAI, if a paste occurs that would push paste 4000 we prevent it and state to paste less, but I'm wondering for human users can we build an ER to detect the overly large paste and prompt "This paste is too large, would you like to attach it as a text file?". 
+(8.11) :  We could ship the already capture paste text to fileStore as a text file fairly easily and that would make it easy for Users to still do things like this: http://is.factset.com/rpd/Summary.aspx?messageId=09-31670 
+(9.1) :  do something like the 300 where we accept 'for now' but indicate we won't in the future We did that for several features in v1 and it didn't work. 
+(9.2) :  People just updated their code to accept 300 as "success". 
+(9.3) :  If we wanted to slow rollout we could have a size override for certain accounts where we allow them to continue posting large comments until they can support some other way. 
+(9.4) :  @RaghupathiManda and I are working on backfilling a mapping of group/owner to service account so we have a good way of directly communicating for specific API issues. 
+(9.5) :  I feel this ties a bit to the lack of a File API Right, the question is do we want to allow people to store logs in RPD in any way, rather than forcing them to host their own logs elsewhere. 
+(9.6) :  My opinion is that we don't want to support storing 3rd party data in RPD in any way. 
+(9.7) :  But it is not technically infeasible. 
+(9.8) :  Let's decide this once and for all in our Monday meeting because this has come up several times @SurekhaVullekki @RobertGroce . 
+(9.9) :  If we decide to support attachments we should probably execute on that before beginning this RPD so we have a good "alternative". 
+(10.1) :  List of service accounts with requests longer than 50K 
+(11.1) :  @BryanEhrlich @ShivamTiwari Maybe an option if we keep accepting larger for a while anyway is to email the owner EVERY SINGLE OCCURENCE. 
+(11.2) :  Of course they'll just send to spam, but I feel between this and your API user distribution list after some reasonable period we can move ahead. 
+(11.3) :  @RobertGroce We have been told that some teams have a 9 month lead time, but that feels unreasonable to me, do you think giving 3 months warning of upcoming breaking changes is enough / makes sense / thoughts? 
+(11.4) :  @TonyPiazza You deal with wanting to make breaking changes and legacy users a lot, do you have a specific policy/thought? 
+(11.5) :  Maybe we can come up with a IS standard? 
+(12.1) :  That does seem slow. 
+(12.2) :  Can we reach out to those teams to see if there's a way to expedite their change control? 
+(13.1) :  If possible, let's go forward with a 50k limit for employees and any new Service accounts (if possible to enforce). 
+(13.2) :  Legacy services can still have the old limit for now, we will communicate the change and give them some lead time to comply before fully shutting off in 3-6 months after initial release. 
+(13.3) :  Additionally, if asked about a File API to use instead the answer is that we do not have or know of a publically consumable File/upload API that can be used programatically. 
+(13.4) :  What are the thoughts having the prompt for excessively large pastes? 
+(13.5) :  I think it's a nice to have, but curious if it's considered 'hard' or a large amount of work or any other discussion related: http://is.factset.com/rpd/summary.aspx?messageId=26843105&commentId=27757169 
+(14.1) :  I think we should implement this as a specific whitelist. 
+(14.3) :  service X, Y, Z can post > 50k if there is some specific reason. 
+(14.4) :  There's no reason to just blanketly allow any existing account to post >50k, especially if they have never posted a message larger than that before (this should be most accounts). 
+(14.5) :  We should get this done with .5 it's been pushed back a couple of times already. 
+(15.1) :  Agree and approved, this is something reasonable that RPD should support and a whitelist makes sense. 
+(18.1) :  We should also include some kind of indication in the front end when you go over the limit, rather than just failing. 
+(19.1) :  @Shivam Tiwari has submitted TFS change: 84678 , which references this RPD Description: block request larger than 50K on front end RPD:26843105 
+(20.1) :  @Shivam Tiwari has submitted TFS change: 84686 , which references this RPD Description: tinymce check for content length RPD:26843105 
+(21.1) :  Hi, Completed testing the above enhancement in QA Environment. 
+(21.2) :  Encountered a message as shown in the below screenshot, when the content length of the RPD exceeded 50K. 
+(21.3) :  Message while creating an RPD with content exceeding 50k Message while commenting on the RPD with content exceeding 50K Setting the status to Testing Complete as no issues were found. 
+(22.1) :  need some opinion on the following this RPD:26104534 , for example, has a table in the content which doesn't have a large content (only 2947 characters text) but 51700 characters in HTML, after processing, it becomes above 90k, as it has a lot of styles. 
+(22.2) :  TinyMCE adds its own attribute "data-mce-style" to store all the styles. 
+(22.4) :  or is it ok to block similar requests? 
+(23.1) :  The limit has to be on the raw html size. 
+(23.2) :  If this is a common issue we can increase the limit. 
+(23.3) :  But 50k of html puts the same strain on the system as 50k plain text. 
+(23.4) :  Is there anything we can do to decrease the size of the attributes TinyMCE is adding? 
+(24.1) :  "data-mce-style" this extra attribute can be avoided if we remove {format: "raw"} in the getContent method. 
+(24.2) :  this is part of the raw html styles are the major contributor to the request of this kind, therefore, adding another attribute and storing duplicate styles almost doubles the length. 
+(25.1) :  @AjinkyaNilkanthDhumale can you try to filter out the same attributes TinyMCE is filtering out? 
+(25.2) :  And then we can run the size check after we run the string through SafeStringProvider. 
+(25.3) :  Otherwise we need to roll back the format: raw change. 
+(26.1) :  Yes, as @ShivamTiwari mentioned above, TinyMCE is adding few of its own attributes like "data-mce-style"/ "data-mce-bogus". 
+(26.2) :  All such attributes can be removed. 
+(26.3) :  However, the RPDs RPD:29826610 and RPD:29645628 are linked to .6 So, I rolled back the changes. 
+(26.4) :  This shouldn't be a problem at least for now. 
+(27.1) :  Hi, Completed testing the above enhancement in Staging. 
+(27.2) :  Encountered a message when the content length of the RPD exceeded 50K as expected. 
+(27.3) :  Leaving the status to Testing Complete as everything looks good. 
+(28.1) :  @BryanEhrlich another RPD:30586442 with big table in the content and people trying to edit manually. 
+(28.2) :  the service account used to create the rpd "s_661", //production_infrastructure is one of the exempted accounts. 
+(29.1) :  Hi - unable to edit the table. 

@@ -1,0 +1,95 @@
+(1.1) :  Hi Everyone, I'm working on creating some reports for LSIA (on trial for FIPA) and they group out their securities into Years to Expected Maturity. 
+(1.2) :  Currently, the only default grouping we have is Years to Maturtiy, where we use the Stated Maturity. 
+(1.3) :  I can create a custom grouping for these guys, but I think it would be advantageous to be able to selected which Maturity you would like to use in the Definitions section of the grouping: Years to Maturity Definitions The code behind the current grouping is essentially: FLOAT(JULIAN(PMWSM_FI(CLIENT,DS_MAT_DATE))-JULIAN(INTEGER(CONVERT_DATE("#SD","YYYYMMDD"))))/365 In order to pull in the Years to Expected Maturtiy, we should just be able to swap out the DS_MAT_DATE with DS_EXPECTED_MATURITY. 
+(1.4) :  **Also to note: the Grouping Help for "Years to Maturity" says it "Groups by yield to maturity." Grouping Description Would we also be able to have this as a default column? 
+(1.5) :  Please let me know if you have any questions. 
+(1.6) :  It's not urgent since I can create custom groupings/columns, but it would nice to have them in there by default. 
+(3.1) :  @MarkSolis - have you had a chance to look into adding this yet? 
+(4.1) :  @ChrisDudek - Haven't had a chance yet. 
+(4.2) :  I will take a look today. 
+(5.2) :  For a bunch of them, it will not be as easy as switching the DS_MAT_DATE field with DS_EXPECTED_MATURITY. 
+(5.3) :  I am looking into whether I can create equivalent codes for Years to Expected Maturity for these Database/Pricing combinations. 
+(5.4) :  I imagine, there will be some cases where this is not possible. 
+(5.5) :  I'll add back on when I have more info. 
+(6.1) :  @ChrisDudek - It looks like most of the pricing databases do not have Expected Maturity fields. 
+(6.3) :  Do you have a sample document where you created your own custom version of this code? 
+(7.1) :  @MarkSolis Client: LS_INV Serial: 321071 Document: Personal:Internal Reports Report: Maturity Distribution Grouping code: FLOAT(JULIAN(PMWSM_FI(CLIENT,DS_EXPECTED_MATURITY))-JULIAN(INTEGER(CONVERT_DATE("#SD","YYYYMMDD"))))/365 Is it possible to add this field to the Barclays and Merrill databases for overnight calculation? 
+(8.1) :  @ChrisDudek - While on the surface this seems like a simple request, it is actually pretty substantial. 
+(8.2) :  When adding a new DS field, it is either all or nothing. 
+(8.4) :  We would then have to backfill the data for at least 6 years. 
+(8.6) :  If we have some more client demand, we can move forward with this request. 
+(8.7) :  Changing status to monitoring. 
+(9.1) :  Mark, I understand. 
+(9.2) :  I'll continue to add clients as this comes up. 
+(9.3) :  In the mean-time, can we still fix the incorrect definition for the grouping as noted in my screenshot above? 
+(10.1) :  Thanks for pointing that out again. 
+(11.2) :  Please continue to add on with interested clients. 
+(13.1) :  Hey Leslie, This came up at Cutwater, they want to see Years to Expected Maturity on a number of Barclays Benchmarks. 
+(14.1) :  Please see also RPD:8408268 Adding IKANO_LUX who would like to see expected inflation. 
+(14.2) :  I was able to use the formula provided by Crhis, but for the benchmark, no DS_EXPECTED_MATURITY field exisists. 
+(14.3) :  Can we please add this to the Barclays indices (at the minimum). 
+(14.4) :  Expected maturity is quite important for the client, so I hope we can add at least the DS field, so we can pull the figure using the same formula and replace the PMWSM_FI code with an FDB code. 
+(14.5) :  By this means, we do not require a full PA intergration add the momement. 
+(16.1) :  Hi My client has also requested this. 
+(16.2) :  Is there an update as to when it might be possible to get this information Thankyou Andrew 
+(18.1) :  @AndrewKlajman @EricBlinn @JeroenRisseeuw @FreddyStrout @ChrisDudek Just wanted to see if there was ASV at risk by not having this as a default grouping/column? 
+(18.2) :  We want to gauge the priority of this as we have much higher priority items that we are currently working on at the moment (e.g. 
+(18.4) :  Noting that you can use custom formulas (e.g. 
+(18.5) :  PMWSM) to pull this information from an MSL. 
+(19.1) :  @LeslieItty - no ASV at risk for my accounts...more of a nice to have for the moment. 
+(19.3) :  Thanks for commenting. 
+(21.1) :  Just to update i still believe there is little risk but the client has said that she would like this by Jan 2014 (i said that this was unlikely) Thankyou Andrew 
+(22.1) :  Adding MAWER (who is on trial) that would like to have "Years to Expected Maturity" as a column and grouping in PA. 
+(22.2) :  I used the code provided in Chris's comment above which worked for the portfolio; however, the client on trial uses DEX indices. 
+(22.3) :  Would it be possible to add this for the DEX indices? 
+(23.1) :  Hello, Can I ask if this RPD is about adding the option in PA to group by 'expected maturity' as per mock up of definitions in original request, or to add DS_EXPECTED_MATURITY to benchmarks? 
+(23.2) :  Or both as the latter is needed for the former right? 
+(23.3) :  Morningstar are asking for "effective maturity" and though the link below is from 2012, two clients recently have asked for this in the space of two days (JUPITER_UK and THREADNEEDLE) Their definition https://corporate.morningstar.com/us/documents/MethodologyDocuments/MethodologyPapers/MorningstarFixedIncomeGuidelines.pdf : Their definition https://corporate.morningstar.com/us/documents/MethodologyDocuments/MethodologyPapers/MorningstarFixedIncomeGuidelines.pdf : "Average Effective Maturity Morningstar asks fund companies to calculate and send average effective maturity for each of their fixed-income or allocation funds on a monthly or quarterly basis. 
+(23.4) :  Average effective maturity is defined as a weighted average of the maturities of the bonds in a portfolio, taking into account all expected mortgage prepayments, puts, and adjustable coupons. 
+(23.5) :  Maturity is defined as the length of time in years until a debt becomes due for payment. 
+(23.8) :  Please do not send average nominal maturity, defined as a measure of a bond's maturity that, unlike average effective maturity, does not take into account expected mortgage prepayments, puts, or adjustable coupons." As per http://is.factset.com/rpd/summary.aspx?messageId=56006&commentId=3299700 "effective" maturity is equivalent to "expected" maturity. 
+(23.9) :  Are we still a long way off to adding DS_EXPECTED_MATURITY to these FDB's: ML Barclays iBoxx FTSE Gilts JPM If this is not happening anytime soon can someone confirm the only option is to leverage the 'benchmark' tab in FIAB, let it create new MSL's, then add that MSL to all ACCT's for benchmark analytics hierarchy? 
+(24.1) :  Hi all, Regarding @DipeshPatel 's comment above has there been any progress in incorporating DS_EXPECTED_MATURITY to benchmark FDB's? 
+(24.2) :  Is running the benchmark through FIAB with the 'Expected Maturity' calc the best way to retrieve this at the moment? 
+(24.3) :  Thanks, Tom cc: @WT_FI_Support 
+(26.1) :  @LilyGranville @EricGrosspietsch - Can we add DS_EXPECTED_MATURITY as a standard calc? 
+(27.1) :  @MarkSolis I support adding DS_EXPECTED_MATURITY as a Standard Calc. 
+(27.2) :  It is a 'free calc' from ECS and is incredibly useful data. 
+(27.3) :  I have made this request before in http://is.factset.com/rpd/Summary.aspx?messageId=22023187 . 
+(27.4) :  @EricGrosspietsch Let's discuss in our catch up meeting tomorrow. 
+(28.1) :  @fipa_inf_curator I have confirmed with @EricGrosspietsch That Expected Maturity may be added to the Standard Calculations group. 
+(28.2) :  Would you please take care of making this change? 
+(31.1) :  @RobertWaddell If DS_ names or whitelists are changing, then it will require an ECS side change 
+(34.1) :  I'll get someone assigned from FIPA PD in the next week for two to add this as a column/grouping in PA. 
+(36.1) :  @WalkerSeaver - Kicking this back to you. 
+(36.2) :  Can you please write up instructions for the Manila PD team to add this as a new column? 
+(36.3) :  We should add the four versions shown below. 
+(36.4) :  Portfolio Beginning Expected Maturity - PA_GEN_FI_COL(#PR,#SD,DS_EXPECTED_MATURITY) Portfolio Ending Expected Maturity - PA_GEN_FI_COL(#PR,#ED,DS_EXPECTED_MATURITY) Benchmark Beginning Expected Maturity - PA_GEN_FI_COL(#BN,#SD,DS_EXPECTED_MATURITY) Benchmark Ending Expected Maturity - PA_GEN_FI_COL(#BN,#ED,DS_EXPECTED_MATURITY) 
+(37.1) :  @WalkerSeaver - Can you follow up here? 
+(37.2) :  You should be able to leverage at least part of Hannah's comment here for your instructions, http://is.factset.com/rpd/summary.aspx?messageId=27561299&commentId=27695951 . 
+(39.1) :  Hey guys - any update here? 
+(39.2) :  It's been over 2 months since this was going on Manila's plate to create a few columns. 
+(39.3) :  A few groups at Nuveen have been asking about this recently. 
+(39.4) :  Should we expect to get this live soon? 
+(41.1) :  @PAPD-Manila can you please add these columns: Make sure to test this in your personal options lock first. 
+(41.2) :  Portfolio Beginning Expected Maturity - PA_GEN_FI_COL(#PR,#SD,DS_EXPECTED_MATURITY) Portfolio Ending Expected Maturity - PA_GEN_FI_COL(#PR,#ED,DS_EXPECTED_MATURITY) Benchmark Beginning Expected Maturity - PA_GEN_FI_COL(#BN,#SD,DS_EXPECTED_MATURITY) Benchmark Ending Expected Maturity - PA_GEN_FI_COL(#BN,#ED,DS_EXPECTED_MATURITY) Step 1: Open the options lock --> open PA --> Contribution Report -->Options --> Columns --> Data --> New.. 
+(41.3) :  You can see this in my screenshot below: Step 1 for adding columns Step 2: Copy and paste the formula from the first column into the box that says "Formula" and and type the name for it in the box called Header with the appropriate line breaks by pressing enter. 
+(41.5) :  Beginning (then press enter) Expected Maturity). 
+(41.6) :  Separate babelfish will need to be filed for these columns as well. 
+(41.7) :  You can see this in my screenshot below: Formula and Header Step 3: Select/fill out all appropriate options in Column Edit including: Sub Period Column (for the beginning columns, exclude this option for ending column), Allow Interquartile, MultiCurrency, Default Decimals, Formula Type, Column Access, Avail Compound, Stat,Category, and Supported Apps. 
+(41.9) :  Then go into weights and select benchmark beginning weight. 
+(41.10) :  You can then unselect weighted average so only engine statistic is highlighted. 
+(41.11) :  The category is going to be FactSet/Fixed Income/Bond Terms/Additional Calculations --> and then we are going to want to create new Portfolio and Bench subfolders under here, however this needs to be done after adding the columns. 
+(41.12) :  To do so, right click on one of the new columns --> Add Category --> Type in Portfolio, then repeat for benchmark (once you have added one of the benchmark columns) . 
+(41.13) :  Only after adding one portfolio column and one benchmark column you can do this . 
+(41.14) :  For the next two columns you will be able to choose these subfolders as the category (in column edit). 
+(41.15) :  CACCESS is going to be 00PAF,00PPA,00PAW You can see this in my screenshot below: Column Edit Then add all new columns to a report with appropriate settings to make sure everything is populating as expected. 
+(41.17) :  All the best, Dan 
+(45.1) :  Hey @DanRosenblatt , I had begun testing these but got swamped by other RPDs until it fell back in my pile. 
+(45.2) :  I'll get you an update on this tomorrow and will begin testing. 
+(45.3) :  Any benchmarks you have in mind that I can test with? 
+(46.1) :  Hi @DanRosenblatt , I've set up the columns on my personal lock but am unable to get values to populate: Empty results Here is my setup: Port Beg expected maturity setup Here are my universe and pricing source settings: Settings Can you please advise? 
+(48.1) :  Set a meeting for tomorrow. 
+(49.1) :  @MiguelReyes I will look into this more either tomorrow or early next week and try and figure out what was going wrong on your end 
+(50.1) :  @MiguelReyes this issue was DS_EXPECTED_MATURITY not being a field in the benchmark databases. 
+(50.2) :  This is being addressed here: http://is.factset.com/RPD/Summary.aspx?messageId=30598994 Let's follow up here next week Best, Dan 

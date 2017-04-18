@@ -1,0 +1,13 @@
+(1.1) :  Compare browser versions for FPE and SGE FPE options are very limited and in most cases out of date. 
+(1.2) :  for example: Chrome FPE only has 51 Chrome SGE has up to 54 Current client usage shows we should be testing on 56 http://fds-web-stats.factset.io/dashboard/browser-stats?startDate=Sun%20Feb%2019%202017%2010:48:50%20GMT-0500&endDate=Tue%20Mar%2021%202017%2010:48:50%20GMT-0400&source=external&uniqueUsers=unique&showMinor=false&application=all 
+(2.1) :  @LilunCao and @KrishnatejaSurapaneni Rajul mentioned that you would have a FPE instance with multiple browser available to test FDSWeb against. 
+(3.2) :  unlike in SGE we can host only one browser per a VM. 
+(3.4) :  @LilunCao please holdoff on updating the browser version file for FPE Thanks, Krishna 
+(4.3) :  I will also update the browser version file for FPE. 
+(5.1) :  @AvanthiRentala What the user chooses for browser version (chrome, firefox) doesn't matter now. 
+(5.2) :  Then we need to update the BrowserVersions.json file for FPE since the versions there for different browsers are not the latest ones. 
+(6.1) :  Hi @LilunCao - We have Only one version in FPE and it will be always latest version, as it automatically upgrades . 
+(7.1) :  Hi @AngelaYacovelli We manage the browsers in different ways in FPE and SGE. 
+(7.3) :  Like if we specifiy a browser version, is it possible that it is not available in FPE? 
+(9.1) :  Hi @AvanthiRentala and @VasuNakka What versions are available for different browsers in FPE environment? 
+(9.3) :  Also any newer versions of browsers need to be added to FPE? 

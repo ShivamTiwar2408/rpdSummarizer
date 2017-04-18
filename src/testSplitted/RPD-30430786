@@ -1,0 +1,169 @@
+<thread>
+<Name> Allow Tellus API/launcher to CRON/schedule but not 'run' </Name>
+<listno>30430786</listno>
+         <DOC>
+             <Received>06-Apr-17 15:34:46</Received>
+             <From>Chris Werner</From>
+             <To>Surekha Vullekki,Ken D. Morris,Chris Werner,Angela Yacovelli,Sreenu Narra,Lilun Cao,Joseph Hwang</To>
+             <Subject> Allow Tellus API/launcher to CRON/schedule but not 'run' </Subject>
+             <Text> 
+                          <Sent id="1.1"> The purpose of this is to enhance Tellus API and test launcher to have a way to schedule jobs but that they will never run, pull VMs or affect load of Tellus. </Sent>
+                          <Sent id="1.2"> As a way to test the scheduler itself. </Sent>
+                          <Sent id="1.3"> @KenMorris and I discussed possibly allowing for a Priority of 0 to be passed to the API or maybe a new ScheduleType ("none"), but a new Property (like Fake: true or ScheduleOnly: true) would be fine too. </Sent>
+                          <Sent id="1.4"> QAI would use this to hit Tellus API with a full Online SWP worth of Test Case jobs, all as 'RunNow' and see how the scheduler responds and where items get scheduled, but prevent Tellus framework from having to launch and actually run these tests. </Sent>
+             </Text>
+             </DOC>
+         <DOC>
+             <Received>06-Apr-17 18:01:11</Received>
+             <From>Lilun Cao</From>
+             <To>Surekha Vullekki,Ken D. Morris,Chris Werner,Angela Yacovelli,Sreenu Narra,Lilun Cao,Joseph Hwang</To>
+             <Subject> Allow Tellus API/launcher to CRON/schedule but not 'run' </Subject>
+             <Text> 
+                          <Sent id="2.1"> @ChrisWerner Do these jobs have higher priorities than any other jobs in the future? </Sent>
+                          <Sent id="2.2"> Right now we have priorities 1,2,3,4. </Sent>
+                          <Sent id="2.3"> 1 is the highest and any jobs with priority 1 will be running first at the specified time. </Sent>
+                          <Sent id="2.4"> Online jobs have priority 1. </Sent>
+                          <Sent id="2.5"> If we want to run online jobs before any other jobs, we can set their priorities to 0. </Sent>
+                          <Sent id="2.6"> Then we push other jobs back given the limited number of VMs. </Sent>
+                          <Sent id="2.7"> In the scheduler, I may be able to save those jobs in a file and remove them from the response. </Sent>
+                          <Sent id="2.8"> That way they will not run. </Sent>
+                          <Sent id="2.9"> But most of other jobs will be pushed back since there may be lots of jobs with priority 0. </Sent>
+                          <Sent id="2.10"> Any idea? </Sent>
+                          <Sent id="2.11"> Lilun </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Apr-17 18:05:38</Received>
+             <From>Ken D. Morris</From>
+             <To>Surekha Vullekki,Ken D. Morris,Chris Werner,Angela Yacovelli,Sreenu Narra,Lilun Cao,Joseph Hwang</To>
+             <Subject> Allow Tellus API/launcher to CRON/schedule but not 'run' </Subject>
+             <Text> 
+                          <Sent id="3.1"> Its just a load test right? </Sent>
+                          <Sent id="3.2"> Let's make it Priority 5 and schedule it behind(after) higher priority ones. </Sent>
+                          <Sent id="3.3"> But still don't execute and then delete when done. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Apr-17 18:39:02</Received>
+             <From>Lilun Cao</From>
+             <To>Surekha Vullekki,Ken D. Morris,Chris Werner,Angela Yacovelli,Sreenu Narra,Lilun Cao,Joseph Hwang</To>
+             <Subject> Allow Tellus API/launcher to CRON/schedule but not 'run' </Subject>
+             <Text> 
+                          <Sent id="4.1"> If priority is set to 5, then these jobs will be scheduled to run after all existing jobs. </Sent>
+                          <Sent id="4.2"> So all existing jobs do not need to be moved or rescheduled. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Apr-17 18:43:30</Received>
+             <From>Ken D. Morris</From>
+             <To>Surekha Vullekki,Ken D. Morris,Chris Werner,Angela Yacovelli,Sreenu Narra,Lilun Cao,Joseph Hwang</To>
+             <Subject> Allow Tellus API/launcher to CRON/schedule but not 'run' </Subject>
+             <Text> 
+                          <Sent id="5.1"> Scheduled but not actually run right? </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Apr-17 18:44:20</Received>
+             <From>Lilun Cao</From>
+             <To>Surekha Vullekki,Ken D. Morris,Chris Werner,Angela Yacovelli,Sreenu Narra,Lilun Cao,Joseph Hwang</To>
+             <Subject> Allow Tellus API/launcher to CRON/schedule but not 'run' </Subject>
+             <Text> 
+                          <Sent id="6.1"> yes </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Apr-17 19:17:53</Received>
+             <From>Chris Werner</From>
+             <To>Surekha Vullekki,Ken D. Morris,Chris Werner,Angela Yacovelli,Sreenu Narra,Lilun Cao,Joseph Hwang</To>
+             <Subject> Allow Tellus API/launcher to CRON/schedule but not 'run' </Subject>
+             <Text> 
+                          <Sent id="7.1"> A non-zero Priority seems like a valid priority, in the sense of run this, just last. </Sent>
+                          <Sent id="7.2"> Maybe ScheduleType ("none") makes more sense? </Sent>
+                          <Sent id="7.3"> The fact is that we want to test the scheduler on tellusdev, so having items schedule 'extra low' no matter what doesn't properly let us test the scheduler. </Sent>
+                          <Sent id="7.4"> It would be nice to see jobs sent from Atlas vs Online vs other SWPs to all be slotted properly per: http://tellus/qadocs/Scheduling%20Automation%20workflow.htm But not executed. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Apr-17 19:30:19</Received>
+             <From>Lilun Cao</From>
+             <To>Surekha Vullekki,Ken D. Morris,Chris Werner,Angela Yacovelli,Sreenu Narra,Lilun Cao,Joseph Hwang</To>
+             <Subject> Allow Tellus API/launcher to CRON/schedule but not 'run' </Subject>
+             <Text> 
+                          <Sent id="8.1"> @ChrisWerner If you want to test jobs with regular priority 1,2,or 3 but do not let them run, then it makes sense to create a new field like ScheduleType and set it to "none". </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Apr-17 20:13:37</Received>
+             <From>Chris Werner</From>
+             <To>Surekha Vullekki,Ken D. Morris,Chris Werner,Angela Yacovelli,Sreenu Narra,Lilun Cao,Joseph Hwang</To>
+             <Subject> Allow Tellus API/launcher to CRON/schedule but not 'run' </Subject>
+             <Text> 
+                          <Sent id="9.1"> To my understanding, QAI shouldn't be sending Priority ID of 1, 2 or 3, I thought the point of this http://tellus/qadocs/Scheduling%20Automation%20workflow.htm is that Priority was assigned automatically based on these rules. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>07-Apr-17 12:42:11</Received>
+             <From>Lilun Cao</From>
+             <To>Surekha Vullekki,Ken D. Morris,Chris Werner,Angela Yacovelli,Sreenu Narra,Lilun Cao,Joseph Hwang</To>
+             <Subject> Allow Tellus API/launcher to CRON/schedule but not 'run' </Subject>
+             <Text> 
+                          <Sent id="10.1"> Hi @ChrisWerner Those jobs will be displayed in Calendar. </Sent>
+                          <Sent id="10.2"> But their cron id will be 0 since no cron jobs are created for them. </Sent>
+                          <Sent id="10.3"> Lilun </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>07-Apr-17 12:39:06</Received>
+             <From>Chris Werner</From>
+             <To>Surekha Vullekki,Ken D. Morris,Chris Werner,Angela Yacovelli,Sreenu Narra,Lilun Cao,Joseph Hwang</To>
+             <Subject> Allow Tellus API/launcher to CRON/schedule but not 'run' </Subject>
+             <Text> 
+                          <Sent id="11.1"> @LilunCao This sounds fine to me, but if it doesn't end up cronned, how can we know the result of the scheduling? </Sent>
+                          <Sent id="11.2"> It will still exist as a groupId or instanceId that we can verify using the API? </Sent>
+                          <Sent id="11.3"> Otherwise, should we just create a completely seperate end-point for this that could return the result of the scheduling? </Sent>
+                          <Sent id="11.4"> Ie. </Sent>
+                          <Sent id="11.5"> after sending these requests, that is 1100 Cases worth of jobs, chunked by Environment and Product, so maybe 100 requests, we would want to verify the scheduled start date and priority values supplied to each job. </Sent>
+                          <Sent id="11.6"> So QAI can either query a 2nd time each job or maybe we have an end-point that returns this? </Sent>
+                          <Sent id="11.7"> If an end-point we could keep it on tellusdev only. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>07-Apr-17 12:21:27</Received>
+             <From>Lilun Cao</From>
+             <To>Surekha Vullekki,Ken D. Morris,Chris Werner,Angela Yacovelli,Sreenu Narra,Lilun Cao,Joseph Hwang</To>
+             <Subject> Allow Tellus API/launcher to CRON/schedule but not 'run' </Subject>
+             <Text> 
+                          <Sent id="12.1"> Hi @ChrisWerner @KenMorris , @JosephHwang and I discussed how to implement this. </Sent>
+                          <Sent id="12.2"> We figured out a way to avoid creating cron jobs for those jobs to be load tested after normal scheduling. </Sent>
+                          <Sent id="12.3"> You can add a new field to the request: something like "SkipCron": "true". </Sent>
+                          <Sent id="12.4"> Priority should be set in the normal way. </Sent>
+                          <Sent id="12.5"> Scheduling will be done as usual. </Sent>
+                          <Sent id="12.6"> After that, tellus framework will check this field. </Sent>
+                          <Sent id="12.7"> If it is set to "true", then tellus framework will not create cron job for that; Otherwise treat it like a normal job. </Sent>
+                          <Sent id="12.8"> -Lilun </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>07-Apr-17 11:52:29</Received>
+             <From>Lilun Cao</From>
+             <To>Surekha Vullekki,Ken D. Morris,Chris Werner,Angela Yacovelli,Sreenu Narra,Lilun Cao,Joseph Hwang</To>
+             <Subject> Allow Tellus API/launcher to CRON/schedule but not 'run' </Subject>
+             <Text> 
+                          <Sent id="13.1"> Hi @KenMorris @ChrisWerner Some php modules may need to be modified since only the following fields will be sent to the scheduler: { "task" : [{ "start" : "2017-04-06T03:53:38", "end" : "2017-04-06T04:02:38", "priority" : 4, "testenvironment" : "FPE", "sgbrowsername" : null, "sgbrowserversion" : null, "groupid" : 342763, "eventid" : 161527 } ] } It is easier to set priority to 5 in tellusapi if scheduletype is set to "none". </Sent>
+                          <Sent id="13.2"> This way we don't need to modify other php modules. </Sent>
+                          <Sent id="13.3"> Also we don't need to add a new field to the scheduler. </Sent>
+                          <Sent id="13.4"> -Lilun </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>07-Apr-17 08:40:57</Received>
+             <From>Ken D. Morris</From>
+             <To>Surekha Vullekki,Ken D. Morris,Chris Werner,Angela Yacovelli,Sreenu Narra,Lilun Cao,Joseph Hwang</To>
+             <Subject> Allow Tellus API/launcher to CRON/schedule but not 'run' </Subject>
+             <Text> 
+                          <Sent id="14.1"> @LilunCao a new field for testing is OK. </Sent>
+                          <Sent id="14.2"> But the priority should be set by us to 5. </Sent>
+                          <Sent id="14.3"> However, the issue is verfication and removing those when done, it looks like a manual process now. </Sent>
+             </Text>
+         </DOC>
+</thread>

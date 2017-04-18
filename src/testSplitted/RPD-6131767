@@ -1,0 +1,550 @@
+<thread>
+<Name> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Name>
+<listno>6131767</listno>
+         <DOC>
+             <Received>10-Apr-12 17:23:02</Received>
+             <From>Chris Dudek</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="1.1"> Hi Everyone, I'm working on creating some reports for LSIA (on trial for FIPA) and they group out their securities into Years to Expected Maturity. </Sent>
+                          <Sent id="1.2"> Currently, the only default grouping we have is Years to Maturtiy, where we use the Stated Maturity. </Sent>
+                          <Sent id="1.3"> I can create a custom grouping for these guys, but I think it would be advantageous to be able to selected which Maturity you would like to use in the Definitions section of the grouping: Years to Maturity Definitions The code behind the current grouping is essentially: FLOAT(JULIAN(PMWSM_FI(CLIENT,DS_MAT_DATE))-JULIAN(INTEGER(CONVERT_DATE("#SD","YYYYMMDD"))))/365 In order to pull in the Years to Expected Maturtiy, we should just be able to swap out the DS_MAT_DATE with DS_EXPECTED_MATURITY. </Sent>
+                          <Sent id="1.4"> **Also to note: the Grouping Help for "Years to Maturity" says it "Groups by yield to maturity." Grouping Description Would we also be able to have this as a default column? </Sent>
+                          <Sent id="1.5"> Please let me know if you have any questions. </Sent>
+                          <Sent id="1.6"> It's not urgent since I can create custom groupings/columns, but it would nice to have them in there by default. </Sent>
+                          <Sent id="1.7"> Thanks, Chris </Sent>
+             </Text>
+             </DOC>
+         <DOC>
+             <Received>11-Apr-12 15:20:28</Received>
+             <From>Mark Solis</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="2.1"> I'll look into this. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>17-Apr-12 13:32:23</Received>
+             <From>Chris Dudek</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="3.1"> @MarkSolis - have you had a chance to look into adding this yet? </Sent>
+                          <Sent id="3.2"> Another one of my clients at Frost has expressed interest in this. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>17-Apr-12 13:33:44</Received>
+             <From>Mark Solis</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="4.1"> @ChrisDudek - Haven't had a chance yet. </Sent>
+                          <Sent id="4.2"> I will take a look today. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>17-Apr-12 14:59:28</Received>
+             <From>Mark Solis</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="5.1"> @ChrisDudek - Using various FI Database and Pricing sources, there are 41 code versions of the Years to Maturity Grouping. </Sent>
+                          <Sent id="5.2"> For a bunch of them, it will not be as easy as switching the DS_MAT_DATE field with DS_EXPECTED_MATURITY. </Sent>
+                          <Sent id="5.3"> I am looking into whether I can create equivalent codes for Years to Expected Maturity for these Database/Pricing combinations. </Sent>
+                          <Sent id="5.4"> I imagine, there will be some cases where this is not possible. </Sent>
+                          <Sent id="5.5"> I'll add back on when I have more info. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>17-Apr-12 16:00:32</Received>
+             <From>Mark Solis</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="6.1"> @ChrisDudek - It looks like most of the pricing databases do not have Expected Maturity fields. </Sent>
+                          <Sent id="6.2"> As a result, I would likely only have to create codes for client pricing sources. </Sent>
+                          <Sent id="6.3"> Do you have a sample document where you created your own custom version of this code? </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>17-Apr-12 16:25:45</Received>
+             <From>Chris Dudek</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="7.1"> @MarkSolis Client: LS_INV Serial: 321071 Document: Personal:Internal Reports Report: Maturity Distribution Grouping code: FLOAT(JULIAN(PMWSM_FI(CLIENT,DS_EXPECTED_MATURITY))-JULIAN(INTEGER(CONVERT_DATE("#SD","YYYYMMDD"))))/365 Is it possible to add this field to the Barclays and Merrill databases for overnight calculation? </Sent>
+                          <Sent id="7.2"> Thanks, Chris </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>17-Apr-12 20:36:56</Received>
+             <From>Mark Solis</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="8.1"> @ChrisDudek - While on the surface this seems like a simple request, it is actually pretty substantial. </Sent>
+                          <Sent id="8.2"> When adding a new DS field, it is either all or nothing. </Sent>
+                          <Sent id="8.3"> As a result, we would have to add this field to all of the benchmark databases and all client MSL's. </Sent>
+                          <Sent id="8.4"> We would then have to backfill the data for at least 6 years. </Sent>
+                          <Sent id="8.5"> For now, we aren't going to create a new grouping/column for Years to Expected Maturity since they would not work with most Database/Pricing source combinations. </Sent>
+                          <Sent id="8.6"> If we have some more client demand, we can move forward with this request. </Sent>
+                          <Sent id="8.7"> Changing status to monitoring. </Sent>
+                          <Sent id="8.8"> Please continue to add on with interested clients. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>17-Apr-12 21:01:18</Received>
+             <From>Chris Dudek</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="9.1"> Mark, I understand. </Sent>
+                          <Sent id="9.2"> I'll continue to add clients as this comes up. </Sent>
+                          <Sent id="9.3"> In the mean-time, can we still fix the incorrect definition for the grouping as noted in my screenshot above? </Sent>
+                          <Sent id="9.4"> Thanks, Chris </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>17-Apr-12 21:32:09</Received>
+             <From>Mark Solis</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="10.1"> Thanks for pointing that out again. </Sent>
+                          <Sent id="10.2"> I submitted the change. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>23-Apr-12 17:44:25</Received>
+             <From>Mark Solis</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="11.1"> Adding FIPA Product Development. </Sent>
+                          <Sent id="11.2"> Please continue to add on with interested clients. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>24-Jan-13 17:46:00</Received>
+             <From>Leslie A. Itty</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="12.1"> I am lowering the priority of this RPD as there does not seem to be much client demand from other clients over the past few months. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>30-Jan-13 22:11:44</Received>
+             <From>Freddy Strout</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="13.1"> Hey Leslie, This came up at Cutwater, they want to see Years to Expected Maturity on a number of Barclays Benchmarks. </Sent>
+                          <Sent id="13.2"> Thanks, Freddy </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>14-Feb-13 08:47:38</Received>
+             <From>Jeroen Risseeuw</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="14.1"> Please see also RPD:8408268 Adding IKANO_LUX who would like to see expected inflation. </Sent>
+                          <Sent id="14.2"> I was able to use the formula provided by Crhis, but for the benchmark, no DS_EXPECTED_MATURITY field exisists. </Sent>
+                          <Sent id="14.3"> Can we please add this to the Barclays indices (at the minimum). </Sent>
+                          <Sent id="14.4"> Expected maturity is quite important for the client, so I hope we can add at least the DS field, so we can pull the figure using the same formula and replace the PMWSM_FI code with an FDB code. </Sent>
+                          <Sent id="14.5"> By this means, we do not require a full PA intergration add the momement. </Sent>
+                          <Sent id="14.6"> Best, Jeroen </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>25-Mar-13 16:19:35</Received>
+             <From>Eric Blinn</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="15.1"> Adding John Escario from Vanguard, who has expressed interest in seeing this. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>02-Dec-13 04:08:53</Received>
+             <From>Andrew Klajman</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="16.1"> Hi My client has also requested this. </Sent>
+                          <Sent id="16.2"> Is there an update as to when it might be possible to get this information Thankyou Andrew </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>18-Dec-13 03:48:14</Received>
+             <From>Andrew Klajman</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="17.1"> Hi Guys, Could soemone pelase comment Thankyou Andrew </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>18-Dec-13 22:34:51</Received>
+             <From>Leslie A. Itty</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="18.1"> @AndrewKlajman @EricBlinn @JeroenRisseeuw @FreddyStrout @ChrisDudek Just wanted to see if there was ASV at risk by not having this as a default grouping/column? </Sent>
+                          <Sent id="18.2"> We want to gauge the priority of this as we have much higher priority items that we are currently working on at the moment (e.g. </Sent>
+                          <Sent id="18.3"> PA3/Projects, etc.). </Sent>
+                          <Sent id="18.4"> Noting that you can use custom formulas (e.g. </Sent>
+                          <Sent id="18.5"> PMWSM) to pull this information from an MSL. </Sent>
+                          <Sent id="18.6"> Best Regards, Leslie </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>18-Dec-13 22:36:47</Received>
+             <From>Chris Dudek</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="19.1"> @LeslieItty - no ASV at risk for my accounts...more of a nice to have for the moment. </Sent>
+                          <Sent id="19.2"> Completely understand that this falls on the lower end of the queue with the PA3 work being done. </Sent>
+                          <Sent id="19.3"> Thanks for commenting. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>18-Dec-13 22:37:52</Received>
+             <From>Andrew Klajman</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="20.1"> @LeslieItty - Same here. </Sent>
+                          <Sent id="20.2"> I would say no risk. </Sent>
+                          <Sent id="20.3"> Kind regards Andrew </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>24-Dec-13 01:32:43</Received>
+             <From>Andrew Klajman</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="21.1"> Just to update i still believe there is little risk but the client has said that she would like this by Jan 2014 (i said that this was unlikely) Thankyou Andrew </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>14-Apr-14 22:55:32</Received>
+             <From>Ben Kerelian</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="22.1"> Adding MAWER (who is on trial) that would like to have "Years to Expected Maturity" as a column and grouping in PA. </Sent>
+                          <Sent id="22.2"> I used the code provided in Chris's comment above which worked for the portfolio; however, the client on trial uses DEX indices. </Sent>
+                          <Sent id="22.3"> Would it be possible to add this for the DEX indices? </Sent>
+                          <Sent id="22.4"> Thank you. </Sent>
+                          <Sent id="22.5"> cc: @FarazFarzaneh @PatReilly @AaronHogue @BryanWatts Best regards, Ben </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>30-Sep-15 15:47:32</Received>
+             <From>Dipesh Patel</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="23.1"> Hello, Can I ask if this RPD is about adding the option in PA to group by 'expected maturity' as per mock up of definitions in original request, or to add DS_EXPECTED_MATURITY to benchmarks? </Sent>
+                          <Sent id="23.2"> Or both as the latter is needed for the former right? </Sent>
+                          <Sent id="23.3"> Morningstar are asking for "effective maturity" and though the link below is from 2012, two clients recently have asked for this in the space of two days (JUPITER_UK and THREADNEEDLE) Their definition https://corporate.morningstar.com/us/documents/MethodologyDocuments/MethodologyPapers/MorningstarFixedIncomeGuidelines.pdf : Their definition https://corporate.morningstar.com/us/documents/MethodologyDocuments/MethodologyPapers/MorningstarFixedIncomeGuidelines.pdf : "Average Effective Maturity Morningstar asks fund companies to calculate and send average effective maturity for each of their fixed-income or allocation funds on a monthly or quarterly basis. </Sent>
+                          <Sent id="23.4"> Average effective maturity is defined as a weighted average of the maturities of the bonds in a portfolio, taking into account all expected mortgage prepayments, puts, and adjustable coupons. </Sent>
+                          <Sent id="23.5"> Maturity is defined as the length of time in years until a debt becomes due for payment. </Sent>
+                          <Sent id="23.6"> If a fund holds futures, other derivatives, or other funds as assets, the average effective maturity should include the weighted impact of the underlying assets. </Sent>
+                          <Sent id="23.7"> Any fixed instrument with less than one year to maturity should be included in the calculation of average effective maturity. </Sent>
+                          <Sent id="23.8"> Please do not send average nominal maturity, defined as a measure of a bond's maturity that, unlike average effective maturity, does not take into account expected mortgage prepayments, puts, or adjustable coupons." As per http://is.factset.com/rpd/summary.aspx?messageId=56006&amp;commentId=3299700 "effective" maturity is equivalent to "expected" maturity. </Sent>
+                          <Sent id="23.9"> Are we still a long way off to adding DS_EXPECTED_MATURITY to these FDB's: ML Barclays iBoxx FTSE Gilts JPM If this is not happening anytime soon can someone confirm the only option is to leverage the 'benchmark' tab in FIAB, let it create new MSL's, then add that MSL to all ACCT's for benchmark analytics hierarchy? </Sent>
+                          <Sent id="23.10"> Any update would be appreciated. </Sent>
+                          <Sent id="23.11"> Dipesh </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>03-Oct-16 19:46:21</Received>
+             <From>Tom Gasbarro</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="24.1"> Hi all, Regarding @DipeshPatel 's comment above has there been any progress in incorporating DS_EXPECTED_MATURITY to benchmark FDB's? </Sent>
+                          <Sent id="24.2"> Is running the benchmark through FIAB with the 'Expected Maturity' calc the best way to retrieve this at the moment? </Sent>
+                          <Sent id="24.3"> Thanks, Tom cc: @WT_FI_Support </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>03-Oct-16 20:31:01</Received>
+             <From>Alec Mendes</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="25.1"> Expected Maturity getting added to vendor pricing sources could also be picked up by Security Analysis (RPD:22676049) </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>04-Oct-16 18:18:32</Received>
+             <From>Mark Solis</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="26.1"> @LilyGranville @EricGrosspietsch - Can we add DS_EXPECTED_MATURITY as a standard calc? </Sent>
+                          <Sent id="26.2"> @TomGasbarro - The workflow you mentioned is the best approach for now. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>05-Oct-16 03:35:40</Received>
+             <From>Lily Granville</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="27.1"> @MarkSolis I support adding DS_EXPECTED_MATURITY as a Standard Calc. </Sent>
+                          <Sent id="27.2"> It is a 'free calc' from ECS and is incredibly useful data. </Sent>
+                          <Sent id="27.3"> I have made this request before in http://is.factset.com/rpd/Summary.aspx?messageId=22023187 . </Sent>
+                          <Sent id="27.4"> @EricGrosspietsch Let's discuss in our catch up meeting tomorrow. </Sent>
+                          <Sent id="27.5"> Thanks. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>05-Oct-16 19:05:46</Received>
+             <From>Lily Granville</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="28.1"> @fipa_inf_curator I have confirmed with @EricGrosspietsch That Expected Maturity may be added to the Standard Calculations group. </Sent>
+                          <Sent id="28.2"> Would you please take care of making this change? </Sent>
+                          <Sent id="28.3"> Thank you. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>05-Oct-16 19:12:39</Received>
+             <From>Hannah Grover</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="29.1"> @RobertWaddell does anyone from @StephenDanauskas 's team be involved to adjust for a new calc? </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>05-Oct-16 19:21:59</Received>
+             <From>Robert Waddell</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="30.1"> @AdamSmith do you need to update the dds calcs db for this? </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>05-Oct-16 19:54:06</Received>
+             <From>Adam Smith</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="31.1"> @RobertWaddell If DS_ names or whitelists are changing, then it will require an ECS side change </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>07-Oct-16 18:43:47</Received>
+             <From>GitLab</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="32.1"> @FIPA Manager pushed 1 commit to refs/heads/master for fipa-inf/ds_calc_specs . </Sent>
+                          <Sent id="32.2"> commit 1bfc6f4a3fb145b2b3b164969752bc3993f31f00 ; Author: FIPA Manager ;fi.pa.infrastructure@factset.com&gt; Date: 2016-10-07T14:43:45-04:00;Update by rwaddell: Add Expected Maturity to the standard calcs group RPD:6131767; </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>07-Oct-16 18:46:20</Received>
+             <From>Robert Waddell</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="33.1"> @LilyGranville @HannahGrover This calculation should be exposed in FIAB now -Rob </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>09-Oct-16 14:48:48</Received>
+             <From>Mark Solis</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="34.1"> I'll get someone assigned from FIPA PD in the next week for two to add this as a column/grouping in PA. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>01-Nov-16 21:54:37</Received>
+             <From>Mark Solis</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="35.1"> @WalkerSeaver - I am going to pass this along to Manila PD. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>23-Nov-16 13:39:08</Received>
+             <From>Mark Solis</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="36.1"> @WalkerSeaver - Kicking this back to you. </Sent>
+                          <Sent id="36.2"> Can you please write up instructions for the Manila PD team to add this as a new column? </Sent>
+                          <Sent id="36.3"> We should add the four versions shown below. </Sent>
+                          <Sent id="36.4"> Portfolio Beginning Expected Maturity - PA_GEN_FI_COL(#PR,#SD,DS_EXPECTED_MATURITY) Portfolio Ending Expected Maturity - PA_GEN_FI_COL(#PR,#ED,DS_EXPECTED_MATURITY) Benchmark Beginning Expected Maturity - PA_GEN_FI_COL(#BN,#SD,DS_EXPECTED_MATURITY) Benchmark Ending Expected Maturity - PA_GEN_FI_COL(#BN,#ED,DS_EXPECTED_MATURITY) </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>12-Dec-16 08:16:41</Received>
+             <From>Mark Solis</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="37.1"> @WalkerSeaver - Can you follow up here? </Sent>
+                          <Sent id="37.2"> You should be able to leverage at least part of Hannah's comment here for your instructions, http://is.factset.com/rpd/summary.aspx?messageId=27561299&amp;commentId=27695951 . </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>09-Jan-17 22:33:50</Received>
+             <From>Dan Rosenblatt</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="38.1"> I will try and give this a look in the next week or so </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>13-Jan-17 19:10:53</Received>
+             <From>Chris Dudek</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="39.1"> Hey guys - any update here? </Sent>
+                          <Sent id="39.2"> It's been over 2 months since this was going on Manila's plate to create a few columns. </Sent>
+                          <Sent id="39.3"> A few groups at Nuveen have been asking about this recently. </Sent>
+                          <Sent id="39.4"> Should we expect to get this live soon? </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>13-Jan-17 21:08:23</Received>
+             <From>Dan Rosenblatt</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="40.1"> @ChrisDudek I will be able to get to this early next week. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>24-Jan-17 18:32:53</Received>
+             <From>Dan Rosenblatt</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="41.1"> @PAPD-Manila can you please add these columns: Make sure to test this in your personal options lock first. </Sent>
+                          <Sent id="41.2"> Portfolio Beginning Expected Maturity - PA_GEN_FI_COL(#PR,#SD,DS_EXPECTED_MATURITY) Portfolio Ending Expected Maturity - PA_GEN_FI_COL(#PR,#ED,DS_EXPECTED_MATURITY) Benchmark Beginning Expected Maturity - PA_GEN_FI_COL(#BN,#SD,DS_EXPECTED_MATURITY) Benchmark Ending Expected Maturity - PA_GEN_FI_COL(#BN,#ED,DS_EXPECTED_MATURITY) Step 1: Open the options lock --&gt; open PA --&gt; Contribution Report --&gt;Options --&gt; Columns --&gt; Data --&gt; New.. </Sent>
+                          <Sent id="41.3"> You can see this in my screenshot below: Step 1 for adding columns Step 2: Copy and paste the formula from the first column into the box that says "Formula" and and type the name for it in the box called Header with the appropriate line breaks by pressing enter. </Sent>
+                          <Sent id="41.4"> (Port. </Sent>
+                          <Sent id="41.5"> Beginning (then press enter) Expected Maturity). </Sent>
+                          <Sent id="41.6"> Separate babelfish will need to be filed for these columns as well. </Sent>
+                          <Sent id="41.7"> You can see this in my screenshot below: Formula and Header Step 3: Select/fill out all appropriate options in Column Edit including: Sub Period Column (for the beginning columns, exclude this option for ending column), Allow Interquartile, MultiCurrency, Default Decimals, Formula Type, Column Access, Avail Compound, Stat,Category, and Supported Apps. </Sent>
+                          <Sent id="41.8"> For benchmark columns, you need to select engine statistic and weighted average for stats. </Sent>
+                          <Sent id="41.9"> Then go into weights and select benchmark beginning weight. </Sent>
+                          <Sent id="41.10"> You can then unselect weighted average so only engine statistic is highlighted. </Sent>
+                          <Sent id="41.11"> The category is going to be FactSet/Fixed Income/Bond Terms/Additional Calculations --&gt; and then we are going to want to create new Portfolio and Bench subfolders under here, however this needs to be done after adding the columns. </Sent>
+                          <Sent id="41.12"> To do so, right click on one of the new columns --&gt; Add Category --&gt; Type in Portfolio, then repeat for benchmark (once you have added one of the benchmark columns) . </Sent>
+                          <Sent id="41.13"> Only after adding one portfolio column and one benchmark column you can do this . </Sent>
+                          <Sent id="41.14"> For the next two columns you will be able to choose these subfolders as the category (in column edit). </Sent>
+                          <Sent id="41.15"> CACCESS is going to be 00PAF,00PPA,00PAW You can see this in my screenshot below: Column Edit Then add all new columns to a report with appropriate settings to make sure everything is populating as expected. </Sent>
+                          <Sent id="41.16"> You will then follow these steps for the next three columns: Portfolio Ending Expected Maturity - PA_GEN_FI_COL(#PR,#ED,DS_EXPECTED_MATURITY) Benchmark Beginning Expected Maturity - PA_GEN_FI_COL(#BN,#SD,DS_EXPECTED_MATURITY) Benchmark Ending Expected Maturity - PA_GEN_FI_COL(#BN,#ED,DS_EXPECTED_MATURITY) You can see a video explaining the process of adding GEN_FI columns here: Please note that the video above is just an example and the recorder forgot to mention how to add these columns into a category Please feel to reach out to me with any further questions Once these columns are added we will work on adding years to expected maturity. </Sent>
+                          <Sent id="41.17"> All the best, Dan </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>10-Feb-17 14:04:21</Received>
+             <From>Mark Solis</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="42.1"> @PAPD-Manila @AndrewManickas - Please assign this one out during your next catch up. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>13-Feb-17 06:57:36</Received>
+             <From>Jopney J. Sotomayor</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="43.1"> Adding @MiguelReyes to take a look. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>07-Mar-17 14:17:52</Received>
+             <From>Dan Rosenblatt</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="44.1"> any update here @MiguelReyes ? </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>08-Mar-17 14:56:50</Received>
+             <From>Miguel C. Reyes</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="45.1"> Hey @DanRosenblatt , I had begun testing these but got swamped by other RPDs until it fell back in my pile. </Sent>
+                          <Sent id="45.2"> I'll get you an update on this tomorrow and will begin testing. </Sent>
+                          <Sent id="45.3"> Any benchmarks you have in mind that I can test with? </Sent>
+                          <Sent id="45.4"> Thanks, Mikey </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>09-Mar-17 14:05:16</Received>
+             <From>Miguel C. Reyes</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="46.1"> Hi @DanRosenblatt , I've set up the columns on my personal lock but am unable to get values to populate: Empty results Here is my setup: Port Beg expected maturity setup Here are my universe and pricing source settings: Settings Can you please advise? </Sent>
+                          <Sent id="46.2"> Thanks, Mikey </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>27-Mar-17 13:14:33</Received>
+             <From>Dan Rosenblatt</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="47.1"> @MiguelReyes can you put some time on my calendar so I can take a look here with you later in the week? </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>29-Mar-17 16:47:21</Received>
+             <From>Miguel C. Reyes</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="48.1"> Set a meeting for tomorrow. </Sent>
+                          <Sent id="48.2"> 3/30/2017 </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Apr-17 18:43:47</Received>
+             <From>Dan Rosenblatt</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="49.1"> @MiguelReyes I will look into this more either tomorrow or early next week and try and figure out what was going wrong on your end </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>13-Apr-17 19:57:49</Received>
+             <From>Dan Rosenblatt</From>
+             <To>Tom Liebl,Wei Fang,Chris Dudek,Andrew Klajman,Freddy Strout,Jeroen Risseeuw,Eric Blinn,Leslie A. Itty,Edwin Hauwert,Bryan Watts,Faraz Farzaneh,Aaron Hogue,Pat Reilly,Dipesh Patel,WT_FI_Support,Tom Gasbarro,Mark Solis,Eric Grosspietsch,fipa_inf_curator,Stephen Danauskas,Adam Smith,Robert Waddell,Lily Granville,Hannah Grover,Anthony W. Kane,Walker Seaver,PA PD - Manila,Andrew Manickas,Miguel C. Reyes,Dan Rosenblatt</To>
+             <Subject> Can we add Years to Expected Maturity as a Grouping Definition and as a Column? </Subject>
+             <Text> 
+                          <Sent id="50.1"> @MiguelReyes this issue was DS_EXPECTED_MATURITY not being a field in the benchmark databases. </Sent>
+                          <Sent id="50.2"> This is being addressed here: http://is.factset.com/RPD/Summary.aspx?messageId=30598994 Let's follow up here next week Best, Dan </Sent>
+             </Text>
+         </DOC>
+</thread>

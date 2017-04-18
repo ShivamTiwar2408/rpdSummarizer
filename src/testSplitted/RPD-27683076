@@ -1,0 +1,123 @@
+<thread>
+<Name> Employee Confirmation </Name>
+<listno>27683076</listno>
+         <DOC>
+             <Received>29-Nov-16 05:13:26</Received>
+             <From>Manisha Rana</From>
+             <To>Krishna Jain,Manisha Rana,Pavan Kumar Vempali,Usha Neelakandan</To>
+             <Subject> Employee Confirmation </Subject>
+             <Text> 
+                          <Sent id="1.1"> Hi Team, There is one employee (Sai Kumar Somisetty - Emp ID - 21086) for whom confirmation is pending as we are getting below error while completing confirmation action for an individual: Request you to look into this issue. </Sent>
+                          <Sent id="1.2"> Regards, Manisha </Sent>
+             </Text>
+             </DOC>
+         <DOC>
+             <Received>01-Dec-16 05:24:37</Received>
+             <From>Pavan Kumar Vempali</From>
+             <To>Krishna Jain,Manisha Rana,Pavan Kumar Vempali,Usha Neelakandan</To>
+             <Subject> Employee Confirmation </Subject>
+             <Text> 
+                          <Sent id="2.1"> @KrishnaJain , Could you please check whether @ManishaRana has access to path " \\pc.factset.com\dfs\Department\Human Resources\Hyderabad\Generalist\Employee Documents\ " Thanks, Pavan </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>01-Dec-16 05:27:15</Received>
+             <From>Manisha Rana</From>
+             <To>Krishna Jain,Manisha Rana,Pavan Kumar Vempali,Usha Neelakandan</To>
+             <Subject> Employee Confirmation </Subject>
+             <Text> 
+                          <Sent id="3.1"> Hi Pavan, I have an access to the above mentioned path. </Sent>
+                          <Sent id="3.2"> Regards, Manisha </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>08-Dec-16 09:52:43</Received>
+             <From>Manisha Rana</From>
+             <To>Krishna Jain,Manisha Rana,Pavan Kumar Vempali,Usha Neelakandan</To>
+             <Subject> Employee Confirmation </Subject>
+             <Text> 
+                          <Sent id="4.1"> @PavanKumarVempali &amp; @UshaNeelakandan : Appreciate your help here. </Sent>
+                          <Sent id="4.2"> Thanks, Manisha </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>07-Dec-16 11:16:24</Received>
+             <From>Usha Neelakandan</From>
+             <To>Krishna Jain,Manisha Rana,Pavan Kumar Vempali,Usha Neelakandan</To>
+             <Subject> Employee Confirmation </Subject>
+             <Text> 
+                          <Sent id="5.1"> @ManishaRana : Looks like the folder structure within21086 is incorrect. </Sent>
+                          <Sent id="5.2"> Please rename Upload 21068 to Upload 21086 and then try saving the confirmation document. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>07-Dec-16 10:06:33</Received>
+             <From>Manisha Rana</From>
+             <To>Krishna Jain,Manisha Rana,Pavan Kumar Vempali,Usha Neelakandan</To>
+             <Subject> Employee Confirmation </Subject>
+             <Text> 
+                          <Sent id="6.1"> Hi Pavan, "21086_Confirmation.pdf" does not exist in the folder. </Sent>
+                          <Sent id="6.2"> Regards, Manisha </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>07-Dec-16 07:51:58</Received>
+             <From>Pavan Kumar Vempali</From>
+             <To>Krishna Jain,Manisha Rana,Pavan Kumar Vempali,Usha Neelakandan</To>
+             <Subject> Employee Confirmation </Subject>
+             <Text> 
+                          <Sent id="7.1"> @ManishaRana , I am mentioning about the file "21086_Confirmation.pdf", does it exist in the folder? </Sent>
+                          <Sent id="7.2"> Thanks, Pavan </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>07-Dec-16 07:45:28</Received>
+             <From>Manisha Rana</From>
+             <To>Krishna Jain,Manisha Rana,Pavan Kumar Vempali,Usha Neelakandan</To>
+             <Subject> Employee Confirmation </Subject>
+             <Text> 
+                          <Sent id="8.1"> @PavanKumarVempali : Yes the folder exists in the path. </Sent>
+                          <Sent id="8.2"> Regards, Manisha </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>07-Dec-16 07:04:54</Received>
+             <From>Pavan Kumar Vempali</From>
+             <To>Krishna Jain,Manisha Rana,Pavan Kumar Vempali,Usha Neelakandan</To>
+             <Subject> Employee Confirmation </Subject>
+             <Text> 
+                          <Sent id="9.1"> @ManishaRana , Could you also confirm whether the file "21086_Confirmation.pdf" exists in the path which you have it in the screenshot. </Sent>
+                          <Sent id="9.2"> Thanks, Pavan </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>07-Dec-16 06:53:51</Received>
+             <From>Pavan Kumar Vempali</From>
+             <To>Krishna Jain,Manisha Rana,Pavan Kumar Vempali,Usha Neelakandan</To>
+             <Subject> Employee Confirmation </Subject>
+             <Text> 
+                          <Sent id="10.1"> @ManishaRana , If you are having the access to the folder then you should be able to do the confirmation. </Sent>
+                          <Sent id="10.2"> Could you please do a screenshare or drop by my desk to look into it further? </Sent>
+                          <Sent id="10.3"> Thanks, Pavan </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>07-Dec-16 05:45:17</Received>
+             <From>Manisha Rana</From>
+             <To>Krishna Jain,Manisha Rana,Pavan Kumar Vempali,Usha Neelakandan</To>
+             <Subject> Employee Confirmation </Subject>
+             <Text> 
+                          <Sent id="11.1"> Hi Pavan, Could you please provide an update on this as employee's confirmation is still in pending mode. </Sent>
+                          <Sent id="11.2"> Regards, Manisha </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>29-Nov-16 11:22:13</Received>
+             <From>Pavan Kumar Vempali</From>
+             <To>Krishna Jain,Manisha Rana,Pavan Kumar Vempali,Usha Neelakandan</To>
+             <Subject> Employee Confirmation </Subject>
+             <Text> 
+                          <Sent id="12.1"> Hi @KrishnaJain Can you please check and confirm whether @ManishaRana has access to path " \\pc.factset.com\dfs\Department\Human Resources\Hyderabad\Generalist\Employee Documents\ " Thanks, Pavan </Sent>
+             </Text>
+         </DOC>
+</thread>

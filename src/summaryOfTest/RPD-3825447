@@ -1,0 +1,162 @@
+(1.1) :  Hi all, Submitting this request as I think it is something that could be very useful. 
+(1.2) :  Most of us know it is often a challenge/time consuming to find the solution to an RPD, even if it exists, because of the often very long list of comments tied to certain RPD's. 
+(1.3) :  The solution is often not even at the end of the RPD as users add on for clarifiying/secondary questions. 
+(1.4) :  I think it would be extraordinarily useful to add the ability to flag/mark the relevant comments in an RPD. 
+(1.6) :  1) Add a "Flag as Solution" button, which could highlight the selected comment in green for example, so it is easy to see scrolling down the list. 
+(1.7) :  2) Add filter options for comments, so you filter to see only comments made by the product team/assignee. 
+(1.8) :  Not very useful though if it is a very long RPD. 
+(1.10) :  Does this sound like an enhancement that could be implemented, or has been inquired about before? 
+(1.11) :  This could be a key benefit to all employees for helping them utilize their time better. 
+(1.12) :  On helpdesk calls for instance, you might find the relevant RPD within seconds, but it often takes a few minutes to search through all the comments to find the one specific one you need. 
+(2.1) :  Awesome request Brandon! 
+(2.2) :  :) It happens that our new RPD Steering Committee also brought this up for consideration for very similar reasons. 
+(2.3) :  We'll certainly be giving this more thought - thanks for the suggestion! 
+(4.1) :  Something like this will also reduce spam when people unresolve RPDs by accident or with irrelavent new issues. 
+(4.2) :  As of right now, if and RPD is unresolved, there is no way to undo the unresolve. 
+(5.1) :  I would strongly support this suggestion from the PD side, and take it one step further by also summarizing the problem. 
+(5.2) :  I was thinking it would be useful to have a section in the RPD called "synopsis", where the product expert could concisely summarize the problem and the solution. 
+(5.3) :  This would have the following benefits: - Save other users time when searching for a similar problem -- as Brandon states, they wouldn't have to read through dozens of comments to figure out if the problem matches their's and they would be able to easily find the solution to the problem. 
+(5.4) :  - If the problem only relates to a specific FactSet version, Office version, etc., that can be stated in the synopsis. 
+(5.5) :  - The synopsis would be written by the product expert, and use terms that RPD filers would typically search on, so the RPD will be more likely to be returned in search results. 
+(5.9) :  The synoposis would contain the error text so that it would be returned in search results. 
+(5.10) :  This would end up benefiting both those that file RPDs and those that respond to RPDs. 
+(6.1) :  You can now use the "Solution" tag for this. 
+(6.2) :  Click on the icon of the tag on the right hand of a comment header to tag it. 
+(7.1) :  @LucyTancredi no this has not gone "main stream" as of yet. 
+(8.1) :  @LucyTancredi - I'm part of the tagging beta group, and I think tagging is fantastic. 
+(8.2) :  My suggestion above is to include both a synopsis and a solution for a given RPD. 
+(8.4) :  If it were exposed in search (perhaps hovering over a search result would show a tooltip with the synopsis) it would really help RPD users find relevant RPDs and quick solutions to their issues (without having to read through lots of RPD text/comments). 
+(9.1) :  Ah nice - we are adding a RPD hover with some key info (title, author, status, etc) - we could certainly add any comments that were tagged with "Solution" in that hover. 
+(11.1) :  Hi @LucyTancredi - I actually created the "solution" tag, and think it has a lot of value, but still think it doesn't completely satisfy this request. 
+(11.2) :  A concise problem description (with relevant requirements like FDSW version) along with a concise solution, or list of troubleshooting steps per RPD would add a lot of value (per my 8/23 comment). 
+(11.3) :  Hi @BrianBishop - is searching for tags enabled? 
+(11.4) :  I searched for #solution and expected RPD:4138325 to be at the top of my search results, but it's not there. 
+(12.1) :  Nice (tag filter panel in Search). 
+(13.1) :  Thanks @MichelleLuft - Wouldn't the comment that is tagged with #solution be the synopsis? 
+(13.2) :  Or else how would you make the synopsis more useful? 
+(13.3) :  Forcing fielded data won't always make it better (e.g. 
+(14.1) :  Hi @MichelleLuft - not yet. 
+(14.2) :  Example of how the existing functionality can help: if one knows the RPD product, you can sift a single RPD out of the masses produced by a query with no keywords, using that filter by panel: If one had another useful piece of data related to what one wanted to find (eg a keyword, or a person's name) then you can find SOlution tagged RPDs this way. 
+(15.1) :  @BrianBishop - Thanks, that's helpful. 
+(15.2) :  Searching for tags will also be very helpful. 
+(15.3) :  @LucyTancredi - The comment tagged with #solution would likely just be the solution to the RPD, and not describe the problem. 
+(15.4) :  Simply tagging one comment with "solution" will help in some cases, but won't be enough in the following cases: - In many cases, a solution is spread over multiple comments (e.g. 
+(15.6) :  FDS minimum version requirement, or CACCESS restrictions, or anything else) would be more helpful. 
+(15.7) :  - Sometimes it's hard to discern whether the problem in the RPD is the same issue that you're having. 
+(15.8) :  The filer might think the issue is X, when really after troubleshooting, we discover it is Y. 
+(15.9) :  The synposis would state the problem in a way that makes it relevant for everyone (not just a specific template for example). 
+(15.10) :  - A single RPD could have solutions to multiple issues, and the initial problem description might not cover all of the issues discussed in the RPD. 
+(15.11) :  I think its nice to be able to read a concise problem description and solution -- as opposed to having to scan through an RPD to find the problem, and then separately reading the solution. 
+(15.12) :  As I said above, if this could be exposed through the hover in search results, it would likely save users a lot of time. 
+(15.13) :  For example, in this RPD:4138325 , the comment tagged "solution" doesn't explain what the problem is. 
+(15.14) :  If you read the lengthy problem, it is specific to FTSE NAREIT Indices. 
+(15.15) :  The RPD has solutions to multiple problems (see the 2 comments tagged "solution"). 
+(15.17) :  I could spend 5 minutes trying to figure out what the problem is, and whether my problem is the same or not. 
+(15.19) :  For example, if you're trying to format the x-axis of an intraday chart to only include rounded half-hour times, then do XYZ. 
+(15.20) :  I am not proposing forcing fielded data. 
+(15.21) :  The author of the synopsis could add whatever information s/he thinks is relevant. 
+(15.22) :  Thanks, Michelle 
+(16.1) :  Hi All, Thanks for the discussion on this. 
+(16.2) :  Michelle in her last comment highlights my initial thoughts behind this. 
+(16.3) :  In a large portion of helpdesk calls, if it is necessary to search within RPD's, many times I'll find the exact RPD I need within seconds, but it may take me another 5-10 minutes just to try and sift through all the comments and try out different workarounds/solutions for the initial problem. 
+(16.5) :  I also think it is a great idea to include a synopsis, because it is a very common occurence that the initial RPD creator describes a situation which is irrelavant to the actual issue at hand, mostly because of misinterpretations/assumptions. 
+(16.6) :  Having an easy to find synopsis and solution could essentially eliminate the need for the intermittent comments once an RPD is closed. 
+(16.7) :  The conversation is very important during the solution-finding phase, but afterwards, RPD's are more essential as a database of answers, so adding this could "limit the bulk," and help all departments find what they need more efficiently/accurately. 
+(17.1) :  Thanks Michelle and Brandon for the detailed explanation - that clarifies for me. 
+(17.2) :  What I missed is that you're looking for a Problem Synopsis, not (or rather, in addition to) a concise Solution. 
+(17.3) :  My next thoughts/questions then are 1) Why aren't assignees / product owners providing concise, eloquent solutions / synopses now when they Resolve requests, and how to motivate them to do so with an enhancement to the RPD system. 
+(17.4) :  I suspect many are engaged with the current RPD back-and-forth and not seeing it in the bigger picture of people searching for it in the future and needing a quick way to glean its important information. 
+(17.5) :  So I would think some prompt like "Please include a concise problem synopsis and solution for future readers / searchers. 
+(17.6) :  This should include any troubleshooting tips, minimum version requirements, CACCESS restrictions, or other relevant info." would help. 
+(17.7) :  We could add this to the current Resolution box prompt, but as Brandon said the solution is sometimes not at the end. 
+(17.8) :  Which brings up 2) How to encourage people to flag something as a solution/synopsis, and so the RPD system knows what to prompt when. 
+(17.9) :  Perhaps adding some standard/suggested tags (that people could click to add) below the existing "Search Tags' box in the Add Comment section would solve that. 
+(17.10) :  We could then allow filtering on these in a future iteration. 
+(17.11) :  (I.e. 
+(17.12) :  show me all the status updates / latest status update, all the questions, etc in this RPD). 
+(17.14) :  Do you think that would address this issue, or are you looking for something different? 
+(18.1) :  @LucyTancredi - I think re-branding the RPD resolution comment is a great idea. 
+(18.2) :  As a PD who very much wants to solve the issues we've discussed above, I can say that PDs generally do not think of the resolution comment as a place to provide a problem/solution synopsis (most of us just say "resolved" or "resolving per comments above") -- but it's a great place to do exactly that. 
+(18.3) :  Ideally we'd make adding concise problem and solutions synopses to RPDs a best practice at FactSet. 
+(18.4) :  We could add text that says something like "Please provide a concise description of both the problem and the solution so that other RPD filers can easily find this important information. 
+(18.5) :  You might choose to include relevant FDSW versions, error message text, troubleshooting tips, etc." The one concern that comes to mind is that RPDs that have the "Atlas Release" field filled in (e.g. 
+(18.6) :  2011.4A) will get automatically resolved by a script when that FDSW version is released. 
+(18.7) :  That script is really helpful, but it will mean that the RPD filer or PD will have to go back and proactively add synopses to relevant RPDs (question: is the resolution comment editable?). 
+(19.1) :  Yes, the resolution comment is editable (by anyone, I believe - it will display who edited it last). 
+(20.1) :  This is a great conversation, hopefully we'll be able to populate a good library of solutions with this, that are easily found via search and views... 
+(20.2) :  To add onto @MichelleLuft 's last point about "resolved per comments above"... 
+(20.3) :  allowing users to resolve an RPD from within an existing comment they're currently typing would help encourage folks to think of their resolution as a "solution"... 
+(20.4) :  and also reduce spam (since people doing the resolving are often clicking send twice): RPD:3759074 
+(21.1) :  As an FYI, you can currently search on tags in the search page by using the following syntax: tag:Solution The tag name is case sensitive, so tag:solution returns no results where tag:Solution does 
+(22.1) :  @BrandonNovack @MichelleLuft This is an old RPD and I wanted to reach out how much difficulty is still being found to determine the solution / synopsis of an RPD and if tagging was helpful at all. 
+(22.2) :  I will say as of right now we do color the 'openning'/requester comment blue and the resolution comment green, but I do understand that looking up incidents/bug resolutions you care more about the 'actual' problem as described by the responding rengineer and actual resolution. 
+(23.1) :  Hi @ChrisWerner I think this request is still valid and I'd like to see this improved. 
+(23.2) :  I don't know about in other groups, but at least in sales/consulting we're not very aware of how to use the tagging, and can't say if it is widely used. 
+(23.3) :  And you're correct on the resolution/opening comments, since most ofthen they're just the first and last comments which isn't helpful. 
+(23.4) :  I think @MichelleLuft summed it perfectly in her comment above ( http://is.factset.com/rpd/summary.aspx?messageId=3825447&commentId=4652209 ), and I would love to see some kind of synopsis box incorporated for newly created RPD's. 
+(24.1) :  Adding to this @BryanEhrlich comment from here: http://is.factset.com/rpd/summary.aspx?messageId=23001442&commentId=23004631 I think the solution of just having some 'standard' tags that will show at the top of the RPD and jump to the comment with that tag is a good solution to this. 
+(24.2) :  We would probably allow this 'Workaround' tag only on comments and allow only one per RPD ? 
+(24.3) :  We could have other tags like 'Summary'/'Retrospect'/'Synopsis', or whatever other type tags or comments are relevant to the S&C workflow. 
+(24.4) :  If this becomes a standard workflow, we could also probably define a 'validity', that is, bug or incident from a client that required certain input or some other criteria and allow views built where the synopsis is not yet provided. 
+(24.5) :  Or make it required to provide before resolution? 
+(24.6) :  @BrandonNovack @RachelBattis Let me know your thoughts or I can reach out to S&C at large to get additional input. 
+(25.1) :  @ChrisWerner - I like that idea. 
+(25.2) :  It provides a way to see at the top of the RPD that a workaround exists, then quickly jump to it. 
+(25.3) :  Being able to tag just one comment as the workaround seems appropriate. 
+(25.4) :  Overall, I think the enhancement would be very helpful. 
+(26.1) :  I saw this same desire in the old RPD Usability docs. 
+(26.2) :  I think this is something we should evaluate. 
+(26.3) :  Based on the previous comment and this comment http://is.factset.com/rpd/summary.aspx?messageId=3825447&commentId=4652209 I see a couple workflows we should evaluate. 
+(26.5) :  Pasting in 'error' screenshots. 
+(26.6) :  Should we change our left-hand text in Create RPD to state, please type out any error messages? 
+(26.7) :  OR should we look for Client's Affected added AND a pasted image and show an actual alert/note "Please type-out any error messages displayed in any pasted screenshots". 
+(26.8) :  I'm not sure how often images in a client found Bug or Incident are errors or not, but it seems plausible. 
+(26.10) :  'Problem synopsis' - I'm not sure how often this is really an issue or if getting the actual error message is enough. 
+(26.13) :  'Solution synopsis' - It seems we could require this as part of a resolution based on certain criteria (Clients on a Question or Incident, etc). 
+(26.14) :  I think the resolution comment should ideally be the solution synopsis, so it's just a matter of encouraging or forcing this. 
+(26.15) :  I think we could also support resolving using an existing comment, often the resolution ends up as just trying to change the Status when a comment already summarizes the fix, this could work like 'edit comment' and bring in the existing comment for editing but actually file a new comment when resolving. 
+(26.16) :  I think 2 and 3 combined with cleaning up the summary interface to hide the majority of comments by default would really help the majority of RPDs: http://is.factset.com/rpd/summary.aspx?messageId=1649080&commentId=19264337 Example RPD http://is.factset.com/RPD/summary.aspx?messageid=4138325 4. 
+(26.17) :  'Workaround' - This I could see working similarly to the tagging proposed above and seen in the example using a 'Tag' like the 'Solution' tag. 
+(26.18) :  However we need to consider how to make this obvious and easily navigable to and we need to make it obvious as an option. 
+(26.19) :  a. 
+(26.20) :  When adding a comment on a specific type of RPD (ie. 
+(26.21) :  Question/Incident with a Client Affected), should we have a 'Workaround' option in the Add Comment box, maybe next to 'Status'? 
+(26.26) :  A bit of a seperate request, can we 'jump to' tags? 
+(27.1) :  Another thing we should strongly consider is having a mechanism like old Notes RPD used to have that signified that a solution needed to be ported to OA. 
+(27.2) :  Especially considering that RPD will likely be undergoing retention guidelines, we can't count on it being a persistent source of solutions. 
+(27.3) :  @LeighRichards @NancyMatthews @LisaKnoll - who owns the process of adding to OA content currently? 
+(28.1) :  Hi @LucyTancredi - Nancy forwarded this to me as I'm the PD for OA and my team manages the content for the product as well. 
+(28.2) :  This is definitely something that would be helpful as now it's up to whoever is on a given RPD to add the Online Assistant product or file a separate request if an RPD discusses content that either should be added or updated in OA. 
+(28.3) :  You can include me on any further discussion about this. 
+(28.4) :  Something that we'll want to keep in mind - we will need to have some sort of process around this and not just say tag an update for an OA update. 
+(28.5) :  If you flag an RPD for OA, I don't want the team to have to sift through the whole RPD to find something relevant for OA. 
+(28.6) :  It should give us some direction for what needs to be updated - either in the synopsis that's being suggested or if that's tagged on a comment level (or some other area). 
+(28.7) :  Since we're a small team and are already handling a large volume of enhancement/change alert RPDs each month, I don't want to just add to that influx and not have a way to manage it and clearly identify what action needs to be taken in OA. 
+(29.1) :  Good day, We have a similar request / suggestion like this one but it was resolved and pointed to this RPD. 
+(29.2) :  http://is.factset.com/rpd/summary.aspx?messageid=26734059 Per our experience, end users will just keep on updating the RPD without checking the solution first and it is getting out of hand. 
+(29.3) :  Also we noticed that the page takes time to load probably because of the updates. 
+(29.4) :  Reference RPDs RPD:27349603 Our suggestion was to create a popup window to stop user from updating the RPD and check the solution first. 
+(29.5) :  One good example, is when we type the word "password" on the RPD we get that pop up message. 
+(29.7) :  Thanks - Karl - 
+(30.1) :  Hi @ChrisWerner @LucyTancredi @RobertGroce @SreeDivyaBonagiri @BryanEhrlich Let me know if this should be filed separately, but I would also find it useful to have a "Current Status" tag or comment for longer term enhancements. 
+(30.2) :  For example this RPD where people are no longer seeing my comment http://is.factset.com/rpd/summary.aspx?messageId=22581451&commentId=27852238 about our ETA for that risk model being the end of January. 
+(30.3) :  It would be handy if people could just know where to look for the current status of an open RPD. 
+(30.4) :  Thanks Karim 
+(31.2) :  @ChrisWerner - perhaps this could leverage similar mechanism as the "archive" functionality under discussion. 
+(31.3) :  We should also discuss this general idea (a problem synopsis/solution, and or conversion from RPD to OA or other 'official' knowledgebase) in conjuction with the RPD Document Retention project and the Starmind / Agent Assist project, if that goes forward. 
+(31.4) :  Both will require the migration of knowledge from unstructured RPDs to more easily-searched, structured Q&A knowledgebases, which address the issues in here as well. 
+(32.1) :  This is interesting but neither example is really the same as a 'solution' to the RPD. 
+(32.2) :  Karl's example feels like he wants to flag a 'workaround' as something more obvious to consumers, but discussion is continuing toward the actual fix. 
+(32.3) :  In Karim's example, he specified an ETA, so it would be normal for discussion to continue until the fix. 
+(32.4) :  The issue of 'ETA' is an ongoing issue seem by RPD. 
+(32.6) :  Karim made a comments, some users use 'estimated completion date', PDIS uses associated 'Build' RPDs, etc. 
+(32.7) :  @LucyTancredi I think what would be more helpful here is some priority to the display of the comments. 
+(32.9) :  Right now we load all comments and collapse all but the top and bottom 2 (or last unread). 
+(32.10) :  But another option would be to no load all comments, selectively suppress comments that are less relevant. 
+(32.11) :  For instance it could display: Opening comment ... 
+(32.12) :  10 additional comments ... 
+(32.14) :  Here's an example in QAI doing something similar: http://is.factset.com/justifier/TestManager/TestRun/2617176#/37126453 I don't know if we just have a simple up/down vote system like so many other sites (Stackoverflow etc), or let RPD Product owners or Assignees more directly control what is up voted. 
+(32.16) :  Or if there are standard 'categories' of these upvotes (say, 'workaround', 'eta', solution'), then these could be chosen and tagged directly to the comment, even as regular 'tags' now. 
+(32.17) :  We could just put a bit more structure around it. 
+(32.18) :  This would also help with the 100+ comment large RPDs that are very slow to open. 
+(32.19) :  I think this is something we should/will consider in the UI simplification. 

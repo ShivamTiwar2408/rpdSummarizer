@@ -1,0 +1,29 @@
+(1.1) :  The purpose of this is to enhance Tellus API and test launcher to have a way to schedule jobs but that they will never run, pull VMs or affect load of Tellus. 
+(1.2) :  As a way to test the scheduler itself. 
+(1.4) :  QAI would use this to hit Tellus API with a full Online SWP worth of Test Case jobs, all as 'RunNow' and see how the scheduler responds and where items get scheduled, but prevent Tellus framework from having to launch and actually run these tests. 
+(2.1) :  @ChrisWerner Do these jobs have higher priorities than any other jobs in the future? 
+(2.9) :  But most of other jobs will be pushed back since there may be lots of jobs with priority 0. 
+(3.2) :  Let's make it Priority 5 and schedule it behind(after) higher priority ones. 
+(7.1) :  A non-zero Priority seems like a valid priority, in the sense of run this, just last. 
+(7.3) :  The fact is that we want to test the scheduler on tellusdev, so having items schedule 'extra low' no matter what doesn't properly let us test the scheduler. 
+(7.4) :  It would be nice to see jobs sent from Atlas vs Online vs other SWPs to all be slotted properly per: http://tellus/qadocs/Scheduling%20Automation%20workflow.htm But not executed. 
+(9.1) :  To my understanding, QAI shouldn't be sending Priority ID of 1, 2 or 3, I thought the point of this http://tellus/qadocs/Scheduling%20Automation%20workflow.htm is that Priority was assigned automatically based on these rules. 
+(10.1) :  Hi @ChrisWerner Those jobs will be displayed in Calendar. 
+(10.2) :  But their cron id will be 0 since no cron jobs are created for them. 
+(11.1) :  @LilunCao This sounds fine to me, but if it doesn't end up cronned, how can we know the result of the scheduling? 
+(11.2) :  It will still exist as a groupId or instanceId that we can verify using the API? 
+(11.3) :  Otherwise, should we just create a completely seperate end-point for this that could return the result of the scheduling? 
+(11.5) :  after sending these requests, that is 1100 Cases worth of jobs, chunked by Environment and Product, so maybe 100 requests, we would want to verify the scheduled start date and priority values supplied to each job. 
+(11.6) :  So QAI can either query a 2nd time each job or maybe we have an end-point that returns this? 
+(12.1) :  Hi @ChrisWerner @KenMorris , @JosephHwang and I discussed how to implement this. 
+(12.2) :  We figured out a way to avoid creating cron jobs for those jobs to be load tested after normal scheduling. 
+(12.3) :  You can add a new field to the request: something like "SkipCron": "true". 
+(12.4) :  Priority should be set in the normal way. 
+(12.6) :  After that, tellus framework will check this field. 
+(12.7) :  If it is set to "true", then tellus framework will not create cron job for that; Otherwise treat it like a normal job. 
+(13.1) :  Hi @KenMorris @ChrisWerner Some php modules may need to be modified since only the following fields will be sent to the scheduler: { "task" : [{ "start" : "2017-04-06T03:53:38", "end" : "2017-04-06T04:02:38", "priority" : 4, "testenvironment" : "FPE", "sgbrowsername" : null, "sgbrowserversion" : null, "groupid" : 342763, "eventid" : 161527 } ] } It is easier to set priority to 5 in tellusapi if scheduletype is set to "none". 
+(13.2) :  This way we don't need to modify other php modules. 
+(13.3) :  Also we don't need to add a new field to the scheduler. 
+(14.1) :  @LilunCao a new field for testing is OK. 
+(14.2) :  But the priority should be set by us to 5. 
+(14.3) :  However, the issue is verfication and removing those when done, it looks like a manual process now. 

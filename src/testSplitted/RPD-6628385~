@@ -1,0 +1,936 @@
+<thread>
+<Name> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Name>
+<listno>6628385</listno>
+         <DOC>
+             <Received>19-Jun-12 20:01:43</Received>
+             <From>Mark Solis</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="1.1"> This is an internal product alert </Sent>
+             </Text>
+             </DOC>
+         <DOC>
+             <Received>19-Jun-12 20:04:37</Received>
+             <From>Mark Solis</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="2.1"> This change, http://is.factset.com/RPD/Summary.aspx?messageId=5552227 , is currently being reviewed by the PA Engineering review board. </Sent>
+                          <Sent id="2.2"> The 7/12/2012 effective date is tentative and depends on when the review board has completed their evaluation . </Sent>
+                          <Sent id="2.3"> I will update the RPD if there are any changes. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>20-Jun-12 16:55:21</Received>
+             <From>Bridie Sullivan</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="3.1"> Hi Mark, Can you provide a list of the affected clients and PA documents (if available)? </Sent>
+                          <Sent id="3.2"> For changes like this, Consulting has asked for details including username, serial number, contact info, sales/consulting representatives, sales/consulting group. </Sent>
+                          <Sent id="3.3"> This will help us gauge the severity of the change and let the support reps know who to reach out to. </Sent>
+                          <Sent id="3.4"> It looks like a client will not have to do anything for this change, just be aware that the behavior is changing, correct? </Sent>
+                          <Sent id="3.5"> -Bridie </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>20-Jun-12 17:57:34</Received>
+             <From>Mark Solis</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="4.1"> @BridieSullivan - I have a list but it is a bit old. </Sent>
+                          <Sent id="4.2"> I asked Chong Qiu to compile a new one and will add it on here once it is complete. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>21-Jun-12 20:49:31</Received>
+             <From>Mark Solis</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="5.1"> @BridieSullivan - Here is the list of usernames and documents that are using Client Portfolio Pricing and End of Period holdings. </Sent>
+                          <Sent id="5.2"> This list should contain every document that will be impacted, but some of these documents may not see any change. </Sent>
+                          <Sent id="5.3"> The change only affects OFDB's and CSTM's that are being run in PA in 'Holding's Only' mode. </Sent>
+                          <Sent id="5.4"> If any Blended Benchmark, Fixed Dollar Weighted, or Floating methodology CSTM's are set to OMS mode, they will also be impacted. </Sent>
+                          <Sent id="5.5"> OMS is not supported for these methodologies, so they fall back to the 'Holdings Only' mode behavior. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>21-Jun-12 21:01:09</Received>
+             <From>Bridie Sullivan</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="6.1"> Hi Mark, Any chance you can get the serial #, name of client, support contacts? </Sent>
+                          <Sent id="6.2"> @MichaelAltmaier and @MichaelGiordano - any objections to this change occuring on 12-Jul? </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>21-Jun-12 21:09:53</Received>
+             <From>Michael Altmaier</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="7.1"> There are a great deal of clients in the notepad, which is partially helpful but we need to add consultant, salesteam, etc. </Sent>
+                          <Sent id="7.2"> and put it in Excel so we can filter. </Sent>
+                          <Sent id="7.3"> I don't completely understand the change and how it impacts our clients, What exactly will they see differntly/what will be change and be different? </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>21-Jun-12 21:27:37</Received>
+             <From>Mark Solis</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="8.1"> @MichaelAltmaier - When using Client Portfolio pricing and End of Period holdings, PA feels forward for pricing. </Sent>
+                          <Sent id="8.2"> If I run a PA report from 1/11-1/12, the prices come from 1/12 and 1/13 (see screenshot). </Sent>
+                          <Sent id="8.3"> The proposed change will result in the prices for 1/11 and 1/12 coming from 1/11 and 1/12. </Sent>
+                          <Sent id="8.4"> We are making this change for the following reasons: The current behavior is not intuitive The price fetching is not consistent with the behavior seen for MSL's To fix a long standing bug To ensure consistent behavior among all pricing sources Current Behavior </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>22-Jun-12 18:46:12</Received>
+             <From>Bridie Sullivan</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="9.1"> Hi @MichaelAltmaier Are you ok with the 12-Jul date and me sending this out in the next couple of days? </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>22-Jun-12 18:51:20</Received>
+             <From>Mark Solis</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="10.1"> @BridieSullivan - Here is the list you requested. </Sent>
+                          <Sent id="10.2"> I was unable to get the serial numbers, but I will look into whether or not that is possible. </Sent>
+                          <Sent id="10.3"> Let me know if there is anything else you need. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>22-Jun-12 18:59:59</Received>
+             <From>Mark Solis</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="11.1"> Client Central Team - I used CRM screening to put together the spreadsheet in my previous post. </Sent>
+                          <Sent id="11.2"> To get the serial numbers Bridie requested, I need to be able to return usernames with the client specific number appended at the end (i.e. </Sent>
+                          <Sent id="11.3"> 1STBANK_STPL.01). </Sent>
+                          <Sent id="11.4"> Is there a code that will return this data? </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>22-Jun-12 21:56:24</Received>
+             <From>Michael Giordano</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="12.1"> Thanks Mark. </Sent>
+                          <Sent id="12.2"> If possible having the Serial numbers will be really beneficial. </Sent>
+                          <Sent id="12.3"> A lot of these 16,000+ documents are only accessed by certain people. </Sent>
+                          <Sent id="12.4"> If we can group by Serial number we can know how many people are affected and what our communication task is going to look like. </Sent>
+                          <Sent id="12.5"> We need to be primarily concerned with the performance teams publishing numbers to clients and in marketing materials directly from PA. </Sent>
+                          <Sent id="12.6"> Results will change so we absolutely need to personally notify these users of this difference in methodology. </Sent>
+                          <Sent id="12.7"> The more lead time we have on this the better. </Sent>
+                          <Sent id="12.8"> The sooner we have the Serial numbers, the sooner we can start dialing/emailing. </Sent>
+                          <Sent id="12.9"> Thanks again for the info, </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>22-Jun-12 22:00:28</Received>
+             <From>Michael Giordano</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="13.1"> @BridieSullivan - once we know how many actual users are affected and who they are, we'll be able to comment on whether the July 12th date is feasible. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>26-Jun-12 14:15:17</Received>
+             <From>Mark Solis</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="14.1"> I am putting together a new spreadsheet with the serial numbers. </Sent>
+                          <Sent id="14.2"> We are now looking to have this installed on July 19. </Sent>
+                          <Sent id="14.3"> I will add on later today with more details. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>27-Jun-12 12:57:52</Received>
+             <From>Mark Solis</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="15.1"> @BridieSullivan @MichaelGiordano @MichaelAltmaier - I am attaching the latest document scan. </Sent>
+                          <Sent id="15.2"> I believe this contains all the data that has been requested. </Sent>
+                          <Sent id="15.3"> Let me know if I have missed anything. </Sent>
+                          <Sent id="15.4"> I also made a small change to the alert. </Sent>
+                          <Sent id="15.5"> The bug that we are fixing applies to all fields in client portfolios except for shares. </Sent>
+                          <Sent id="15.6"> For example, if a client uploads Effective Duration in their portfolio, the data would be returned in the same unintuitive manner I described on 6/21 for price fetching. </Sent>
+                          <Sent id="15.7"> The list of affected documents should remain the same. </Sent>
+                          <Sent id="15.8"> As I mentioned yesterday, we would like to have this change installed on 7/19. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>27-Jun-12 14:56:04</Received>
+             <From>Michael Giordano</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="16.1"> I hate to do this Mark - but we need "consulting team" as a column here too. </Sent>
+                          <Sent id="16.2"> Sales teams span all over the globe and they're certainly not taking care of this - the consulting department is. </Sent>
+                          <Sent id="16.3"> Apologies for not requesting this sooner. </Sent>
+                          <Sent id="16.4"> Situations like these make a great case for having a standard document/data ready when we make changes/retirements instead of going back and forth like this. </Sent>
+                          <Sent id="16.5"> Using what we have here, there are 2,268 individual users affected by this change which is quite a lot. </Sent>
+                          <Sent id="16.6"> Until we have consulting team though, we don't have any directive to the consulting groups to get the communication out. </Sent>
+                          <Sent id="16.7"> In the meantime, can we automatically add those 2,268 people to the appropriate broadcast list and send them a notification? </Sent>
+                          <Sent id="16.8"> That would be a good step one I think. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>27-Jun-12 16:06:09</Received>
+             <From>Mark Solis</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="17.1"> No problem. </Sent>
+                          <Sent id="17.2"> Here is the updated scan. </Sent>
+                          <Sent id="17.3"> @BridieSullivan - Can you take care of adding the users from the scan to the broadcast list? </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>27-Jun-12 16:58:21</Received>
+             <From>Bridie Sullivan</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="18.1"> Hi Mark, Mike. </Sent>
+                          <Sent id="18.2"> et al We can't post the message to a specific list of clients (this feature is being worked on right now). </Sent>
+                          <Sent id="18.3"> The best bet would be to post a client message to the Portfolio Analysis list - we can CACCESS this message if needed. </Sent>
+                          <Sent id="18.4"> @CristinaFlores will work on the client message for you. </Sent>
+                          <Sent id="18.5"> Bridie </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>27-Jun-12 17:00:50</Received>
+             <From>Michael Giordano</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="19.1"> Thanks Bridie. </Sent>
+                          <Sent id="19.2"> This would only be good if all 2268 users are subscribed to the Portfolio Analysis list. </Sent>
+                          <Sent id="19.3"> Can we get them all subscribed to this list before we post a message there? </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>27-Jun-12 18:09:59</Received>
+             <From>Bridie Sullivan</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="20.1"> Hi Mike, The way it works now, any client with 00PA2 would be able to see the message, including in the QuickView (hover over blinking tower icon). </Sent>
+                          <Sent id="20.2"> Only those that are subscribed would actually receive an email, and we can't add clients to the subscribed list. </Sent>
+                          <Sent id="20.3"> After the message was posted, consultants could forward it to their affected clients. </Sent>
+                          <Sent id="20.4"> I talked to some other people and we *might* be able to send the message to just the 2268 users, but this would require some further testing to confirm it would work. </Sent>
+                          <Sent id="20.5"> The earliest the testing could be accomplished is end of next week (i.e., message wouldn't be sent until 9-Jul or later). </Sent>
+                          <Sent id="20.6"> We would also need a comma delimited list of all the user emails. </Sent>
+                          <Sent id="20.7"> Let us know how you want to proceed with the client message Thanks! </Sent>
+                          <Sent id="20.8"> Bridie </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>27-Jun-12 18:17:17</Received>
+             <From>Michael Giordano</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="21.1"> Thanks @BridieSullivan - the blinking tower icon I would guess might get 5% of people to look at it - most of the time its out of your peripheral view and a lot of people think its a signal (akin to wireless or something) so I don't think they will pay much attention to it. </Sent>
+                          <Sent id="21.2"> Ensuring the message was sent to the 2268 users would be ideal in addition to the blinking tower message. </Sent>
+                          <Sent id="21.3"> @MarkSolis - could the user emails be added to the scan file? </Sent>
+                          <Sent id="21.4"> If so they could be pulled from there. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>27-Jun-12 18:31:30</Received>
+             <From>Michael Altmaier</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="22.1"> It will be impossible to contact 16,000+ users before July 12th. </Sent>
+                          <Sent id="22.2"> I think direct email is our only option at this point, Mike is right in that the blinking icon is cool, but most people think it's a connection signal, similar to wireless. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>27-Jun-12 19:51:55</Received>
+             <From>Cristina C. Flores</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="23.1"> Hi @MarkSolis -- I've pasted a draft of the client-facing Notify message below. </Sent>
+                          <Sent id="23.2"> I'm not sure whether to include the sentence in bold or not. </Sent>
+                          <Sent id="23.3"> While it provides clarity, I do not want to make the current behavior sound more correct than the new behavior. </Sent>
+                          <Sent id="23.4"> What do you think? </Sent>
+                          <Sent id="23.5"> I've also updated the OA pages that you requested, for the 12-July upload: http://help01b.factset.com/oa2/View.aspx?node_id=13014#calc http://help01b.factset.com/oa2/View.aspx?node_id=16570#prices Thanks! </Sent>
+                          <Sent id="23.6"> ******************* Subject: Change to Pricing Methodology for Buy &amp; Hold Portfolios - 19-Jul-2012 On 19-Jul-2012, a change will be made that may affect prices and returns in your Portfolio Analysis reports. </Sent>
+                          <Sent id="23.7"> The change only affects portfolios in Buy &amp; Hold mode, and has been made to allow for greater consistency among pricing sources in Portfolio Analysis. </Sent>
+                          <Sent id="23.8"> Currently, when you use end-of-period holdings and Client Portfolio pricing, end-of-period pricing is automatically used because prices are tied to shares. </Sent>
+                          <Sent id="23.9"> In Buy &amp; Hold mode, the next day&rsquo;s prices and shares are used as an approximation for end-of-period prices and shares, as portfolio data is only uploaded once a day, generally before the market opens. </Sent>
+                          <Sent id="23.10"> For example, if you run a report from January 11 &ndash; January 12, the prices and shares used are from January 12 and January 13. </Sent>
+                          <Sent id="23.11"> After 19-Jul-2012, when you use end-of-period holdings and Client Portfolio pricing, Portfolio Analysis will not feel forward for price. </Sent>
+                          <Sent id="23.12"> For example, if you run a report from January 11 &ndash; January 12, the prices used will be from January 11 and January 12. </Sent>
+                          <Sent id="23.13"> This will provide more intuitive results than the current behavior. </Sent>
+                          <Sent id="23.14"> If you have questions about this change, contact your PMW specialist or email pmw_support@factset.com. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>27-Jun-12 20:12:54</Received>
+             <From>Bridie Sullivan</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="24.1"> @MichaelAltmaier This is only affecting 2268 clients. </Sent>
+                          <Sent id="24.2"> There are 16,000 PA documents that have these settings (Buy &amp; Hold, End-of-Period Holdings, Client Portfolio pricing). </Sent>
+                          <Sent id="24.3"> Also, Mark pushed this back a week to 19-Jul. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>27-Jun-12 20:49:23</Received>
+             <From>Michael Altmaier</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="25.1"> I still believe we need to communicate this change via email, an Alert, etc. </Sent>
+                          <Sent id="25.2"> Client communication right now is critical. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>27-Jun-12 21:14:48</Received>
+             <From>Mark Solis</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="26.1"> @CristinaFlores - Can we remove the statement in bold. </Sent>
+                          <Sent id="26.2"> It is not really accurate for the following reasons: 1) There is no such thing as end-of-period pricing. </Sent>
+                          <Sent id="26.3"> 2) The bold statement describes the theory behind end of period holdings with the corrected price fetching 3) The current behavior is a bug that was caused by setting up the client portfolio pricing source separately from the other pricing sources. </Sent>
+                          <Sent id="26.4"> Can we say: Currently, when you use end-of-period holdings and Client Portfolio pricing, prices and other data fields are tied to shares. </Sent>
+                          <Sent id="26.5"> For example, if you run a report from January 11 &ndash; January 12, the prices and shares used are from January 12 and January 13. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>27-Jun-12 21:19:26</Received>
+             <From>Mark Solis</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="27.1"> A small correction to Bridie's last post: The document scan was for all documents that are using End-of-Period Holdings and Client Portfolio pricing. </Sent>
+                          <Sent id="27.2"> It does not distinguish between B&amp;H, OMS, and TBR. </Sent>
+                          <Sent id="27.3"> This change is specific to B&amp;H so some of the documents may not actually be affected. </Sent>
+                          <Sent id="27.4"> I am still working on getting the email addresses in the scan file. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>27-Jun-12 21:22:12</Received>
+             <From>Cristina C. Flores</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="28.1"> Hi @MarkSolis -- Thanks for clarifying! </Sent>
+                          <Sent id="28.2"> I've updated the draft below, to be posted once we determine whether we can use Notify to email the list of affected clients. </Sent>
+                          <Sent id="28.3"> ********************* Subject: Change to Pricing Methodology for Buy &amp; Hold Portfolios &ndash; 19-Jul-2012 On 19-Jul-2012, a change will be made that may affect prices and returns in your Portfolio Analysis reports. </Sent>
+                          <Sent id="28.4"> The change only affects portfolios in Buy &amp; Hold mode, and has been made to allow for greater consistency among pricing sources in Portfolio Analysis. </Sent>
+                          <Sent id="28.5"> Currently, when you use end-of-period holdings and Client Portfolio pricing, prices and other data fields are tied to shares. </Sent>
+                          <Sent id="28.6"> For example, if you run a report from January 11 &ndash; January 12, the prices and shares used are from January 12 and January 13. </Sent>
+                          <Sent id="28.7"> After 19-Jul-2012, when you use end-of-period holdings and Client Portfolio pricing, Portfolio Analysis will not feel forward for price. </Sent>
+                          <Sent id="28.8"> For example, if you run a report from January 11 &ndash; January 12, the prices used will be from January 11 and January 12. </Sent>
+                          <Sent id="28.9"> This will provide more intuitive results than the current behavior. </Sent>
+                          <Sent id="28.10"> If you have questions about this change, contact your PMW specialist or email pmw_support@factset.com. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>27-Jun-12 21:34:28</Received>
+             <From>Bridie Sullivan</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="29.1"> Hi @MichaelAltmaier I'm not sure what you meant by your last comment, but we're working on the communication (internal and external) right now. </Sent>
+                          <Sent id="29.2"> Mark filed this RPD to request the alert + client message and now Cristina and I are working on both. </Sent>
+                          <Sent id="29.3"> The INTERNAL alert (to be sent as a Critical Change) can be found here - RPD:6687494 The client message can be found in Cristina's last comment on this RPD - comment From the Knowledge Management group and Mark&rsquo;s prospective, the messages are complete and ready to go. </Sent>
+                          <Sent id="29.4"> We are waiting for you (and the other Consulting Managers) to tell us if you need any other information. </Sent>
+                          <Sent id="29.5"> If you need Mark to push back the date, let him know. </Sent>
+                          <Sent id="29.6"> There was a request to send the client message to all 2286 affected users. </Sent>
+                          <Sent id="29.7"> This is possible, but would require testing. </Sent>
+                          <Sent id="29.8"> I outlined the options for sending the client message above (see comment at 2:09 p.m.) Here's a summary of the options: Post to Portfolio Analysis list: Client with 00PA2 would be able to see the message. </Sent>
+                          <Sent id="29.9"> Only those that are subscribed would actually receive an email. </Sent>
+                          <Sent id="29.10"> After the message was posted, consultants could forward it to their affected clients. </Sent>
+                          <Sent id="29.11"> Send message to just the 2268 users. </Sent>
+                          <Sent id="29.12"> This would require some further testing to confirm it would work. </Sent>
+                          <Sent id="29.13"> The earliest the testing could be accomplished is end of next week (i.e., message wouldn't be sent until 9-Jul or later). </Sent>
+                          <Sent id="29.14"> We would also need a comma delimited list of all the user emails. </Sent>
+                          <Sent id="29.15"> It sounds like you prefer the second option, but we need to know so we can schedule the testing first. </Sent>
+                          <Sent id="29.16"> In a nutshell, we (Mark, Cristina, and I) need from you: Are you ok with the new date: 19-Jul Can the internal alert be sent How do you want the client message sent? </Sent>
+                          <Sent id="29.17"> Thanks, Bridie </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>28-Jun-12 00:33:09</Received>
+             <From>Mark Solis</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="30.1"> I was able to get most of the emails in Client Central. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>28-Jun-12 00:42:32</Received>
+             <From>Mark Solis</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="31.1"> @CristinaFlores - Sorry to make another change, but after reviewing Bridie's alert, http://is.factset.com/RPD/summary.aspx?messageid=6687494 , I was hoping we steal a couple things and add them here. </Sent>
+                          <Sent id="31.2"> ********************* Subject: Change to Pricing Methodology for Buy &amp; Hold Portfolios &ndash; 19-Jul-2012 On 19-Jul-2012, a change will be made that may affect prices, returns, and other data (ex shares) in your Portfolio Analysis reports . </Sent>
+                          <Sent id="31.3"> The change only affects portfolios in Buy &amp; Hold mode, and has been made to allow for greater consistency among pricing sources in Portfolio Analysis. </Sent>
+                          <Sent id="31.4"> Currently, when you use end-of-period holdings and Client Portfolio pricing, prices and other data fields are tied to shares. </Sent>
+                          <Sent id="31.5"> For example, if you run a report from January 11 &ndash; January 12, the prices and shares used are from January 12 and January 13. </Sent>
+                          <Sent id="31.6"> After 19-Jul-2012, when you use end-of-period holdings and Client Portfolio pricing, Portfolio Analysis will not feel forward for price or other data fields (ex shares) . </Sent>
+                          <Sent id="31.7"> For example, if you run a report from January 11 &ndash; January 12, the prices used will be from January 11 and January 12. </Sent>
+                          <Sent id="31.8"> This will provide more intuitive results than the current behavior. </Sent>
+                          <Sent id="31.9"> If you have questions about this change, contact your PMW specialist or email pmw_support@factset.com. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>28-Jun-12 00:59:00</Received>
+             <From>Cristina C. Flores</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="32.1"> Hi @MarkSolis -- That works for me. </Sent>
+                          <Sent id="32.2"> Thanks! </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>28-Jun-12 15:45:45</Received>
+             <From>Michael Giordano</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="33.1"> Question about this comment by @MarkSolis : "...The document scan was for all documents that are using End-of-Period Holdings and Client Portfolio pricing. </Sent>
+                          <Sent id="33.2"> It does not distinguish between B&amp;H, OMS, and TBR. </Sent>
+                          <Sent id="33.3"> This change is specific to B&amp;H so some of the documents may not actually be affected." If this is the case, can we remove the documents that are not affected (OMS and TBR documents) so we can see an accurate list of those clients who will be affected (B&amp;H only)? </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>28-Jun-12 17:25:11</Received>
+             <From>Mark Solis</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="34.1"> @MichaelGiordano - We are working on another scan right now. </Sent>
+                          <Sent id="34.2"> I was worried that the scan wouldn't work properly if documents we using multiple portfolios/benchmarks with different holdings methodologies, but I think we are going to be able to get what you are looking for. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>29-Jun-12 15:56:44</Received>
+             <From>Mark Solis</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="35.1"> @MichaelGiordano - I am attaching the new document scan which flagged any document that uses End of Period Holdings, Client Portfolio Pricing, and either a portfolio or benchmark in B&amp;H mode. </Sent>
+                          <Sent id="35.2"> I checked a few of the documents that were included in the old scan but not included in this one. </Sent>
+                          <Sent id="35.3"> The ones I checked did not have any portfolios or benchmarks saved in the document. </Sent>
+                          <Sent id="35.4"> As a result, they were excluded from the new scan. </Sent>
+                          <Sent id="35.5"> We have no way of knowing what type of portfolios clients are using in these documents. </Sent>
+                          <Sent id="35.6"> It is very possible they are running buy and hold portfolios/benchmarks in these documents that we are now excluding. </Sent>
+                          <Sent id="35.7"> I would recommend using the scan from my last post on 6/27 since we would be alerting more clients than necessary as opposed to possibly missing some clients. </Sent>
+                          <Sent id="35.8"> Let me know if you have any questions. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>29-Jun-12 16:29:43</Received>
+             <From>Michael Giordano</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="36.1"> Thanks Mark - I think this doc had a problem with the fields around row 800 because after that the data is incomplete for the last several columns. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>29-Jun-12 17:14:58</Received>
+             <From>Mark Solis</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="37.1"> Sorry about that. </Sent>
+                          <Sent id="37.2"> Here is the corrected list. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>02-Jul-12 13:42:21</Received>
+             <From>Michael Altmaier</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="38.1"> Are we sending an email announcement to the ~16,000 users? </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>02-Jul-12 13:46:21</Received>
+             <From>Lisa Knoll</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="39.1"> @MichaelAltmaier - I have confirmed we can use FactSet Notify to email all the users. </Sent>
+                          <Sent id="39.2"> @RyanClark - the attached spreadsheet has serial numbers and email addresses. </Sent>
+                          <Sent id="39.3"> Is that enough for you to do a saved Target list so we can send a notification to these affected users. </Sent>
+                          <Sent id="39.4"> When do we want to plan to send this? </Sent>
+                          <Sent id="39.5"> Thanks! </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>02-Jul-12 19:13:29</Received>
+             <From>Ryan C. Clark</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="40.1"> @LisaKnoll - Unfortunately, no. </Sent>
+                          <Sent id="40.2"> Would it be possible to get a list with CRM Ids instead? </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>02-Jul-12 20:49:18</Received>
+             <From>Jessica Tompkins</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="41.1"> @MichaelAltmaier -- Bridie mentioned before that it is actually 2,286 affected users, not 16,000. </Sent>
+                          <Sent id="41.2"> (The usage file shows the full list of documents affected -- so you'll see duplicate individual users listed in several rows.) @MarkSolis --how hard is it to include fdsCRM ID in the list of affected users? </Sent>
+                          <Sent id="41.3"> Before we decide the best way to proceed, I wanted to get a sense of whether this is possible and if so, how much time it would take to do as I know you've already had to rerun usage several times for this change. </Sent>
+                          <Sent id="41.4"> The ability to target specific users using Notify vs. </Sent>
+                          <Sent id="41.5"> the standard way of emailing users that are signed up is essentially a "beta" feature and not live yet so we weren't sure about all of the requirements needed. </Sent>
+                          <Sent id="41.6"> If it isn't feasible to add in fdsCRM ID, we'll adjust our game plan accordingly. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>02-Jul-12 22:08:12</Received>
+             <From>Ryan C. Clark</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="42.1"> I was able get a list of CRM ID's from the information in the spreadsheet, but I'm not sure if it's 100% correct; the list only contains 1560 id's. </Sent>
+                          <Sent id="42.2"> Only 1611 of the 16,000 had real email addresses. </Sent>
+                          <Sent id="42.3"> I could create the criteria list now, but I'd like to verify that I have all the correct CRM id's. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>03-Jul-12 13:06:04</Received>
+             <From>Mark Solis</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="43.1"> Here is a list with all the CRM ID's included. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>03-Jul-12 13:52:01</Received>
+             <From>Ryan C. Clark</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="44.1"> @MarkSolis Does this truly affect 320,000 individuals? </Sent>
+                          <Sent id="44.2"> That's 3/4 of our clients, from what I can tell. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>03-Jul-12 14:06:01</Received>
+             <From>Mark Solis</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="45.1"> @RyanClark - Sorry, I attached the wrong file. </Sent>
+                          <Sent id="45.2"> Here you go. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>03-Jul-12 19:15:25</Received>
+             <From>Bridie Sullivan</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="46.1"> @MichaelAltmaier It looks like we're all set to send the internal product alert and the client message. </Sent>
+                          <Sent id="46.2"> Do you have any objections or are we ok to send this on Thursday 5-Jul (assuming sending it tomorrow would make it get lost in the shuffle)? </Sent>
+                          <Sent id="46.3"> This will give everyone 2 weeks notice. </Sent>
+                          <Sent id="46.4"> Thanks, Bridie </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>03-Jul-12 20:55:58</Received>
+             <From>Mark Solis</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="47.1"> Are we all set for Chong and I to submit this so it can go live on 7/19? </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>06-Jul-12 12:52:35</Received>
+             <From>Mark Solis</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="48.1"> We have been asked to push this back one more week. </Sent>
+                          <Sent id="48.2"> It will now go live on 7/26. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>09-Jul-12 16:06:46</Received>
+             <From>Cristina C. Flores</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="49.1"> Hi @LisaKnoll - Bridie posted the Alert on Friday, so please let me know when you're planning to send the emails. </Sent>
+                          <Sent id="49.2"> Do you have a preference whether we post the Notify message before/after the emails? </Sent>
+                          <Sent id="49.3"> Thank you! </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>09-Jul-12 16:18:20</Received>
+             <From>Lisa Knoll</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="50.1"> @RyanClark - were you able to get the target criteria list together from the new usage file @MarkSolis provided? </Sent>
+                          <Sent id="50.2"> I believe we are talking about roughly 2,300 users? </Sent>
+                          <Sent id="50.3"> @CristinaFlores - I think we should send an email first and then the following day, post within Notify. </Sent>
+                          <Sent id="50.4"> Who is writing the email? </Sent>
+                          <Sent id="50.5"> or has that been done already? </Sent>
+                          <Sent id="50.6"> @MichaelAltmaier - let us know if you have any objections to a email going out today or tomorrow to all affected users for this change happening on the 26th. </Sent>
+                          <Sent id="50.7"> Thanks! </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>09-Jul-12 16:32:37</Received>
+             <From>Ryan C. Clark</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="51.1"> @LisaKnoll -- the users have been added to a criteria list for the purpose of sending out this message; however, there are only 1148 users, as many of the files listed could not be linked to CRM id's. </Sent>
+                          <Sent id="51.2"> Let me know when you will be sending out the message so that I can subscribed those users to the appropriate category. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>09-Jul-12 16:37:14</Received>
+             <From>Cristina C. Flores</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="52.1"> @LisaKnoll -- I've put together a modified version of the Notify message that we could use for the email. </Sent>
+                          <Sent id="52.2"> Please let me know what you think. </Sent>
+                          <Sent id="52.3"> @MichaelAltmaier - Please let me know if you think the urgency of the message is appropriate, or if I should add something to the headline to emphasize that recipients are affected (e.g., "Your Action Required:"). </Sent>
+                          <Sent id="52.4"> Thanks! </Sent>
+                          <Sent id="52.5"> ************ (Email draft) Subject: Change to Portfolio Analysis pricing methodology affects your reports On 26-Jul-2012, a change will be made that affects prices, returns, and other data (ex shares) in your Portfolio Analysis reports. </Sent>
+                          <Sent id="52.6"> The change only affects portfolios in Buy &amp; Hold mode, and has been made to allow for greater consistency among pricing sources in Portfolio Analysis. </Sent>
+                          <Sent id="52.7"> If you are receiving this email, it means that you have reports saved that use the affected settings. </Sent>
+                          <Sent id="52.8"> Currently, when you use end-of-period holdings and Client Portfolio pricing, prices and other data fields are tied to shares. </Sent>
+                          <Sent id="52.9"> For example, if you run a report from January 11 &ndash; January 12, the prices and shares used are from January 12 and January 13. </Sent>
+                          <Sent id="52.10"> After 19-Jul-2012, when you use end-of-period holdings and Client Portfolio pricing, Portfolio Analysis will not feel forward for price or other data fields (ex shares). </Sent>
+                          <Sent id="52.11"> For example, if you run a report from January 11 &ndash; January 12, the prices used will be from January 11 and January 12. </Sent>
+                          <Sent id="52.12"> This will provide more intuitive results than the current behavior. </Sent>
+                          <Sent id="52.13"> If you have questions about this change or would like to know which of your saved reports are affected, contact your PMW specialist or email pmw_support@factset.com. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>10-Jul-12 00:24:16</Received>
+             <From>Michael Altmaier</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="53.1"> I think this is fine, no need to add anything, but I wouldn't mind asking Chris Elias for his opinion. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>10-Jul-12 00:43:20</Received>
+             <From>Cristina C. Flores</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="54.1"> Thanks, @MichaelAltmaier . </Sent>
+                          <Sent id="54.2"> @ChristopherElias -- Can you please review the message in my comment from 9-Jul, 9:37 a.m., and let me know if you think any additional information would be helpful? </Sent>
+                          <Sent id="54.3"> This is for the email that will be sent to users who we know have affected reports; the Notify message will be slightly different. </Sent>
+                          <Sent id="54.4"> We would like to post it tomorrow. </Sent>
+                          <Sent id="54.5"> Thanks! </Sent>
+                          <Sent id="54.6"> cc @LisaKnoll </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>10-Jul-12 14:53:16</Received>
+             <From>Christopher Elias</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="55.1"> I spoke with Stan Kwasniewski about this. </Sent>
+                          <Sent id="55.2"> We both believe that proactively emailing clients that are not on the Notify is too alarmist given the potential impact of this change. </Sent>
+                          <Sent id="55.3"> Using email for PA users that have not chosen to opt in is extreme. </Sent>
+                          <Sent id="55.4"> While this change will impact historical results for some, the 2,000+ users that have documents with these settings overstates the amount of users that may really rely on these documents or will be effected. </Sent>
+                          <Sent id="55.5"> A crtical alert change in Notify is warrented. </Sent>
+                          <Sent id="55.6"> It should be communicated this week so that concerned clients will be able to prepare for it. </Sent>
+                          <Sent id="55.7"> PA specialists and consultants should review the client list of those documents with the settings that will see behavior changes and address it with their key users. </Sent>
+                          <Sent id="55.8"> I think the tone of the 6/27 Alert that Cristina used is approriate. </Sent>
+                          <Sent id="55.9"> We want to communicate that this may effect returns in reports that rely on end of period holdings and client prices and that the new behavior shoudl be considered an improvement. </Sent>
+                          <Sent id="55.10"> Short story is that we should not be reaching out proactively to a broader group than those clients that have choosen to recieve emails through Notify. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>10-Jul-12 21:05:16</Received>
+             <From>Cristina C. Flores</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="56.1"> Thanks, @ChristopherElias , for you input. </Sent>
+                          <Sent id="56.2"> @MichaelAltmaier and @MichaelGiordano -- Are you okay with posting the Notify message to the Portfolio Analysis Announcements list tomorrow then? </Sent>
+                          <Sent id="56.3"> That will give users just over 2 weeks of notice. </Sent>
+                          <Sent id="56.4"> Consultants can use the email template in my comment from 9-Jul, 9:37 a.m. </Sent>
+                          <Sent id="56.5"> to contact any power PA users, in lieu of contacting all 2,000 individuals. </Sent>
+                          <Sent id="56.6"> Thanks! </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>10-Jul-12 21:48:59</Received>
+             <From>Michael Giordano</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="57.1"> I'm OK with the posting going out. </Sent>
+                          <Sent id="57.2"> We will have the PA specialists and the Consultants work together to notify the priority/power users of this change. </Sent>
+                          <Sent id="57.3"> @ChristopherElias can you notify your Global PA Specialists and I'll send out the word to Global Consulting? </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>11-Jul-12 03:34:16</Received>
+             <From>Stanley Kwasniewski</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="58.1"> @CristinaFlores - I have some amendments to the Notify message. </Sent>
+                          <Sent id="58.2"> Any objections to this?: Subject: Change to the Behavior of "End of Period" Holdings Mode and Client Portfolio Pricing in Portfolio Analysis On 26-Jul-2012, a change will be made that affects how pricing information is fetched in Portfolio Analysis reports which use Buy &amp; Hold mode with "End of Period" holdings and "Client Portfolio" pricing. </Sent>
+                          <Sent id="58.3"> Currently, when you use Buy &amp; Hold mode with "End of Period" holdings and "Client Portfolio" pricing, prices are fetched from the same day as shares as well as the day after. </Sent>
+                          <Sent id="58.4"> For example, if you run a report from January 11 &ndash; January 12, shares are used from January 12th and prices are used are from January 12 and January 13. </Sent>
+                          <Sent id="58.5"> After 26-Jul-2012, when you use Buy &amp; Hold mode with "End of Period" holdings and "Client Portfolio" pricing, Portfolio Analysis will no longer feel forward an extra day for prices. </Sent>
+                          <Sent id="58.6"> For example, if you run a report from January 11 &ndash; January 12, the prices used will be from January 11 and January 12. </Sent>
+                          <Sent id="58.7"> This change is being made so that the behavior of price fetching within reports which use Buy &amp; Hold mode with "End of Period" holdings and "Client Portfolio" pricing is consistent with the behavior of price fetching when using any other Portfolio Analysis pricing source(s). </Sent>
+                          <Sent id="58.8"> If you have questions about this change or would like to know which of your saved reports are affected, contact your PMW specialist or email pmw_support@factset.com. </Sent>
+                          <Sent id="58.9"> cc @ChristopherElias , @MarkSolis , @MichaelAltmaier , @EuniceKim , @JamesPorter </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>11-Jul-12 15:29:32</Received>
+             <From>Michael Giordano</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="59.1"> last request here....can we get the name of the user next to the Serial Number column? </Sent>
+                          <Sent id="59.2"> That will make it easier for the PA SPecialist and the COnsultant to know who to contact and who not to contact. </Sent>
+                          <Sent id="59.3"> With just the serial number in the file, each one will need to be looked up. </Sent>
+                          <Sent id="59.4"> With the name as well, it will save a significant amount of time. </Sent>
+                          <Sent id="59.5"> Can we get this today? </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>11-Jul-12 15:38:17</Received>
+             <From>Cristina C. Flores</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="60.1"> @StanleyKwasniewski - Thanks, I think your version looks good. </Sent>
+                          <Sent id="60.2"> I made a few small changes in the version below (the subject line exceeded the character limit). </Sent>
+                          <Sent id="60.3"> Please let me know when you would like to post it. </Sent>
+                          <Sent id="60.4"> ****************** Subject: Change to the Behavior of Holdings as of "End of Period" and &ldquo;Client Portfolio&rdquo; Pricing On 26-Jul-2012, a change will be made that affects how pricing information is fetched in Portfolio Analysis reports which use Buy &amp; Hold mode with holdings as of "End of Period" and the "Client Portfolio" pricing source . </Sent>
+                          <Sent id="60.5"> Currently, when you use Buy &amp; Hold mode with "End of Period" holdings and "Client Portfolio" pricing, prices are fetched from the same day as shares as well as the day after. </Sent>
+                          <Sent id="60.6"> For example, if you run a report from January 11 &ndash; January 12, shares are used from January 12 and prices are used from January 12 and January 13. </Sent>
+                          <Sent id="60.7"> After 26-Jul-2012, when you use Buy &amp; Hold mode with "End of Period" holdings and "Client Portfolio" pricing, Portfolio Analysis will no longer feel forward an extra day for prices. </Sent>
+                          <Sent id="60.8"> For example, if you run a report from January 11 &ndash; January 12, the prices used will be from January 11 and January 12. </Sent>
+                          <Sent id="60.9"> This change is being made so that the behavior of price fetching within reports which use Buy &amp; Hold mode with "End of Period" holdings and "Client Portfolio" pricing is consistent with the behavior of price fetching when using any other Portfolio Analysis pricing source(s). </Sent>
+                          <Sent id="60.10"> If you have questions about this change or would like to know which of your saved reports are affected, contact your PMW specialist or email pmw_support@factset.com. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>11-Jul-12 15:40:32</Received>
+             <From>Eunice K. Dove</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="61.1"> @MichaelGiordano : I believe the way Mark created his 6/27 spreadsheet was to take the serial numbers produced by Engineering, download the serial number from CRM screening along with any other data that he thought would be useful, and use a VLOOKUP in order to pull in that data by serial number. </Sent>
+                          <Sent id="61.2"> If the name of the user is a CRM screening field, could consultants use this in order to pull in the user's name (and anything else they may like)? </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>11-Jul-12 16:08:39</Received>
+             <From>Christopher Elias</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="62.1"> MIke G. </Sent>
+                          <Sent id="62.2"> I will make sure the global specialist are aware of this change and share the list of those who may be potentially impacted. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>11-Jul-12 16:45:15</Received>
+             <From>Michael Giordano</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="63.1"> Hi Eunice - how can I use the Serial Numbers to pull other information like the name of the user into a spreadsheet? </Sent>
+                          <Sent id="63.2"> It would be tremendously helpful with less than 2 weeks to contact a lot of people if we could just add the user's first and last name to that spreadsheet. </Sent>
+                          <Sent id="63.3"> If that can be provided, that would be great. </Sent>
+                          <Sent id="63.4"> Alternatively if someone can teach me how to build the same spreadsheet in a quick fashion with accurate data, I'm certainly willing to be taught. </Sent>
+                          <Sent id="63.5"> Let me know. </Sent>
+                          <Sent id="63.6"> Sooner we get this data, the sooner we start calling. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>11-Jul-12 16:51:18</Received>
+             <From>Stanley Kwasniewski</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="64.1"> @CristinaFlores - your new version looks good to go. </Sent>
+                          <Sent id="64.2"> @ChristopherElias - are we ready to post today? </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>11-Jul-12 17:18:39</Received>
+             <From>Michael Altmaier</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="65.1"> Should we use the word "fetch" or "retrieve"? </Sent>
+                          <Sent id="65.2"> Fetch came across as more FactSet-speak to me. </Sent>
+                          <Sent id="65.3"> Thoughts? </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>11-Jul-12 17:28:40</Received>
+             <From>Stanley Kwasniewski</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="66.1"> @MichaelAltmaier - "retrieve" works for me. </Sent>
+                          <Sent id="66.2"> Does the rest of the message look OK to you? </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>11-Jul-12 20:48:04</Received>
+             <From>Christopher Elias</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="67.1"> You can post this today. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>11-Jul-12 21:32:23</Received>
+             <From>Michael Altmaier</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="68.1"> Looks good, let's go with it. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>11-Jul-12 23:19:13</Received>
+             <From>Cristina C. Flores</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="69.1"> Thanks, everyone. </Sent>
+                          <Sent id="69.2"> I'm pa sting the final version below for reference, in case consultants want to use it inform clients of the change. </Sent>
+                          <Sent id="69.3"> This will go out to "Portfolio Analysis Announcements" tonight, and will be available to all PA users in Quick View or in the Notify application. </Sent>
+                          <Sent id="69.4"> ******************** Subject: Change to the Behavior of Holdings as of "End of Period" and &ldquo;Client Portfolio&rdquo; Pricing On 26-Jul-2012, a change will be made that affects how pricing information is retrieved in Portfolio Analysis reports which use Buy &amp; Hold mode with holdings as of "End of Period" and the "Client Portfolio" pricing source. </Sent>
+                          <Sent id="69.5"> Currently, when you use Buy &amp; Hold mode with "End of Period" holdings and "Client Portfolio" pricing, prices are retrieved from the same day as shares as well as the day after. </Sent>
+                          <Sent id="69.6"> For example, if you run a report from January 11 &ndash; January 12, shares are used from January 12 and prices are used from January 12 and January 13. </Sent>
+                          <Sent id="69.7"> After 26-Jul-2012, when you use Buy &amp; Hold mode with "End of Period" holdings and "Client Portfolio" pricing, Portfolio Analysis will no longer feel forward an extra day for prices. </Sent>
+                          <Sent id="69.8"> For example, if you run a report from January 11 &ndash; January 12, the prices used will be from January 11 and January 12. </Sent>
+                          <Sent id="69.9"> This change is being made so that the behavior of price retrieval within reports which use Buy &amp; Hold mode with "End of Period" holdings and "Client Portfolio" pricing is consistent with the behavior of price retrieval when using any other Portfolio Analysis pricing source(s). </Sent>
+                          <Sent id="69.10"> If you have questions about this change or would like to know which of your saved reports are affected, contact your PMW specialist or email pmw_support@factset.com. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>11-Jul-12 23:52:49</Received>
+             <From>Cristina C. Flores</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="70.1"> The Notify message has been posted. </Sent>
+                          <Sent id="70.2"> @MarkSolis - When you are back in the office, please let me know if you would like to post a follow-up message on 26-July. </Sent>
+                          <Sent id="70.3"> Thanks! </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>13-Jul-12 14:58:33</Received>
+             <From>Michael Giordano</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="71.1"> Consulting is still trying to piece together a useful data set to begin contacting clients including name, email address, phone number, consultant and PA Specialist. </Sent>
+                          <Sent id="71.2"> We've been struggling with this for several hours over the last day and a half. </Sent>
+                          <Sent id="71.3"> Just keeping everyone informed. </Sent>
+                          <Sent id="71.4"> We still do not have a viable user list to begin making contact with affected clients. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>13-Jul-12 15:33:10</Received>
+             <From>Michael Giordano</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="72.1"> Finally got a working list here. </Sent>
+                          <Sent id="72.2"> We took Mark's final doc scan from the 27th, removed duplicates (1455 records remain), then used list builder to download the entire universe of IDs in fdsCRM and ran a VLOOKUP on the Serial Numbers to bring in the fdsCRM ID. </Sent>
+                          <Sent id="72.3"> Once we got the fdsCRM ID, we used Client Central formulas to bring in the user's name, phone number, PA Specialist, consultant (the consultant field in the original file was way out of date). </Sent>
+                          <Sent id="72.4"> There are likely cancelled serial numbers in this list too, but the consultant and PA Specialist will just have to use what they know about the accounts to realize whether or not they need to contact any particular user. </Sent>
+                          <Sent id="72.5"> Huge thanks to @DrewSwanson and @ErinHenry for spending many hours on figuring this out yesterday. </Sent>
+                          <Sent id="72.6"> Unfortunately, the attachment feature in RPD is not working right now so I cannot attach the file. </Sent>
+                          <Sent id="72.7"> Will try again later. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>13-Jul-12 15:37:35</Received>
+             <From>Michael Giordano</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="73.1"> switched over to IE from Chrome and was able to attach. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>16-Jul-12 14:26:14</Received>
+             <From>Mark Solis</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="74.1"> @CristinaFlores - I think it would be a good idea to send a follow-up message on July 26th. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>16-Jul-12 21:56:04</Received>
+             <From>Cristina C. Flores</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="75.1"> Thanks, Mark! </Sent>
+                          <Sent id="75.2"> I've made a note of it. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>26-Jul-12 15:24:45</Received>
+             <From>Cristina C. Flores</From>
+             <To>Bridie Sullivan,Jessica Tompkins,Ryan C. Clark,Lisa Knoll,James Porter,Eunice K. Dove,Stanley Kwasniewski,Michael Giordano,Christopher Elias,Michael Altmaier,Mark Solis,Erin H. Kimmons,Drew Swanson,Cristina C. Flores</To>
+             <Subject> Changing Behavior of EOP Holdings with Client Portfolio Pricing </Subject>
+             <Text> 
+                          <Sent id="76.1"> Both Notify messages and the Alert have been posted. </Sent>
+                          <Sent id="76.2"> OA changes are live. </Sent>
+                          <Sent id="76.3"> Thanks! </Sent>
+             </Text>
+         </DOC>
+</thread>

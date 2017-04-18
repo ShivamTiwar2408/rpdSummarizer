@@ -1,0 +1,141 @@
+<thread>
+<Name> Match the Selenium Grid nodes resolution with Focal Point VM's resolution </Name>
+<listno>30176960</listno>
+         <DOC>
+             <Received>27-Mar-17 13:45:06</Received>
+             <From>Shiva Kumar Macharla</From>
+             <To>Eyme Ann Mathew,Priyanka Muddalapuram,Lilun Cao,Shiva Kumar Macharla,Rajul Shrivastava,Vasu Nakka,Bhupender Agarwal,Avanthi Rentala,Krishnateja Surapaneni,Shiva Kumari Mandala,Ken D. Morris</To>
+             <Subject> Match the Selenium Grid nodes resolution with Focal Point VM's resolution </Subject>
+             <Text> 
+                          <Sent id="1.1"> Hi @LilunCao A few test cases are failing as the resolution of the Selenium grid nodes is less. </Sent>
+                          <Sent id="1.2"> So far Focal Point VM's resolution is working fine for all the applications I've automated. </Sent>
+                          <Sent id="1.3"> So it would be better to have the same resolution on the Selenium grid node machines. </Sent>
+                          <Sent id="1.4"> Please increase the resolution of the selenium grid machines and let me know if you need any other information. </Sent>
+                          <Sent id="1.5"> Thanks, Shiva </Sent>
+             </Text>
+             </DOC>
+         <DOC>
+             <Received>30-Mar-17 12:59:02</Received>
+             <From>Lilun Cao</From>
+             <To>Eyme Ann Mathew,Priyanka Muddalapuram,Lilun Cao,Shiva Kumar Macharla,Rajul Shrivastava,Vasu Nakka,Bhupender Agarwal,Avanthi Rentala,Krishnateja Surapaneni,Shiva Kumari Mandala,Ken D. Morris</To>
+             <Subject> Match the Selenium Grid nodes resolution with Focal Point VM's resolution </Subject>
+             <Text> 
+                          <Sent id="2.1"> Hi @ShivaKumariMandala I did some testing and found that if the script was running against the node on Windows Server 2008 for dev, the max resolution that could be reached there was 1928x1088 by default in case the following statement was used in the script: wd.driver.manage.window.maximize But if the script was running against the node on Windows Server 2012 for dev, the max resolution that could be reached was 1040x784 by default. </Sent>
+                          <Sent id="2.2"> Also we don't have any node configuration option to set any default resolution on any node. </Sent>
+                          <Sent id="2.3"> We can only set the physical display resolution to 1920x1200. </Sent>
+                          <Sent id="2.4"> So I am going to do some research to see whether we can improve the browser resolution for the nodes on Windows Server 2012. </Sent>
+                          <Sent id="2.5"> Right now we have two node machines for dev and prod respectively: one node machine on Windows Server 2008 and another one on Windows Server 2012. </Sent>
+                          <Sent id="2.6"> The hub uses some algorithms to redirect the requests to the nodes on 2008 and 2012, so the scripts may be running with different browser resolutions each time. </Sent>
+                          <Sent id="2.7"> -Lilun </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>30-Mar-17 14:54:43</Received>
+             <From>Lilun Cao</From>
+             <To>Eyme Ann Mathew,Priyanka Muddalapuram,Lilun Cao,Shiva Kumar Macharla,Rajul Shrivastava,Vasu Nakka,Bhupender Agarwal,Avanthi Rentala,Krishnateja Surapaneni,Shiva Kumari Mandala,Ken D. Morris</To>
+             <Subject> Match the Selenium Grid nodes resolution with Focal Point VM's resolution </Subject>
+             <Text> 
+                          <Sent id="3.1"> Hi @ShivaKumariMandala If we ran the node on the command line on tellusgridb05 (Windows Server 2012) instead of a windows service, then the larger browser resolution 1936x1176 for chrome could be reached. </Sent>
+                          <Sent id="3.2"> Seems running the nodes as windows services causes some limitation to the browsers on Windows Server 2012. </Sent>
+                          <Sent id="3.3"> Hopefully we can find a way to reach the wanted browser resolution by launching the nodes as windows services (browsers run in the background); Otherwise we have to run the nodes on the command line, but this will cause the browsers to run in the foreground. </Sent>
+                          <Sent id="3.4"> It may not be a good solution. </Sent>
+                          <Sent id="3.5"> --Lilun </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>03-Apr-17 14:10:15</Received>
+             <From>Lilun Cao</From>
+             <To>Eyme Ann Mathew,Priyanka Muddalapuram,Lilun Cao,Shiva Kumar Macharla,Rajul Shrivastava,Vasu Nakka,Bhupender Agarwal,Avanthi Rentala,Krishnateja Surapaneni,Shiva Kumari Mandala,Ken D. Morris</To>
+             <Subject> Match the Selenium Grid nodes resolution with Focal Point VM's resolution </Subject>
+             <Text> 
+                          <Sent id="4.1"> Hi @RajulShrivastava @KenMorris I haven't found any option in node configuration to set the default browser resolution. </Sent>
+                          <Sent id="4.2"> I did some research. </Sent>
+                          <Sent id="4.3"> Many people have faced the resolution issue and posted those questions, but they never got any working solutions. </Sent>
+                          <Sent id="4.4"> I did testing on our grid. </Sent>
+                          <Sent id="4.5"> Seems we can reach higher resolution on Windows Server 2008 when the nodes are launched as windows services, but we can not reach higher resolution on Windows Server 2012 when the nodes are launched as windows services. </Sent>
+                          <Sent id="4.6"> The only working way I found on Windows Server 2012 is to launch the nodes like any desktop apps (on the command line). </Sent>
+                          <Sent id="4.7"> The problem with this is if the account used to start the nodes is logged out, then all the nodes would be stopped. </Sent>
+                          <Sent id="4.8"> Maybe we can take the same way as Thief grid for those nodes on Windows Server 2012. </Sent>
+                          <Sent id="4.9"> cc @ShivaKumariMandala -Lilun </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>04-Apr-17 15:18:59</Received>
+             <From>Rajul Shrivastava</From>
+             <To>Eyme Ann Mathew,Priyanka Muddalapuram,Lilun Cao,Shiva Kumar Macharla,Rajul Shrivastava,Vasu Nakka,Bhupender Agarwal,Avanthi Rentala,Krishnateja Surapaneni,Shiva Kumari Mandala,Ken D. Morris</To>
+             <Subject> Match the Selenium Grid nodes resolution with Focal Point VM's resolution </Subject>
+             <Text> 
+                          <Sent id="5.1"> @ShivaKumarMacharla can this resolution setting be part of script? </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>05-Apr-17 12:20:08</Received>
+             <From>Shiva Kumar Macharla</From>
+             <To>Eyme Ann Mathew,Priyanka Muddalapuram,Lilun Cao,Shiva Kumar Macharla,Rajul Shrivastava,Vasu Nakka,Bhupender Agarwal,Avanthi Rentala,Krishnateja Surapaneni,Shiva Kumari Mandala,Ken D. Morris</To>
+             <Subject> Match the Selenium Grid nodes resolution with Focal Point VM's resolution </Subject>
+             <Text> 
+                          <Sent id="6.1"> Hi @RajulShrivastava We have been using the browser maximize logic in the script which maximizes the browser to the maximum available resolution of the machine. </Sent>
+                          <Sent id="6.2"> As the node machine resolution is lesser than the expected, the browser also being maximized to the same resolution hence the test cases are failing. </Sent>
+                          <Sent id="6.3"> I'll try to set the browser resolution to '1280x1024' though the code. </Sent>
+                          <Sent id="6.4"> If that works we have to use this logic every time while launching the browser. </Sent>
+                          <Sent id="6.5"> CC @LilunCao Thanks, Shiva </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>27-Mar-17 17:24:40</Received>
+             <From>Lilun Cao</From>
+             <To>Eyme Ann Mathew,Priyanka Muddalapuram,Lilun Cao,Shiva Kumar Macharla,Rajul Shrivastava,Vasu Nakka,Bhupender Agarwal,Avanthi Rentala,Krishnateja Surapaneni,Shiva Kumari Mandala,Ken D. Morris</To>
+             <Subject> Match the Selenium Grid nodes resolution with Focal Point VM's resolution </Subject>
+             <Text> 
+                          <Sent id="7.1"> Hi @ShivaKumarMacharla What we did on the node is set the max resolution 1920x1200 for the account running the node. </Sent>
+                          <Sent id="7.2"> Seems the configuration for selenium node does not have any option to set the default resolution of the browser. </Sent>
+                          <Sent id="7.3"> https://github.com/SeleniumHQ/selenium/wiki/DesiredCapabilities Selenium is not capable of modifying the desktop resolution. </Sent>
+                          <Sent id="7.4"> The browser size in Selenium can be modified to match a specific resolution wanted: wd.driver.manage.window.move_to(0, 0) wd.driver.manage.window.resize_to(1280, 1024) Also the available resolution for the node running as a windows service may be lower and different from that for the node running as a desktop app on the command line on the same machine. </Sent>
+                          <Sent id="7.5"> Our nodes are running as windows services. </Sent>
+                          <Sent id="7.6"> Let me do some research about whether there is any way to set the default resolution. </Sent>
+                          <Sent id="7.7"> Thanks, Lilun </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>27-Mar-17 15:32:41</Received>
+             <From>Shiva Kumar Macharla</From>
+             <To>Eyme Ann Mathew,Priyanka Muddalapuram,Lilun Cao,Shiva Kumar Macharla,Rajul Shrivastava,Vasu Nakka,Bhupender Agarwal,Avanthi Rentala,Krishnateja Surapaneni,Shiva Kumari Mandala,Ken D. Morris</To>
+             <Subject> Match the Selenium Grid nodes resolution with Focal Point VM's resolution </Subject>
+             <Text> 
+                          <Sent id="8.1"> @LilunCao It would be better to have the default resolution as 1280x1024. </Sent>
+                          <Sent id="8.2"> In case, any application requires specific resolution we can set it through the script. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>27-Mar-17 14:28:22</Received>
+             <From>Lilun Cao</From>
+             <To>Eyme Ann Mathew,Priyanka Muddalapuram,Lilun Cao,Shiva Kumar Macharla,Rajul Shrivastava,Vasu Nakka,Bhupender Agarwal,Avanthi Rentala,Krishnateja Surapaneni,Shiva Kumari Mandala,Ken D. Morris</To>
+             <Subject> Match the Selenium Grid nodes resolution with Focal Point VM's resolution </Subject>
+             <Text> 
+                          <Sent id="9.1"> Thanks a lot @EymeAnnMathew ! </Sent>
+                          <Sent id="9.2"> @ShivaKumarMacharla On the grid node, the maximum resolution that can be reached is 1920x1200. </Sent>
+                          <Sent id="9.3"> But the default resolution used may be lower. </Sent>
+                          <Sent id="9.4"> I tested prod grid and printed out the default resolution from the ruby script, I got #&lt;struct Selenium::WebDriver::Dimension width=1004, height=748&gt; After I set wd = Watir::Browser.new(:remote, url: " http://tellusdevb03.pc.factset.com:4444/wd/hub ", :desired_capabilities =&gt; caps) wd.driver.manage.window.move_to(0, 0) wd.driver.manage.window.resize_to(1280, 1024) in the ruby script and ran it, I got the following printed resolution #&lt;struct Selenium::WebDriver::Dimension width=1280, height=1024&gt; #&lt;struct Selenium::WebDriver::Point x=0, y=0&gt; I don't know whether this can be specified in the script or not @ShivaKumarMacharla ? </Sent>
+                          <Sent id="9.5"> Thanks, Lilun </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>27-Mar-17 13:59:29</Received>
+             <From>Eyme Ann Mathew</From>
+             <To>Eyme Ann Mathew,Priyanka Muddalapuram,Lilun Cao,Shiva Kumar Macharla,Rajul Shrivastava,Vasu Nakka,Bhupender Agarwal,Avanthi Rentala,Krishnateja Surapaneni,Shiva Kumari Mandala,Ken D. Morris</To>
+             <Subject> Match the Selenium Grid nodes resolution with Focal Point VM's resolution </Subject>
+             <Text> 
+                          <Sent id="10.1"> Unless it has changed recently, it was 1280x1024. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>27-Mar-17 13:56:50</Received>
+             <From>Lilun Cao</From>
+             <To>Eyme Ann Mathew,Priyanka Muddalapuram,Lilun Cao,Shiva Kumar Macharla,Rajul Shrivastava,Vasu Nakka,Bhupender Agarwal,Avanthi Rentala,Krishnateja Surapaneni,Shiva Kumari Mandala,Ken D. Morris</To>
+             <Subject> Match the Selenium Grid nodes resolution with Focal Point VM's resolution </Subject>
+             <Text> 
+                          <Sent id="11.1"> @VasuNakka @AvanthiRentala @KrishnatejaSurapaneni @BhupenderAgarwal Anybody know what resolution we are using in Focal Point VM? </Sent>
+                          <Sent id="11.2"> Thanks, Lilun </Sent>
+             </Text>
+         </DOC>
+</thread>

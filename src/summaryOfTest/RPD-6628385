@@ -1,0 +1,116 @@
+(2.1) :  This change, http://is.factset.com/RPD/Summary.aspx?messageId=5552227 , is currently being reviewed by the PA Engineering review board. 
+(2.2) :  The 7/12/2012 effective date is tentative and depends on when the review board has completed their evaluation . 
+(3.1) :  Hi Mark, Can you provide a list of the affected clients and PA documents (if available)? 
+(3.2) :  For changes like this, Consulting has asked for details including username, serial number, contact info, sales/consulting representatives, sales/consulting group. 
+(3.3) :  This will help us gauge the severity of the change and let the support reps know who to reach out to. 
+(3.4) :  It looks like a client will not have to do anything for this change, just be aware that the behavior is changing, correct? 
+(4.1) :  @BridieSullivan - I have a list but it is a bit old. 
+(4.2) :  I asked Chong Qiu to compile a new one and will add it on here once it is complete. 
+(5.1) :  @BridieSullivan - Here is the list of usernames and documents that are using Client Portfolio Pricing and End of Period holdings. 
+(5.2) :  This list should contain every document that will be impacted, but some of these documents may not see any change. 
+(5.5) :  OMS is not supported for these methodologies, so they fall back to the 'Holdings Only' mode behavior. 
+(6.2) :  @MichaelAltmaier and @MichaelGiordano - any objections to this change occuring on 12-Jul? 
+(7.1) :  There are a great deal of clients in the notepad, which is partially helpful but we need to add consultant, salesteam, etc. 
+(9.1) :  Hi @MichaelAltmaier Are you ok with the 12-Jul date and me sending this out in the next couple of days? 
+(10.1) :  @BridieSullivan - Here is the list you requested. 
+(10.2) :  I was unable to get the serial numbers, but I will look into whether or not that is possible. 
+(10.3) :  Let me know if there is anything else you need. 
+(12.4) :  If we can group by Serial number we can know how many people are affected and what our communication task is going to look like. 
+(12.6) :  Results will change so we absolutely need to personally notify these users of this difference in methodology. 
+(12.7) :  The more lead time we have on this the better. 
+(13.1) :  @BridieSullivan - once we know how many actual users are affected and who they are, we'll be able to comment on whether the July 12th date is feasible. 
+(14.2) :  We are now looking to have this installed on July 19. 
+(15.1) :  @BridieSullivan @MichaelGiordano @MichaelAltmaier - I am attaching the latest document scan. 
+(15.2) :  I believe this contains all the data that has been requested. 
+(15.4) :  I also made a small change to the alert. 
+(15.8) :  As I mentioned yesterday, we would like to have this change installed on 7/19. 
+(16.1) :  I hate to do this Mark - but we need "consulting team" as a column here too. 
+(16.2) :  Sales teams span all over the globe and they're certainly not taking care of this - the consulting department is. 
+(16.3) :  Apologies for not requesting this sooner. 
+(16.4) :  Situations like these make a great case for having a standard document/data ready when we make changes/retirements instead of going back and forth like this. 
+(16.5) :  Using what we have here, there are 2,268 individual users affected by this change which is quite a lot. 
+(18.2) :  et al We can't post the message to a specific list of clients (this feature is being worked on right now). 
+(18.3) :  The best bet would be to post a client message to the Portfolio Analysis list - we can CACCESS this message if needed. 
+(19.2) :  This would only be good if all 2268 users are subscribed to the Portfolio Analysis list. 
+(20.2) :  Only those that are subscribed would actually receive an email, and we can't add clients to the subscribed list. 
+(20.4) :  I talked to some other people and we *might* be able to send the message to just the 2268 users, but this would require some further testing to confirm it would work. 
+(20.5) :  The earliest the testing could be accomplished is end of next week (i.e., message wouldn't be sent until 9-Jul or later). 
+(22.2) :  I think direct email is our only option at this point, Mike is right in that the blinking icon is cool, but most people think it's a connection signal, similar to wireless. 
+(23.8) :  Currently, when you use end-of-period holdings and Client Portfolio pricing, end-of-period pricing is automatically used because prices are tied to shares. 
+(23.9) :  In Buy   Hold mode, the next day's prices and shares are used as an approximation for end-of-period prices and shares, as portfolio data is only uploaded once a day, generally before the market opens. 
+(23.13) :  This will provide more intuitive results than the current behavior. 
+(23.14) :  If you have questions about this change, contact your PMW specialist or email pmw_support@factset.com. 
+(24.1) :  @MichaelAltmaier This is only affecting 2268 clients. 
+(24.3) :  Also, Mark pushed this back a week to 19-Jul. 
+(25.1) :  I still believe we need to communicate this change via email, an Alert, etc. 
+(25.2) :  Client communication right now is critical. 
+(26.2) :  It is not really accurate for the following reasons: 1) There is no such thing as end-of-period pricing. 
+(26.3) :  2) The bold statement describes the theory behind end of period holdings with the corrected price fetching 3) The current behavior is a bug that was caused by setting up the client portfolio pricing source separately from the other pricing sources. 
+(27.3) :  This change is specific to B H so some of the documents may not actually be affected. 
+(28.10) :  If you have questions about this change, contact your PMW specialist or email pmw_support@factset.com. 
+(29.1) :  Hi @MichaelAltmaier I'm not sure what you meant by your last comment, but we're working on the communication (internal and external) right now. 
+(29.2) :  Mark filed this RPD to request the alert + client message and now Cristina and I are working on both. 
+(29.3) :  The INTERNAL alert (to be sent as a Critical Change) can be found here - RPD:6687494 The client message can be found in Cristina's last comment on this RPD - comment From the Knowledge Management group and Mark's prospective, the messages are complete and ready to go. 
+(29.4) :  We are waiting for you (and the other Consulting Managers) to tell us if you need any other information. 
+(29.7) :  This is possible, but would require testing. 
+(29.13) :  The earliest the testing could be accomplished is end of next week (i.e., message wouldn't be sent until 9-Jul or later). 
+(29.16) :  In a nutshell, we (Mark, Cristina, and I) need from you: Are you ok with the new date: 19-Jul Can the internal alert be sent How do you want the client message sent? 
+(31.1) :  @CristinaFlores - Sorry to make another change, but after reviewing Bridie's alert, http://is.factset.com/RPD/summary.aspx?messageid=6687494 , I was hoping we steal a couple things and add them here. 
+(31.9) :  If you have questions about this change, contact your PMW specialist or email pmw_support@factset.com. 
+(33.1) :  Question about this comment by @MarkSolis : "...The document scan was for all documents that are using End-of-Period Holdings and Client Portfolio pricing. 
+(33.3) :  This change is specific to B H so some of the documents may not actually be affected." If this is the case, can we remove the documents that are not affected (OMS and TBR documents) so we can see an accurate list of those clients who will be affected (B H only)? 
+(35.6) :  It is very possible they are running buy and hold portfolios/benchmarks in these documents that we are now excluding. 
+(36.1) :  Thanks Mark - I think this doc had a problem with the fields around row 800 because after that the data is incomplete for the last several columns. 
+(39.3) :  Is that enough for you to do a saved Target list so we can send a notification to these affected users. 
+(39.4) :  When do we want to plan to send this? 
+(41.1) :  @MichaelAltmaier -- Bridie mentioned before that it is actually 2,286 affected users, not 16,000. 
+(41.2) :  (The usage file shows the full list of documents affected -- so you'll see duplicate individual users listed in several rows.) @MarkSolis --how hard is it to include fdsCRM ID in the list of affected users? 
+(41.3) :  Before we decide the best way to proceed, I wanted to get a sense of whether this is possible and if so, how much time it would take to do as I know you've already had to rerun usage several times for this change. 
+(41.5) :  the standard way of emailing users that are signed up is essentially a "beta" feature and not live yet so we weren't sure about all of the requirements needed. 
+(44.1) :  @MarkSolis Does this truly affect 320,000 individuals? 
+(46.1) :  @MichaelAltmaier It looks like we're all set to send the internal product alert and the client message. 
+(46.2) :  Do you have any objections or are we ok to send this on Thursday 5-Jul (assuming sending it tomorrow would make it get lost in the shuffle)? 
+(46.3) :  This will give everyone 2 weeks notice. 
+(47.1) :  Are we all set for Chong and I to submit this so it can go live on 7/19? 
+(48.1) :  We have been asked to push this back one more week. 
+(49.1) :  Hi @LisaKnoll - Bridie posted the Alert on Friday, so please let me know when you're planning to send the emails. 
+(50.3) :  @CristinaFlores - I think we should send an email first and then the following day, post within Notify. 
+(50.4) :  Who is writing the email? 
+(50.6) :  @MichaelAltmaier - let us know if you have any objections to a email going out today or tomorrow to all affected users for this change happening on the 26th. 
+(51.1) :  @LisaKnoll -- the users have been added to a criteria list for the purpose of sending out this message; however, there are only 1148 users, as many of the files listed could not be linked to CRM id's. 
+(52.3) :  @MichaelAltmaier - Please let me know if you think the urgency of the message is appropriate, or if I should add something to the headline to emphasize that recipients are affected (e.g., "Your Action Required:"). 
+(52.7) :  If you are receiving this email, it means that you have reports saved that use the affected settings. 
+(52.13) :  If you have questions about this change or would like to know which of your saved reports are affected, contact your PMW specialist or email pmw_support@factset.com. 
+(54.3) :  This is for the email that will be sent to users who we know have affected reports; the Notify message will be slightly different. 
+(55.1) :  I spoke with Stan Kwasniewski about this. 
+(55.2) :  We both believe that proactively emailing clients that are not on the Notify is too alarmist given the potential impact of this change. 
+(55.3) :  Using email for PA users that have not chosen to opt in is extreme. 
+(55.4) :  While this change will impact historical results for some, the 2,000+ users that have documents with these settings overstates the amount of users that may really rely on these documents or will be effected. 
+(55.5) :  A crtical alert change in Notify is warrented. 
+(55.6) :  It should be communicated this week so that concerned clients will be able to prepare for it. 
+(55.8) :  I think the tone of the 6/27 Alert that Cristina used is approriate. 
+(55.9) :  We want to communicate that this may effect returns in reports that rely on end of period holdings and client prices and that the new behavior shoudl be considered an improvement. 
+(55.10) :  Short story is that we should not be reaching out proactively to a broader group than those clients that have choosen to recieve emails through Notify. 
+(57.2) :  We will have the PA specialists and the Consultants work together to notify the priority/power users of this change. 
+(58.2) :  Any objections to this?: Subject: Change to the Behavior of "End of Period" Holdings Mode and Client Portfolio Pricing in Portfolio Analysis On 26-Jul-2012, a change will be made that affects how pricing information is fetched in Portfolio Analysis reports which use Buy   Hold mode with "End of Period" holdings and "Client Portfolio" pricing. 
+(58.5) :  After 26-Jul-2012, when you use Buy   Hold mode with "End of Period" holdings and "Client Portfolio" pricing, Portfolio Analysis will no longer feel forward an extra day for prices. 
+(58.7) :  This change is being made so that the behavior of price fetching within reports which use Buy   Hold mode with "End of Period" holdings and "Client Portfolio" pricing is consistent with the behavior of price fetching when using any other Portfolio Analysis pricing source(s). 
+(58.8) :  If you have questions about this change or would like to know which of your saved reports are affected, contact your PMW specialist or email pmw_support@factset.com. 
+(60.4) :  ****************** Subject: Change to the Behavior of Holdings as of "End of Period" and -Client Portfolio- Pricing On 26-Jul-2012, a change will be made that affects how pricing information is fetched in Portfolio Analysis reports which use Buy   Hold mode with holdings as of "End of Period" and the "Client Portfolio" pricing source . 
+(60.7) :  After 26-Jul-2012, when you use Buy   Hold mode with "End of Period" holdings and "Client Portfolio" pricing, Portfolio Analysis will no longer feel forward an extra day for prices. 
+(60.9) :  This change is being made so that the behavior of price fetching within reports which use Buy   Hold mode with "End of Period" holdings and "Client Portfolio" pricing is consistent with the behavior of price fetching when using any other Portfolio Analysis pricing source(s). 
+(60.10) :  If you have questions about this change or would like to know which of your saved reports are affected, contact your PMW specialist or email pmw_support@factset.com. 
+(61.2) :  If the name of the user is a CRM screening field, could consultants use this in order to pull in the user's name (and anything else they may like)? 
+(62.2) :  I will make sure the global specialist are aware of this change and share the list of those who may be potentially impacted. 
+(69.1) :  Thanks, everyone. 
+(69.3) :  This will go out to "Portfolio Analysis Announcements" tonight, and will be available to all PA users in Quick View or in the Notify application. 
+(69.4) :  ******************** Subject: Change to the Behavior of Holdings as of "End of Period" and -Client Portfolio- Pricing On 26-Jul-2012, a change will be made that affects how pricing information is retrieved in Portfolio Analysis reports which use Buy   Hold mode with holdings as of "End of Period" and the "Client Portfolio" pricing source. 
+(69.7) :  After 26-Jul-2012, when you use Buy   Hold mode with "End of Period" holdings and "Client Portfolio" pricing, Portfolio Analysis will no longer feel forward an extra day for prices. 
+(69.9) :  This change is being made so that the behavior of price retrieval within reports which use Buy   Hold mode with "End of Period" holdings and "Client Portfolio" pricing is consistent with the behavior of price retrieval when using any other Portfolio Analysis pricing source(s). 
+(69.10) :  If you have questions about this change or would like to know which of your saved reports are affected, contact your PMW specialist or email pmw_support@factset.com. 
+(71.1) :  Consulting is still trying to piece together a useful data set to begin contacting clients including name, email address, phone number, consultant and PA Specialist. 
+(71.2) :  We've been struggling with this for several hours over the last day and a half. 
+(72.4) :  There are likely cancelled serial numbers in this list too, but the consultant and PA Specialist will just have to use what they know about the accounts to realize whether or not they need to contact any particular user. 
+(72.5) :  Huge thanks to @DrewSwanson and @ErinHenry for spending many hours on figuring this out yesterday. 
+(72.6) :  Unfortunately, the attachment feature in RPD is not working right now so I cannot attach the file. 
+(76.1) :  Both Notify messages and the Alert have been posted. 

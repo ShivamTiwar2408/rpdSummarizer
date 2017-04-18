@@ -1,0 +1,345 @@
+<thread>
+<Name> Add a more reasonable upper bound on RPD comment/message size </Name>
+<listno>26843105</listno>
+         <DOC>
+             <Received>20-Oct-16 19:14:55</Received>
+             <From>Bryan A. Ehrlich</From>
+             <To>Robert L. Groce,Tony Piazza,Shreyas Valmiki,Bryan A. Ehrlich,Chris Werner,Shivam Tiwari,Surekha Vullekki,Raghupathi Manda,Madhavi Chinnala,Ajinkya Nilkanth Dhumale,CSS Resources Hyderabad,Krishna Jain</To>
+             <Subject> Add a more reasonable upper bound on RPD comment/message size </Subject>
+             <Text> 
+                          <Sent id="1.1"> The current upper bound on RPD comment size is 5mb, which is way too large. </Sent>
+                          <Sent id="1.2"> RPDs with this amount of content can barely be loaded (this is an example http://is.factset.com/rpd/summary.aspx?messageId=26560032 ). </Sent>
+                          <Sent id="1.3"> I'm recommending changing this limit to 500k bytes. </Sent>
+                          <Sent id="1.4"> This accounts for 99.99% of RPDs filed in the last month. </Sent>
+                          <Sent id="1.5"> Out of the 23 RPDs that would have failed to post, 40% of them are posted by a single service account, using RPDs to post log results as text (one example is the RPD I posted above). </Sent>
+                          <Sent id="1.6"> @RobertGroce @ChrisWerner please approve/discuss. </Sent>
+                          <Sent id="1.7"> If anything I think we should discuss being more aggressive, 50k for example accounts for 99.85% of RPDs. </Sent>
+                          <Sent id="1.8"> @ShreyasValmiki @TonyPiazza FYI </Sent>
+             </Text>
+             </DOC>
+         <DOC>
+             <Received>20-Oct-16 20:02:15</Received>
+             <From>Robert L. Groce</From>
+             <To>Robert L. Groce,Tony Piazza,Shreyas Valmiki,Bryan A. Ehrlich,Chris Werner,Shivam Tiwari,Surekha Vullekki,Raghupathi Manda,Madhavi Chinnala,Ajinkya Nilkanth Dhumale,CSS Resources Hyderabad,Krishna Jain</To>
+             <Subject> Add a more reasonable upper bound on RPD comment/message size </Subject>
+             <Text> 
+                          <Sent id="2.1"> I think we should make the size as restrictive as we can. </Sent>
+                          <Sent id="2.2"> We should optimize based on human interactions, not potential dumps of logs. </Sent>
+                          <Sent id="2.3"> I would like to change those workflows to incorporate links to the documents rather than a copy of their content. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>26-Oct-16 19:40:37</Received>
+             <From>Chris Werner</From>
+             <To>Robert L. Groce,Tony Piazza,Shreyas Valmiki,Bryan A. Ehrlich,Chris Werner,Shivam Tiwari,Surekha Vullekki,Raghupathi Manda,Madhavi Chinnala,Ajinkya Nilkanth Dhumale,CSS Resources Hyderabad,Krishna Jain</To>
+             <Subject> Add a more reasonable upper bound on RPD comment/message size </Subject>
+             <Text> 
+                          <Sent id="3.1"> I agree with what Rob said. </Sent>
+                          <Sent id="3.2"> What are some of the use cases that are using between 50-100k and 100-500k? </Sent>
+                          <Sent id="3.3"> I'm just wondering what we lose by not support these. </Sent>
+                          <Sent id="3.4"> If these ALL see like logs/service posts then we can just limit to 50k and be done. </Sent>
+                          <Sent id="3.5"> We should make all APIs return 400s and fail the request when this happens. </Sent>
+                          <Sent id="3.6"> We can update docs to reflect that they should provide a URL/link to their document if they need more room. </Sent>
+                          <Sent id="3.7"> .3 is going to get large but I'm going to add this as a low/nice to have and we'll tackle for sure by .4. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>30-Nov-16 08:42:19</Received>
+             <From>Shivam Tiwari</From>
+             <To>Robert L. Groce,Tony Piazza,Shreyas Valmiki,Bryan A. Ehrlich,Chris Werner,Shivam Tiwari,Surekha Vullekki,Raghupathi Manda,Madhavi Chinnala,Ajinkya Nilkanth Dhumale,CSS Resources Hyderabad,Krishna Jain</To>
+             <Subject> Add a more reasonable upper bound on RPD comment/message size </Subject>
+             <Text> 
+                          <Sent id="4.1"> as of now the MAX_CONTENT_LENGTH is set to 5000000 i.e the maximum allowable length of the message string, which is roughly 10mb. </Sent>
+                          <Sent id="4.2"> should we reduce it to 50000 ? </Sent>
+                          <Sent id="4.3"> @BryanEhrlich @ChrisWerner </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>30-Nov-16 18:11:51</Received>
+             <From>Bryan A. Ehrlich</From>
+             <To>Robert L. Groce,Tony Piazza,Shreyas Valmiki,Bryan A. Ehrlich,Chris Werner,Shivam Tiwari,Surekha Vullekki,Raghupathi Manda,Madhavi Chinnala,Ajinkya Nilkanth Dhumale,CSS Resources Hyderabad,Krishna Jain</To>
+             <Subject> Add a more reasonable upper bound on RPD comment/message size </Subject>
+             <Text> 
+                          <Sent id="5.1"> @ShivamTiwari can you get some examples of message bodies between 50-100k and 100k-500k filed by humans . </Sent>
+                          <Sent id="5.2"> We're looking for some valid usecases for making comments &gt; 50000. </Sent>
+                          <Sent id="5.3"> But yes, whatever limit we decide would be a change to MAX_CONTENT_LENGTH in both v1 and v2. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>01-Dec-16 10:20:16</Received>
+             <From>Shivam Tiwari</From>
+             <To>Robert L. Groce,Tony Piazza,Shreyas Valmiki,Bryan A. Ehrlich,Chris Werner,Shivam Tiwari,Surekha Vullekki,Raghupathi Manda,Madhavi Chinnala,Ajinkya Nilkanth Dhumale,CSS Resources Hyderabad,Krishna Jain</To>
+             <Subject> Add a more reasonable upper bound on RPD comment/message size </Subject>
+             <Text> 
+                          <Sent id="6.1"> length &lt; 50000 99.85 % 50000 &lt;= length &lt; 100000 0.093 % 100000 &lt;= length &lt; 500000 0.056 % 500000 &lt;= length 0.005 % some request between 50000 and 100000 http://is.factset.com/rpd/Summary.aspx?messageId=09-31670 -- 70210 http://is.factset.com/rpd/Summary.aspx?messageId=08-10948 -- 68632 some request between 100000 and 500000 http://is.factset.com/rpd/Summary.aspx?messageId=08-38946 -- 128455 http://is.factset.com/rpd/Summary.aspx?messageId=07-87757 -- 356480 some request greater than 500000 http://is.factset.com/rpd/Summary.aspx?messageId=279846 -- 617128 http://is.factset.com/rpd/Summary.aspx?messageId=08-23868 -- 1034873 </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>01-Dec-16 16:54:12</Received>
+             <From>Bryan A. Ehrlich</From>
+             <To>Robert L. Groce,Tony Piazza,Shreyas Valmiki,Bryan A. Ehrlich,Chris Werner,Shivam Tiwari,Surekha Vullekki,Raghupathi Manda,Madhavi Chinnala,Ajinkya Nilkanth Dhumale,CSS Resources Hyderabad,Krishna Jain</To>
+             <Subject> Add a more reasonable upper bound on RPD comment/message size </Subject>
+             <Text> 
+                          <Sent id="7.1"> I looked through the samples and these all appear to be log dumps, or some kind of computer generated output. </Sent>
+                          <Sent id="7.2"> These should just be attachments. </Sent>
+                          <Sent id="7.3"> @ChrisWerner @RobertGroce it sounds like we're saying 50k. </Sent>
+                          <Sent id="7.4"> Can you sign off on that number given the info above? </Sent>
+                          <Sent id="7.5"> This will need to be communicated to API consumers. </Sent>
+                          <Sent id="7.6"> @ShivamTiwari can you get a list of service accounts (sorted by frequency) that would be affected by this change? </Sent>
+                          <Sent id="7.7"> We'll also need to come up with some way of communicating this in the RTE. </Sent>
+                          <Sent id="7.8"> If you make an edit that causes you to go above the 50k limit we would need to highlight the RTE and say something about attaching a file instead. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>01-Dec-16 17:58:31</Received>
+             <From>Chris Werner</From>
+             <To>Robert L. Groce,Tony Piazza,Shreyas Valmiki,Bryan A. Ehrlich,Chris Werner,Shivam Tiwari,Surekha Vullekki,Raghupathi Manda,Madhavi Chinnala,Ajinkya Nilkanth Dhumale,CSS Resources Hyderabad,Krishna Jain</To>
+             <Subject> Add a more reasonable upper bound on RPD comment/message size </Subject>
+             <Text> 
+                          <Sent id="8.1"> @BryanEhrlich Unrelated, love the CCList search box change. </Sent>
+                          <Sent id="8.2"> As for this, I totally approve of 50k limit, it sounds like that covers the vast majority of actual human users. </Sent>
+                          <Sent id="8.3"> As for API users what options do we have for slow roll out? </Sent>
+                          <Sent id="8.4"> Ie. </Sent>
+                          <Sent id="8.5"> do something like the 300 where we accept 'for now' but indicate we won't in the future? </Sent>
+                          <Sent id="8.6"> Or is it 'ok' to just start 400ing and how do we get that approval? </Sent>
+                          <Sent id="8.7"> I feel this ties a bit to the lack of a File API, we're stating we won't attach or create files for you but you shouldn't dump logs in our system. </Sent>
+                          <Sent id="8.8"> @BryanEhrlich @RobertGroce Thoughts on how we should proceed here? </Sent>
+                          <Sent id="8.9"> As for human users, it's pretty easy to detect when the limit is hit, QAI does this and limits comments to 4000 chars. </Sent>
+                          <Sent id="8.10"> In QAI, if a paste occurs that would push paste 4000 we prevent it and state to paste less, but I'm wondering for human users can we build an ER to detect the overly large paste and prompt "This paste is too large, would you like to attach it as a text file?". </Sent>
+                          <Sent id="8.11"> We could ship the already capture paste text to fileStore as a text file fairly easily and that would make it easy for Users to still do things like this: http://is.factset.com/rpd/Summary.aspx?messageId=09-31670 </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>01-Dec-16 18:30:09</Received>
+             <From>Bryan A. Ehrlich</From>
+             <To>Robert L. Groce,Tony Piazza,Shreyas Valmiki,Bryan A. Ehrlich,Chris Werner,Shivam Tiwari,Surekha Vullekki,Raghupathi Manda,Madhavi Chinnala,Ajinkya Nilkanth Dhumale,CSS Resources Hyderabad,Krishna Jain</To>
+             <Subject> Add a more reasonable upper bound on RPD comment/message size </Subject>
+             <Text> 
+                          <Sent id="9.1"> do something like the 300 where we accept 'for now' but indicate we won't in the future We did that for several features in v1 and it didn't work. </Sent>
+                          <Sent id="9.2"> People just updated their code to accept 300 as "success". </Sent>
+                          <Sent id="9.3"> If we wanted to slow rollout we could have a size override for certain accounts where we allow them to continue posting large comments until they can support some other way. </Sent>
+                          <Sent id="9.4"> @RaghupathiManda and I are working on backfilling a mapping of group/owner to service account so we have a good way of directly communicating for specific API issues. </Sent>
+                          <Sent id="9.5"> I feel this ties a bit to the lack of a File API Right, the question is do we want to allow people to store logs in RPD in any way, rather than forcing them to host their own logs elsewhere. </Sent>
+                          <Sent id="9.6"> My opinion is that we don't want to support storing 3rd party data in RPD in any way. </Sent>
+                          <Sent id="9.7"> But it is not technically infeasible. </Sent>
+                          <Sent id="9.8"> Let's decide this once and for all in our Monday meeting because this has come up several times @SurekhaVullekki @RobertGroce . </Sent>
+                          <Sent id="9.9"> If we decide to support attachments we should probably execute on that before beginning this RPD so we have a good "alternative". </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>02-Dec-16 08:11:12</Received>
+             <From>Shivam Tiwari</From>
+             <To>Robert L. Groce,Tony Piazza,Shreyas Valmiki,Bryan A. Ehrlich,Chris Werner,Shivam Tiwari,Surekha Vullekki,Raghupathi Manda,Madhavi Chinnala,Ajinkya Nilkanth Dhumale,CSS Resources Hyderabad,Krishna Jain</To>
+             <Subject> Add a more reasonable upper bound on RPD comment/message size </Subject>
+             <Text> 
+                          <Sent id="10.1"> List of service accounts with requests longer than 50K </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>02-Dec-16 14:20:56</Received>
+             <From>Chris Werner</From>
+             <To>Robert L. Groce,Tony Piazza,Shreyas Valmiki,Bryan A. Ehrlich,Chris Werner,Shivam Tiwari,Surekha Vullekki,Raghupathi Manda,Madhavi Chinnala,Ajinkya Nilkanth Dhumale,CSS Resources Hyderabad,Krishna Jain</To>
+             <Subject> Add a more reasonable upper bound on RPD comment/message size </Subject>
+             <Text> 
+                          <Sent id="11.1"> @BryanEhrlich @ShivamTiwari Maybe an option if we keep accepting larger for a while anyway is to email the owner EVERY SINGLE OCCURENCE. </Sent>
+                          <Sent id="11.2"> Of course they'll just send to spam, but I feel between this and your API user distribution list after some reasonable period we can move ahead. </Sent>
+                          <Sent id="11.3"> @RobertGroce We have been told that some teams have a 9 month lead time, but that feels unreasonable to me, do you think giving 3 months warning of upcoming breaking changes is enough / makes sense / thoughts? </Sent>
+                          <Sent id="11.4"> @TonyPiazza You deal with wanting to make breaking changes and legacy users a lot, do you have a specific policy/thought? </Sent>
+                          <Sent id="11.5"> Maybe we can come up with a IS standard? </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>02-Dec-16 14:23:47</Received>
+             <From>Robert L. Groce</From>
+             <To>Robert L. Groce,Tony Piazza,Shreyas Valmiki,Bryan A. Ehrlich,Chris Werner,Shivam Tiwari,Surekha Vullekki,Raghupathi Manda,Madhavi Chinnala,Ajinkya Nilkanth Dhumale,CSS Resources Hyderabad,Krishna Jain</To>
+             <Subject> Add a more reasonable upper bound on RPD comment/message size </Subject>
+             <Text> 
+                          <Sent id="12.1"> That does seem slow. </Sent>
+                          <Sent id="12.2"> Can we reach out to those teams to see if there's a way to expedite their change control? </Sent>
+                          <Sent id="12.3"> A quarter, 3 months time, does seem reasonable. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>05-Dec-16 15:25:03</Received>
+             <From>Chris Werner</From>
+             <To>Robert L. Groce,Tony Piazza,Shreyas Valmiki,Bryan A. Ehrlich,Chris Werner,Shivam Tiwari,Surekha Vullekki,Raghupathi Manda,Madhavi Chinnala,Ajinkya Nilkanth Dhumale,CSS Resources Hyderabad,Krishna Jain</To>
+             <Subject> Add a more reasonable upper bound on RPD comment/message size </Subject>
+             <Text> 
+                          <Sent id="13.1"> If possible, let's go forward with a 50k limit for employees and any new Service accounts (if possible to enforce). </Sent>
+                          <Sent id="13.2"> Legacy services can still have the old limit for now, we will communicate the change and give them some lead time to comply before fully shutting off in 3-6 months after initial release. </Sent>
+                          <Sent id="13.3"> Additionally, if asked about a File API to use instead the answer is that we do not have or know of a publically consumable File/upload API that can be used programatically. </Sent>
+                          <Sent id="13.4"> What are the thoughts having the prompt for excessively large pastes? </Sent>
+                          <Sent id="13.5"> I think it's a nice to have, but curious if it's considered 'hard' or a large amount of work or any other discussion related: http://is.factset.com/rpd/summary.aspx?messageId=26843105&amp;commentId=27757169 </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>07-Feb-17 20:08:26</Received>
+             <From>Bryan A. Ehrlich</From>
+             <To>Robert L. Groce,Tony Piazza,Shreyas Valmiki,Bryan A. Ehrlich,Chris Werner,Shivam Tiwari,Surekha Vullekki,Raghupathi Manda,Madhavi Chinnala,Ajinkya Nilkanth Dhumale,CSS Resources Hyderabad,Krishna Jain</To>
+             <Subject> Add a more reasonable upper bound on RPD comment/message size </Subject>
+             <Text> 
+                          <Sent id="14.1"> I think we should implement this as a specific whitelist. </Sent>
+                          <Sent id="14.2"> I.e. </Sent>
+                          <Sent id="14.3"> service X, Y, Z can post &gt; 50k if there is some specific reason. </Sent>
+                          <Sent id="14.4"> There's no reason to just blanketly allow any existing account to post &gt;50k, especially if they have never posted a message larger than that before (this should be most accounts). </Sent>
+                          <Sent id="14.5"> We should get this done with .5 it's been pushed back a couple of times already. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>08-Feb-17 12:56:50</Received>
+             <From>Chris Werner</From>
+             <To>Robert L. Groce,Tony Piazza,Shreyas Valmiki,Bryan A. Ehrlich,Chris Werner,Shivam Tiwari,Surekha Vullekki,Raghupathi Manda,Madhavi Chinnala,Ajinkya Nilkanth Dhumale,CSS Resources Hyderabad,Krishna Jain</To>
+             <Subject> Add a more reasonable upper bound on RPD comment/message size </Subject>
+             <Text> 
+                          <Sent id="15.1"> Agree and approved, this is something reasonable that RPD should support and a whitelist makes sense. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>09-Feb-17 04:34:09</Received>
+             <From>Shivam Tiwari</From>
+             <To>Robert L. Groce,Tony Piazza,Shreyas Valmiki,Bryan A. Ehrlich,Chris Werner,Shivam Tiwari,Surekha Vullekki,Raghupathi Manda,Madhavi Chinnala,Ajinkya Nilkanth Dhumale,CSS Resources Hyderabad,Krishna Jain</To>
+             <Subject> Add a more reasonable upper bound on RPD comment/message size </Subject>
+             <Text> 
+                          <Sent id="16.1"> - </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>09-Feb-17 06:58:13</Received>
+             <From>svc-isbuild</From>
+             <To>Robert L. Groce,Tony Piazza,Shreyas Valmiki,Bryan A. Ehrlich,Chris Werner,Shivam Tiwari,Surekha Vullekki,Raghupathi Manda,Madhavi Chinnala,Ajinkya Nilkanth Dhumale,CSS Resources Hyderabad,Krishna Jain</To>
+             <Subject> Add a more reasonable upper bound on RPD comment/message size </Subject>
+             <Text> 
+                          <Sent id="17.1"> @Shivam Tiwari has submitted TFS change: 84529 , which references this RPD Description: reduce content length limit , allow only some service accounts to post within the old limit RPD:26843105 </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>09-Feb-17 14:39:47</Received>
+             <From>Bryan A. Ehrlich</From>
+             <To>Robert L. Groce,Tony Piazza,Shreyas Valmiki,Bryan A. Ehrlich,Chris Werner,Shivam Tiwari,Surekha Vullekki,Raghupathi Manda,Madhavi Chinnala,Ajinkya Nilkanth Dhumale,CSS Resources Hyderabad,Krishna Jain</To>
+             <Subject> Add a more reasonable upper bound on RPD comment/message size </Subject>
+             <Text> 
+                          <Sent id="18.1"> We should also include some kind of indication in the front end when you go over the limit, rather than just failing. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>10-Feb-17 10:06:16</Received>
+             <From>svc-isbuild</From>
+             <To>Robert L. Groce,Tony Piazza,Shreyas Valmiki,Bryan A. Ehrlich,Chris Werner,Shivam Tiwari,Surekha Vullekki,Raghupathi Manda,Madhavi Chinnala,Ajinkya Nilkanth Dhumale,CSS Resources Hyderabad,Krishna Jain</To>
+             <Subject> Add a more reasonable upper bound on RPD comment/message size </Subject>
+             <Text> 
+                          <Sent id="19.1"> @Shivam Tiwari has submitted TFS change: 84678 , which references this RPD Description: block request larger than 50K on front end RPD:26843105 </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>10-Feb-17 11:40:34</Received>
+             <From>svc-isbuild</From>
+             <To>Robert L. Groce,Tony Piazza,Shreyas Valmiki,Bryan A. Ehrlich,Chris Werner,Shivam Tiwari,Surekha Vullekki,Raghupathi Manda,Madhavi Chinnala,Ajinkya Nilkanth Dhumale,CSS Resources Hyderabad,Krishna Jain</To>
+             <Subject> Add a more reasonable upper bound on RPD comment/message size </Subject>
+             <Text> 
+                          <Sent id="20.1"> @Shivam Tiwari has submitted TFS change: 84686 , which references this RPD Description: tinymce check for content length RPD:26843105 </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>30-Mar-17 10:39:43</Received>
+             <From>Madhavi Chinnala</From>
+             <To>Robert L. Groce,Tony Piazza,Shreyas Valmiki,Bryan A. Ehrlich,Chris Werner,Shivam Tiwari,Surekha Vullekki,Raghupathi Manda,Madhavi Chinnala,Ajinkya Nilkanth Dhumale,CSS Resources Hyderabad,Krishna Jain</To>
+             <Subject> Add a more reasonable upper bound on RPD comment/message size </Subject>
+             <Text> 
+                          <Sent id="21.1"> Hi, Completed testing the above enhancement in QA Environment. </Sent>
+                          <Sent id="21.2"> Encountered a message as shown in the below screenshot, when the content length of the RPD exceeded 50K. </Sent>
+                          <Sent id="21.3"> Message while creating an RPD with content exceeding 50k Message while commenting on the RPD with content exceeding 50K Setting the status to Testing Complete as no issues were found. </Sent>
+                          <Sent id="21.4"> Thanks, Madhavi </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>03-Apr-17 10:15:14</Received>
+             <From>Shivam Tiwari</From>
+             <To>Robert L. Groce,Tony Piazza,Shreyas Valmiki,Bryan A. Ehrlich,Chris Werner,Shivam Tiwari,Surekha Vullekki,Raghupathi Manda,Madhavi Chinnala,Ajinkya Nilkanth Dhumale,CSS Resources Hyderabad,Krishna Jain</To>
+             <Subject> Add a more reasonable upper bound on RPD comment/message size </Subject>
+             <Text> 
+                          <Sent id="22.1"> need some opinion on the following this RPD:26104534 , for example, has a table in the content which doesn't have a large content (only 2947 characters text) but 51700 characters in HTML, after processing, it becomes above 90k, as it has a lot of styles. </Sent>
+                          <Sent id="22.2"> TinyMCE adds its own attribute "data-mce-style" to store all the styles. </Sent>
+                          <Sent id="22.3"> should we put a limit on text? </Sent>
+                          <Sent id="22.4"> or is it ok to block similar requests? </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>03-Apr-17 13:54:27</Received>
+             <From>Bryan A. Ehrlich</From>
+             <To>Robert L. Groce,Tony Piazza,Shreyas Valmiki,Bryan A. Ehrlich,Chris Werner,Shivam Tiwari,Surekha Vullekki,Raghupathi Manda,Madhavi Chinnala,Ajinkya Nilkanth Dhumale,CSS Resources Hyderabad,Krishna Jain</To>
+             <Subject> Add a more reasonable upper bound on RPD comment/message size </Subject>
+             <Text> 
+                          <Sent id="23.1"> The limit has to be on the raw html size. </Sent>
+                          <Sent id="23.2"> If this is a common issue we can increase the limit. </Sent>
+                          <Sent id="23.3"> But 50k of html puts the same strain on the system as 50k plain text. </Sent>
+                          <Sent id="23.4"> Is there anything we can do to decrease the size of the attributes TinyMCE is adding? </Sent>
+                          <Sent id="23.5"> Or remove them if they are not necessary? </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>04-Apr-17 09:02:30</Received>
+             <From>Shivam Tiwari</From>
+             <To>Robert L. Groce,Tony Piazza,Shreyas Valmiki,Bryan A. Ehrlich,Chris Werner,Shivam Tiwari,Surekha Vullekki,Raghupathi Manda,Madhavi Chinnala,Ajinkya Nilkanth Dhumale,CSS Resources Hyderabad,Krishna Jain</To>
+             <Subject> Add a more reasonable upper bound on RPD comment/message size </Subject>
+             <Text> 
+                          <Sent id="24.1"> "data-mce-style" this extra attribute can be avoided if we remove {format: "raw"} in the getContent method. </Sent>
+                          <Sent id="24.2"> this is part of the raw html styles are the major contributor to the request of this kind, therefore, adding another attribute and storing duplicate styles almost doubles the length. </Sent>
+                          <Sent id="24.3"> but even without this extra attribute, it's crossing our set limit. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>04-Apr-17 13:28:05</Received>
+             <From>Bryan A. Ehrlich</From>
+             <To>Robert L. Groce,Tony Piazza,Shreyas Valmiki,Bryan A. Ehrlich,Chris Werner,Shivam Tiwari,Surekha Vullekki,Raghupathi Manda,Madhavi Chinnala,Ajinkya Nilkanth Dhumale,CSS Resources Hyderabad,Krishna Jain</To>
+             <Subject> Add a more reasonable upper bound on RPD comment/message size </Subject>
+             <Text> 
+                          <Sent id="25.1"> @AjinkyaNilkanthDhumale can you try to filter out the same attributes TinyMCE is filtering out? </Sent>
+                          <Sent id="25.2"> And then we can run the size check after we run the string through SafeStringProvider. </Sent>
+                          <Sent id="25.3"> Otherwise we need to roll back the format: raw change. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>05-Apr-17 06:25:59</Received>
+             <From>Ajinkya Nilkanth Dhumale</From>
+             <To>Robert L. Groce,Tony Piazza,Shreyas Valmiki,Bryan A. Ehrlich,Chris Werner,Shivam Tiwari,Surekha Vullekki,Raghupathi Manda,Madhavi Chinnala,Ajinkya Nilkanth Dhumale,CSS Resources Hyderabad,Krishna Jain</To>
+             <Subject> Add a more reasonable upper bound on RPD comment/message size </Subject>
+             <Text> 
+                          <Sent id="26.1"> Yes, as @ShivamTiwari mentioned above, TinyMCE is adding few of its own attributes like "data-mce-style"/ "data-mce-bogus". </Sent>
+                          <Sent id="26.2"> All such attributes can be removed. </Sent>
+                          <Sent id="26.3"> However, the RPDs RPD:29826610 and RPD:29645628 are linked to .6 So, I rolled back the changes. </Sent>
+                          <Sent id="26.4"> This shouldn't be a problem at least for now. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>11-Apr-17 10:08:27</Received>
+             <From>Madhavi Chinnala</From>
+             <To>Robert L. Groce,Tony Piazza,Shreyas Valmiki,Bryan A. Ehrlich,Chris Werner,Shivam Tiwari,Surekha Vullekki,Raghupathi Manda,Madhavi Chinnala,Ajinkya Nilkanth Dhumale,CSS Resources Hyderabad,Krishna Jain</To>
+             <Subject> Add a more reasonable upper bound on RPD comment/message size </Subject>
+             <Text> 
+                          <Sent id="27.1"> Hi, Completed testing the above enhancement in Staging. </Sent>
+                          <Sent id="27.2"> Encountered a message when the content length of the RPD exceeded 50K as expected. </Sent>
+                          <Sent id="27.3"> Leaving the status to Testing Complete as everything looks good. </Sent>
+                          <Sent id="27.4"> Thanks, Madhavi </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>13-Apr-17 12:53:07</Received>
+             <From>Shivam Tiwari</From>
+             <To>Robert L. Groce,Tony Piazza,Shreyas Valmiki,Bryan A. Ehrlich,Chris Werner,Shivam Tiwari,Surekha Vullekki,Raghupathi Manda,Madhavi Chinnala,Ajinkya Nilkanth Dhumale,CSS Resources Hyderabad,Krishna Jain</To>
+             <Subject> Add a more reasonable upper bound on RPD comment/message size </Subject>
+             <Text> 
+                          <Sent id="28.1"> @BryanEhrlich another RPD:30586442 with big table in the content and people trying to edit manually. </Sent>
+                          <Sent id="28.2"> the service account used to create the rpd "s_661", //production_infrastructure is one of the exempted accounts. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>14-Apr-17 04:18:21</Received>
+             <From>Krishna Jain</From>
+             <To>Robert L. Groce,Tony Piazza,Shreyas Valmiki,Bryan A. Ehrlich,Chris Werner,Shivam Tiwari,Surekha Vullekki,Raghupathi Manda,Madhavi Chinnala,Ajinkya Nilkanth Dhumale,CSS Resources Hyderabad,Krishna Jain</To>
+             <Subject> Add a more reasonable upper bound on RPD comment/message size </Subject>
+             <Text> 
+                          <Sent id="29.1"> Hi - unable to edit the table. </Sent>
+                          <Sent id="29.2"> http://is.factset.com/rpd/summary.aspx?messageId=30412002&amp;commentId=30412002 Thanks KK </Sent>
+             </Text>
+         </DOC>
+</thread>

@@ -1,0 +1,104 @@
+<thread>
+<Name> FPE Browser Versions should have same options as SGE and both should be updated </Name>
+<listno>30051965</listno>
+         <DOC>
+             <Received>21-Mar-17 14:55:45</Received>
+             <From>Angela Yacovelli</From>
+             <To>Angela Yacovelli,Vasu Nakka,Avanthi Rentala,Lilun Cao,Bhupender Agarwal,Krishnateja Surapaneni,Kate M. Kuzin</To>
+             <Subject> FPE Browser Versions should have same options as SGE and both should be updated </Subject>
+             <Text> 
+                          <Sent id="1.1"> Compare browser versions for FPE and SGE FPE options are very limited and in most cases out of date. </Sent>
+                          <Sent id="1.2"> for example: Chrome FPE only has 51 Chrome SGE has up to 54 Current client usage shows we should be testing on 56 http://fds-web-stats.factset.io/dashboard/browser-stats?startDate=Sun%20Feb%2019%202017%2010:48:50%20GMT-0500&amp;endDate=Tue%20Mar%2021%202017%2010:48:50%20GMT-0400&amp;source=external&amp;uniqueUsers=unique&amp;showMinor=false&amp;application=all </Sent>
+             </Text>
+             </DOC>
+         <DOC>
+             <Received>22-Mar-17 12:40:27</Received>
+             <From>Kate M. Kuzin</From>
+             <To>Angela Yacovelli,Vasu Nakka,Avanthi Rentala,Lilun Cao,Bhupender Agarwal,Krishnateja Surapaneni,Kate M. Kuzin</To>
+             <Subject> FPE Browser Versions should have same options as SGE and both should be updated </Subject>
+             <Text> 
+                          <Sent id="2.1"> @LilunCao and @KrishnatejaSurapaneni Rajul mentioned that you would have a FPE instance with multiple browser available to test FDSWeb against. </Sent>
+                          <Sent id="2.2"> Can you please let me know if you have something for us to try out. </Sent>
+                          <Sent id="2.3"> Thanks, Kate cc @BhupenderAgarwal </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>21-Mar-17 22:32:27</Received>
+             <From>Krishnateja Surapaneni</From>
+             <To>Angela Yacovelli,Vasu Nakka,Avanthi Rentala,Lilun Cao,Bhupender Agarwal,Krishnateja Surapaneni,Kate M. Kuzin</To>
+             <Subject> FPE Browser Versions should have same options as SGE and both should be updated </Subject>
+             <Text> 
+                          <Sent id="3.1"> @LilunCao @AngelaYacovelli It may not be trivial to have all the browser versions available on JEP because of the limitations we have. </Sent>
+                          <Sent id="3.2"> unlike in SGE we can host only one browser per a VM. </Sent>
+                          <Sent id="3.3"> They can be installed on the fly [ RPD:27069245 ] Saw a link online which may help but we need to look into further to evaluate the suggestions http://stackoverflow.com/questions/10541225/cross-browser-testing-all-major-browsers-on-one-machine#10541484 do some os level sanboxing NOTE: The implication of the above propsals on VM diskspace increases in the same order as listed Also, there is a dependency on drivers(used by scripts to launch a browser instance), the project archives should be forced to have multiple drivers or tellus has to provide the approprite one. </Sent>
+                          <Sent id="3.4"> @LilunCao please holdoff on updating the browser version file for FPE Thanks, Krishna </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>21-Mar-17 18:09:21</Received>
+             <From>Lilun Cao</From>
+             <To>Angela Yacovelli,Vasu Nakka,Avanthi Rentala,Lilun Cao,Bhupender Agarwal,Krishnateja Surapaneni,Kate M. Kuzin</To>
+             <Subject> FPE Browser Versions should have same options as SGE and both should be updated </Subject>
+             <Text> 
+                          <Sent id="4.1"> Hi @AngelaYacovelli I will download chrome 55 and 56, and do some testing on my pc. </Sent>
+                          <Sent id="4.2"> Then I will add them to the selenium grid. </Sent>
+                          <Sent id="4.3"> I will also update the browser version file for FPE. </Sent>
+                          <Sent id="4.4"> Lilun </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>21-Mar-17 17:31:58</Received>
+             <From>Lilun Cao</From>
+             <To>Angela Yacovelli,Vasu Nakka,Avanthi Rentala,Lilun Cao,Bhupender Agarwal,Krishnateja Surapaneni,Kate M. Kuzin</To>
+             <Subject> FPE Browser Versions should have same options as SGE and both should be updated </Subject>
+             <Text> 
+                          <Sent id="5.1"> @AvanthiRentala What the user chooses for browser version (chrome, firefox) doesn't matter now. </Sent>
+                          <Sent id="5.2"> Then we need to update the BrowserVersions.json file for FPE since the versions there for different browsers are not the latest ones. </Sent>
+                          <Sent id="5.3"> Lilun </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>21-Mar-17 17:15:41</Received>
+             <From>Avanthi Rentala</From>
+             <To>Angela Yacovelli,Vasu Nakka,Avanthi Rentala,Lilun Cao,Bhupender Agarwal,Krishnateja Surapaneni,Kate M. Kuzin</To>
+             <Subject> FPE Browser Versions should have same options as SGE and both should be updated </Subject>
+             <Text> 
+                          <Sent id="6.1"> Hi @LilunCao - We have Only one version in FPE and it will be always latest version, as it automatically upgrades . </Sent>
+                          <Sent id="6.2"> But in future we are planning to install it dynamically based on user selection. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>21-Mar-17 17:12:22</Received>
+             <From>Lilun Cao</From>
+             <To>Angela Yacovelli,Vasu Nakka,Avanthi Rentala,Lilun Cao,Bhupender Agarwal,Krishnateja Surapaneni,Kate M. Kuzin</To>
+             <Subject> FPE Browser Versions should have same options as SGE and both should be updated </Subject>
+             <Text> 
+                          <Sent id="7.1"> Hi @AngelaYacovelli We manage the browsers in different ways in FPE and SGE. </Sent>
+                          <Sent id="7.2"> @VasuNakka @AvanthiRentala do you have any idea about this? </Sent>
+                          <Sent id="7.3"> Like if we specifiy a browser version, is it possible that it is not available in FPE? </Sent>
+                          <Sent id="7.4"> Lilun </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>21-Mar-17 15:56:56</Received>
+             <From>Angela Yacovelli</From>
+             <To>Angela Yacovelli,Vasu Nakka,Avanthi Rentala,Lilun Cao,Bhupender Agarwal,Krishnateja Surapaneni,Kate M. Kuzin</To>
+             <Subject> FPE Browser Versions should have same options as SGE and both should be updated </Subject>
+             <Text> 
+                          <Sent id="8.1"> @LilunCao - can't we make it so that FP matches what SG has and then add version 56 to Chrome? </Sent>
+                          <Sent id="8.2"> can't they pull from the same list so that we don't have to update 2 places all the time going forward? </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>21-Mar-17 15:20:56</Received>
+             <From>Lilun Cao</From>
+             <To>Angela Yacovelli,Vasu Nakka,Avanthi Rentala,Lilun Cao,Bhupender Agarwal,Krishnateja Surapaneni,Kate M. Kuzin</To>
+             <Subject> FPE Browser Versions should have same options as SGE and both should be updated </Subject>
+             <Text> 
+                          <Sent id="9.1"> Hi @AvanthiRentala and @VasuNakka What versions are available for different browsers in FPE environment? </Sent>
+                          <Sent id="9.2"> Could you give me a list of them? </Sent>
+                          <Sent id="9.3"> Also any newer versions of browsers need to be added to FPE? </Sent>
+                          <Sent id="9.4"> Thanks, Lilun </Sent>
+             </Text>
+         </DOC>
+</thread>

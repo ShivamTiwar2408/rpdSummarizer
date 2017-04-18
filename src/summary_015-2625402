@@ -1,0 +1,22 @@
+ When entered the URL: http://is.factset.com/justifier/#23587 in IE and Google Chrome browsers, SWP dispalyed 'Loading..' message for long time(~5mins) and no test plans were populated in the SWP.</br>
+When refreshed the browser for a couple of times, test plans are populated after seeing Loading message for ~2mins.</br>
+FYI: I have verified with other Prebuild SWP, where the SWP loaded quickly when compared to this Prebuild SWP.
+		</br>
+2. Enter the URL: http://is.factset.com/justifier/#23587 and hit enter.
+		</br>
+Note: As the SWP took 5 minutes to load and as there were no other Prebuilds to test, Analytics Regression team had a production loss of about 1 hour 30 mins.
+		</br>
+I verified in my system, I am unable to reproducing this issue. @MosheenHussainPinjari are you still getting this issue?
+		</br>
+@SreenuNarra , now the issue is not replicable from our end as well. SWP loaded quickly without any loading time.
+		</br>
+When I have verified the behavior today, SWP loaded fine without any delay.</br>
+Are we good to resolve this RPD?</br>
+Hi @MosheenHussainPinjari ,
+		</br>
+If you feel it is working as you expected you can resolve this.
+		</br>
+@SreenuNarra Can we use this to investigate what happens if GetStatusWebPage times out?
+		</br>
+Looking at the logs I see a number of requests that ran for 90 seconds, it looks like this occurred from 04:16am to 04:26am.</br>
+I think the 90sec is because our DB timeout is set to this, but I'm wondering if the SWP doesn't see this as an error and that's why the user sees 'Loading...' forever.</br>

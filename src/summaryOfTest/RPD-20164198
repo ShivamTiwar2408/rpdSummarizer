@@ -1,0 +1,11 @@
+(1.1) :  I have added comment at 11.09 Am and I have received email notification after 7 minutes. 
+(1.2) :  7 minutes delay is huge and we need to check out root cause and fix issue 
+(4.1) :  I was looking at this today and noticed the following: Since NNX_NotificationHistory_date is never used we should remove it. 
+(4.9) :  ClientNotificationHistory (messageid, [date],[OwnerId], hasexception, [notification], TypeId) values(@messageid, getutcdate(), @from, @hasexception, @notification, @notificationType) end end end Why are we querying NotificationHistory and then updating or inserting to Client NotificationHistory anyway? 
+(5.4) :  That is whatever we're selecting, say messageId and date, if we UNIQUE Or primaryKey this we can just call INSERT and SQL will not insert duplicate records. 
+(8.5) :  I wrote a small script to simulate a queue for the month of Sept and Oct 2015. 
+(8.6) :  In order for there to be no backup of the queue, based on past usage, we need to be able to process ~720 notifications per minute (this leaves some room for unexpected spikes in traffic as well). 
+(8.12) :  These logs should be sent using the Core logger, or we should greatly improve the NotificationHistory table to have indexes, and to clean up old NotificationHistory logs (so the table isn't so huge). 
+(10.16) :  Let me know if there is an issue that is not a very quick fix and I will file a separate RPD. 
+(11.1) :  Removed everyone from users and just added RPD admins. 
+(12.1) :  Looks like the queue cannot keep up with the current message volume: When I looked the queue was ~4 minutes behind. 

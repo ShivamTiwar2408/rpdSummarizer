@@ -1,0 +1,196 @@
+<thread>
+<Name> Delay in receiving Email </Name>
+<listno>20164198</listno>
+         <DOC>
+             <Received>26-Oct-15 15:18:35</Received>
+             <From>Sree Divya Bonagiri</From>
+             <To>Rohit Zawar,Bryan A. Ehrlich,Sree Divya Bonagiri,Chris Werner,IS DevOps</To>
+             <Subject> Delay in receiving Email </Subject>
+             <Text> 
+                          <Sent id="1.1"> I have added comment at 11.09 Am and I have received email notification after 7 minutes. </Sent>
+                          <Sent id="1.2"> 7 minutes delay is huge and we need to check out root cause and fix issue </Sent>
+             </Text>
+             </DOC>
+         <DOC>
+             <Received>29-Apr-16 15:20:27</Received>
+             <From>Shreyas Valmiki</From>
+             <To>Rohit Zawar,Bryan A. Ehrlich,Sree Divya Bonagiri,Chris Werner,IS DevOps</To>
+             <Subject> Delay in receiving Email </Subject>
+             <Text> 
+                          <Sent id="2.1"> The queue reader service was stopped from 2:22PM to 3:34 PM for some reason (which we are trying to investigate). </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>29-Apr-16 15:05:52</Received>
+             <From>Bryan A. Ehrlich</From>
+             <To>Rohit Zawar,Bryan A. Ehrlich,Sree Divya Bonagiri,Chris Werner,IS DevOps</To>
+             <Subject> Delay in receiving Email </Subject>
+             <Text> 
+                          <Sent id="3.1"> There was a large lag spike (~.8 hours) in this queue yesterday http://monster.factset.com/?qkuvk . </Sent>
+                          <Sent id="3.2"> @ISDevOps were there any issues around 3pm yesterday with queue? </Sent>
+                          <Sent id="3.3"> All this plugin does is make a web request, I would expect this to timout within ~30 seconds and cause a dead message, but there are no dead messages in this queue. </Sent>
+                          <Sent id="3.4"> This was not a volume/backlog issue, there were only ever 4 messages in the backlog http://monster.factset.com/?0vsr2 . </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>15-Dec-15 20:57:53</Received>
+             <From>Chris Werner</From>
+             <To>Rohit Zawar,Bryan A. Ehrlich,Sree Divya Bonagiri,Chris Werner,IS DevOps</To>
+             <Subject> Delay in receiving Email </Subject>
+             <Text> 
+                          <Sent id="4.1"> I was looking at this today and noticed the following: Since NNX_NotificationHistory_date is never used we should remove it. </Sent>
+                          <Sent id="4.2"> I think since nx_notificationhistory_message_date is being used so often it would make sense to make this a CLUSTERED index unless we think this could slow down our writes to this table. </Sent>
+                          <Sent id="4.3"> I am still curious what the 'update'/upsert usecase is, since we don't have any UNIQUE or primary key I'm not sure what it could be looking up against to update against. </Sent>
+                          <Sent id="4.4"> It also might be possible that all of this should just be written one time to an event log and this table should not be used at all. </Sent>
+                          <Sent id="4.5"> Is there any process that reads from it at all? </Sent>
+                          <Sent id="4.6"> It looks like it's read in [Message].[GetNotificationRecipients] if we knew where/how often that's used. </Sent>
+                          <Sent id="4.7"> Nevermind I found it: if exists(select 'x' from NotificationHistory where messageid=@messageid and TypeId=@notificationType) begin update NotificationHistory set [notification]=@notification, [from]=@from where messageid=@messageid and TypeId=@notificationType end else begin insert NotificationHistory(messageid, [date], [from], hasexception, [notification], TypeId) values(@messageid, getutcdate(), @from, @hasexception, @notification, @notificationType) end This would indicate to me that the clustered index should really be messageid,typeid since it's not so much a 'log' as it is the last time that typeid was updated/sent. </Sent>
+                          <Sent id="4.8"> I also see NotificationHistory queried here, but feels almost like a bug: Create procedure dbo.LogClientNotification @messageid varchar(50), @from varchar(255), @hasexception bit, @notification nvarchar(max), @notificationType int = null as begin if (@notificationType in (15,16,17)) begin if exists(select 'x' from NotificationHistory where messageid=@messageid and TypeId=@notificationType) begin update ClientNotificationHistory set [notification]=@notification, [OwnerId]=@from where messageid=@messageid and TypeId=@notificationType end else begin insert into dbo. </Sent>
+                          <Sent id="4.9"> ClientNotificationHistory (messageid, [date],[OwnerId], hasexception, [notification], TypeId) values(@messageid, getutcdate(), @from, @hasexception, @notification, @notificationType) end end end Why are we querying NotificationHistory and then updating or inserting to Client NotificationHistory anyway? </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>11-Dec-15 16:39:24</Received>
+             <From>Chris Werner</From>
+             <To>Rohit Zawar,Bryan A. Ehrlich,Sree Divya Bonagiri,Chris Werner,IS DevOps</To>
+             <Subject> Delay in receiving Email </Subject>
+             <Text> 
+                          <Sent id="5.1"> I think the parallelism required now we meant ~12-15 because we want a 3-4x increase to get to ~4. </Sent>
+                          <Sent id="5.2"> I saw Bryan saw we do a SELECT first before INSERTing. </Sent>
+                          <Sent id="5.3"> If we know what the uniqueness is supposed to be there is no reason to do this. </Sent>
+                          <Sent id="5.4"> That is whatever we're selecting, say messageId and date, if we UNIQUE Or primaryKey this we can just call INSERT and SQL will not insert duplicate records. </Sent>
+                          <Sent id="5.5"> You can decide whether to try/catch and handle the DuplicateKey 'error', or we could just supress this with IGNORE_DUP_KEY = ON (note this still prevents duplicate records, just doesn't 'error'). </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>11-Dec-15 15:23:35</Received>
+             <From>Bryan A. Ehrlich</From>
+             <To>Rohit Zawar,Bryan A. Ehrlich,Sree Divya Bonagiri,Chris Werner,IS DevOps</To>
+             <Subject> Delay in receiving Email </Subject>
+             <Text> 
+                          <Sent id="6.1"> @SreeDivyaBonagiri thanks for that info, we will preserve this table since it is being used from the application. </Sent>
+                          <Sent id="6.2"> @RohitZawar it looks like this table currently does not have a clustered index, we should investigate adding a clustered index on MessageKey (all of the selects I see on this table are done by messageKey). </Sent>
+                          <Sent id="6.3"> Please still investigate any other slowness you see in the Notify.asmx endpoint, this is just the first thing I saw. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>11-Dec-15 05:00:32</Received>
+             <From>Sree Divya Bonagiri</From>
+             <To>Rohit Zawar,Bryan A. Ehrlich,Sree Divya Bonagiri,Chris Werner,IS DevOps</To>
+             <Subject> Delay in receiving Email </Subject>
+             <Text> 
+                          <Sent id="7.1"> just to add soem more info about notificationhsitory table. </Sent>
+                          <Sent id="7.2"> Currently we are maintaing only past 6 months data in that table. </Sent>
+                          <Sent id="7.3"> We need reciepients data to be available easily to show them on UI. </Sent>
+                          <Sent id="7.4"> If tehre is easy way to get that from core logs. </Sent>
+                          <Sent id="7.5"> We can use core logging for that </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>10-Dec-15 20:40:51</Received>
+             <From>Bryan A. Ehrlich</From>
+             <To>Rohit Zawar,Bryan A. Ehrlich,Sree Divya Bonagiri,Chris Werner,IS DevOps</To>
+             <Subject> Delay in receiving Email </Subject>
+             <Text> 
+                          <Sent id="8.1"> I did some preliminary investigation here, since @RohitZawar is out for the rest of the week. </Sent>
+                          <Sent id="8.2"> We are currently sending ~20,000 notifications per day, with spikes of up to 360 notifications per minute. </Sent>
+                          <Sent id="8.3"> In dev, it looks like we can currently process ~40-60 notifications per minute serially. </Sent>
+                          <Sent id="8.4"> This grows approximately linearly with the number of threads, so if 1 thread can process 60/min, 3 threads can process 180 per minute. </Sent>
+                          <Sent id="8.5"> I wrote a small script to simulate a queue for the month of Sept and Oct 2015. </Sent>
+                          <Sent id="8.6"> In order for there to be no backup of the queue, based on past usage, we need to be able to process ~720 notifications per minute (this leaves some room for unexpected spikes in traffic as well). </Sent>
+                          <Sent id="8.7"> At our current speed we will need a parallelism factor of ~24 in order to process that many messages. </Sent>
+                          <Sent id="8.8"> I would like to get our notification processing speed up to ~3 per second (180 per minute) so that our parallism factor will only need to be 4. </Sent>
+                          <Sent id="8.9"> I also did some preliminary investigation on why Notify.asmx is slow. </Sent>
+                          <Sent id="8.10"> It appears that we are synchronously logging directly to a NotificationHistory table for every notification. </Sent>
+                          <Sent id="8.11"> This is taking over 1 second to execute in prod, because it first selects on the log table to see if a notification has already been logged for that RPD. </Sent>
+                          <Sent id="8.12"> These logs should be sent using the Core logger, or we should greatly improve the NotificationHistory table to have indexes, and to clean up old NotificationHistory logs (so the table isn't so huge). </Sent>
+                          <Sent id="8.13"> FYI @ISDevOps this change is tracking the first multithreaded queue consumer. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>10-Dec-15 11:28:46</Received>
+             <From>Sree Divya Bonagiri</From>
+             <To>Rohit Zawar,Bryan A. Ehrlich,Sree Divya Bonagiri,Chris Werner,IS DevOps</To>
+             <Subject> Delay in receiving Email </Subject>
+             <Text> 
+                          <Sent id="9.1"> Adding some more info here: Currently we have this http://is.factset.com/core/roleprovider/group.aspx?groupId=20391 which are enabled for this feature. </Sent>
+                          <Sent id="9.2"> This group members are already using queue system for notifications. </Sent>
+                          <Sent id="9.3"> In production, I am not seeing lag in normal periods, but there is some lag when there is peak usage. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>08-Dec-15 14:32:17</Received>
+             <From>Bryan A. Ehrlich</From>
+             <To>Rohit Zawar,Bryan A. Ehrlich,Sree Divya Bonagiri,Chris Werner,IS DevOps</To>
+             <Subject> Delay in receiving Email </Subject>
+             <Text> 
+                          <Sent id="10.1"> The DevOps team has implemented multithreaded queues in dev. </Sent>
+                          <Sent id="10.2"> We will be using this process as a first test of that system, as it is an ideal use case. </Sent>
+                          <Sent id="10.3"> I plan to roll this out very cautiously, probably only to "RPD Engineers" for the first release. </Sent>
+                          <Sent id="10.4"> @RohitZawar : 1. </Sent>
+                          <Sent id="10.5"> We should see if there are any easy performance gains to be made in notify.asmx, this will benefit both the new and existing notfication process. </Sent>
+                          <Sent id="10.6"> The current notify seems very slow, &lt; 1 message per second. </Sent>
+                          <Sent id="10.7"> I think a good goal would be 3 per second, ~300ms per notify message, but I have only briefly looked at this code. </Sent>
+                          <Sent id="10.8"> Let me know what is feasible here. </Sent>
+                          <Sent id="10.9"> 2. </Sent>
+                          <Sent id="10.10"> Please determine our current notify volume, and get more exact numbers on how many notifys we can process per second. </Sent>
+                          <Sent id="10.11"> This will allow us to roll out this feature without having to guess whether we can handle the volume, and will determine the level of parallelism we need the DevOps team to set. </Sent>
+                          <Sent id="10.12"> This will also be very useful info when we switch to the DevOps emailer queue. </Sent>
+                          <Sent id="10.13"> 3. </Sent>
+                          <Sent id="10.14"> It looks like there are dev issues with this queue. </Sent>
+                          <Sent id="10.15"> Instead of sending "[please ignore]" messages to the latest commentor, it sends them to the RPD creator. </Sent>
+                          <Sent id="10.16"> Let me know if there is an issue that is not a very quick fix and I will file a separate RPD. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>26-Oct-15 15:32:24</Received>
+             <From>Sree Divya Bonagiri</From>
+             <To>Rohit Zawar,Bryan A. Ehrlich,Sree Divya Bonagiri,Chris Werner,IS DevOps</To>
+             <Subject> Delay in receiving Email </Subject>
+             <Text> 
+                          <Sent id="11.1"> Removed everyone from users and just added RPD admins. </Sent>
+                          <Sent id="11.2"> we can add them back once we fix this issue. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>26-Oct-15 15:28:25</Received>
+             <From>Bryan A. Ehrlich</From>
+             <To>Rohit Zawar,Bryan A. Ehrlich,Sree Divya Bonagiri,Chris Werner,IS DevOps</To>
+             <Subject> Delay in receiving Email </Subject>
+             <Text> 
+                          <Sent id="12.1"> Looks like the queue cannot keep up with the current message volume: When I looked the queue was ~4 minutes behind. </Sent>
+                          <Sent id="12.2"> This definitely needs to be revisited. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>26-Oct-15 15:25:47</Received>
+             <From>Sree Divya Bonagiri</From>
+             <To>Rohit Zawar,Bryan A. Ehrlich,Sree Divya Bonagiri,Chris Werner,IS DevOps</To>
+             <Subject> Delay in receiving Email </Subject>
+             <Text> 
+                          <Sent id="13.1"> Comments added by non Engineering employees is really very quick. </Sent>
+                          <Sent id="13.2"> Delay is less than 1 minute. </Sent>
+                          <Sent id="13.3"> We need to check if queues/queue processer is affecting notifications before enabling notifications via queue for whole factset </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>07-Jan-16 21:13:37</Received>
+             <From>Bryan A. Ehrlich</From>
+             <To>Rohit Zawar,Bryan A. Ehrlich,Sree Divya Bonagiri,Chris Werner,IS DevOps</To>
+             <Subject> Delay in receiving Email </Subject>
+             <Text> 
+                          <Sent id="14.1"> The development work is done. </Sent>
+                          <Sent id="14.2"> However, we need to get a more exact idea of how much the performance was improved by @RohitZawar 's changes, so we can determine the parallelism we will need for the queue. </Sent>
+                          <Sent id="14.3"> Linking this to the next build and setting this back to pending while we determine the parallelism needed. </Sent>
+             </Text>
+         </DOC>
+         <DOC>
+             <Received>05-Jan-16 19:28:12</Received>
+             <From>svc-isbuild</From>
+             <To>Rohit Zawar,Bryan A. Ehrlich,Sree Divya Bonagiri,Chris Werner,IS DevOps</To>
+             <Subject> Delay in receiving Email </Subject>
+             <Text> 
+                          <Sent id="15.1"> @Rohit Zawar has submitted TFS change: 49185 , which references this RPD Description: perf(Performance): Performance tuning for Notify.asmx RPD:20164198 </Sent>
+             </Text>
+         </DOC>
+</thread>
